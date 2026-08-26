@@ -77,11 +77,19 @@
          <lastmod>2026-08-26</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-python-abs/</loc>
+         <lastmod>2026-08-26</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/cs-python-assignment/</loc>
          <lastmod>2026-08-26</lastmod>
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/cs-python-comment/</loc>
+         <lastmod>2026-08-26</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-python-comparison_operators/</loc>
          <lastmod>2026-08-26</lastmod>
     </url>
     <url>
@@ -110,6 +118,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/cs-python-function_definition/</loc>
+         <lastmod>2026-08-26</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-python-if_statement/</loc>
          <lastmod>2026-08-26</lastmod>
     </url>
     <url>
@@ -361,6 +373,14 @@
          <lastmod>2026-08-26</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/math-opposite_numbers/</loc>
+         <lastmod>2026-08-26</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/math-opposite_vector/</loc>
+         <lastmod>2026-08-26</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/math-outlier/</loc>
          <lastmod>2026-08-26</lastmod>
     </url>
@@ -469,6 +489,10 @@
          <lastmod>2026-08-26</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/math-zero_vector/</loc>
+         <lastmod>2026-08-26</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/meta-three_worlds_framework/</loc>
          <lastmod>2026-08-26</lastmod>
     </url>
@@ -490,6 +514,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/physics-elongation/</loc>
+         <lastmod>2026-08-26</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/physics-equilibrium/</loc>
          <lastmod>2026-08-26</lastmod>
     </url>
     <url>
@@ -526,6 +554,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/physics-net_force/</loc>
+         <lastmod>2026-08-26</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/physics-normal_force/</loc>
          <lastmod>2026-08-26</lastmod>
     </url>
     <url>
@@ -602,6 +634,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/modules/module-1/uniform-motion/</loc>
+         <lastmod>2026-08-26</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/modules/module-2/equilibrium-two-forces/</loc>
          <lastmod>2026-08-26</lastmod>
     </url>
     <url>

@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "stembook_version": "0.1.0",
-  "concept_count": 141,
+  "concept_count": 150,
   "concepts": [
     {
       "id": "cs.arbitrary_precision_integer",
@@ -140,6 +140,14 @@
       "href": "/concepts/cs-numerical_stability/"
     },
     {
+      "id": "cs.python.abs",
+      "title": "Функция abs()",
+      "subject": "cs",
+      "area": "python",
+      "importance": "high",
+      "href": "/concepts/cs-python-abs/"
+    },
+    {
       "id": "cs.python.assignment",
       "title": "Присваивание",
       "subject": "cs",
@@ -154,6 +162,14 @@
       "area": "python",
       "importance": "normal",
       "href": "/concepts/cs-python-comment/"
+    },
+    {
+      "id": "cs.python.comparison_operators",
+      "title": "Операторы сравнения",
+      "subject": "cs",
+      "area": "python",
+      "importance": "critical",
+      "href": "/concepts/cs-python-comparison_operators/"
     },
     {
       "id": "cs.python.expression",
@@ -210,6 +226,14 @@
       "area": "python",
       "importance": "critical",
       "href": "/concepts/cs-python-function_definition/"
+    },
+    {
+      "id": "cs.python.if_statement",
+      "title": "Условный оператор if",
+      "subject": "cs",
+      "area": "python",
+      "importance": "critical",
+      "href": "/concepts/cs-python-if_statement/"
     },
     {
       "id": "cs.python.import",
@@ -716,6 +740,22 @@
       "href": "/concepts/math-number_zero/"
     },
     {
+      "id": "math.opposite_numbers",
+      "title": "Противоположные числа",
+      "subject": "math",
+      "area": "algebra",
+      "importance": "high",
+      "href": "/concepts/math-opposite_numbers/"
+    },
+    {
+      "id": "math.opposite_vector",
+      "title": "Противоположный вектор",
+      "subject": "math",
+      "area": "geometry",
+      "importance": "critical",
+      "href": "/concepts/math-opposite_vector/"
+    },
+    {
       "id": "math.outlier",
       "title": "Выброс",
       "subject": "math",
@@ -932,6 +972,14 @@
       "href": "/concepts/math-well_ordering_principle/"
     },
     {
+      "id": "math.zero_vector",
+      "title": "Нулевой вектор",
+      "subject": "math",
+      "area": "geometry",
+      "importance": "critical",
+      "href": "/concepts/math-zero_vector/"
+    },
+    {
       "id": "meta.three_worlds_framework",
       "title": "Концепция трёх миров числа",
       "subject": "meta",
@@ -980,6 +1028,14 @@
       "href": "/concepts/physics-elongation/"
     },
     {
+      "id": "physics.equilibrium",
+      "title": "Равновесие",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "critical",
+      "href": "/concepts/physics-equilibrium/"
+    },
+    {
       "id": "physics.force",
       "title": "Сила",
       "subject": "physics",
@@ -1002,6 +1058,14 @@
       "area": "dynamics",
       "importance": "critical",
       "href": "/concepts/physics-gravity_force/"
+    },
+    {
+      "id": "physics.inertia",
+      "title": "Инерция",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "low",
+      "href": "/concepts/physics-inertia/"
     },
     {
       "id": "physics.mass",
@@ -1050,6 +1114,14 @@
       "area": "dynamics",
       "importance": "critical",
       "href": "/concepts/physics-net_force/"
+    },
+    {
+      "id": "physics.normal_force",
+      "title": "Сила реакции опоры",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "critical",
+      "href": "/concepts/physics-normal_force/"
     },
     {
       "id": "physics.path",
