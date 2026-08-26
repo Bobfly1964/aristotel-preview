@@ -2250,6 +2250,7 @@ g \approx 9{,}81 \text{ м/с}^2.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">50</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>100000000000000000000000000000000000000000000000000</code></pre>
 <p>Python спокойно выведет число с 51 цифрой.</p>
 <p>Для школьных задач можно считать: <code>int</code> хранит целые числа точно.</p>
 <p>Используйте <code>int</code>, когда считаете штуки:</p>
@@ -2283,29 +2284,25 @@ g \approx 9{,}81 \text{ м/с}^2.
 <!-- fragment:014 -->
 
 <h3 id="сюрприз-python">Сюрприз Python<a class="headerlink" href="#сюрприз-python" title="Permanent link">&para;</a></h3>
-<p>Запустите код:</p>
+<p>Запустите код — скорее всего, вы увидите:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mf">0.2</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
 </code></pre></div>
-<p>Скорее всего, вы увидите:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>0.30000000000000004
-</code></pre></div>
+<pre class="aristotel-output"><code>0.30000000000000004</code></pre>
 <p>Это не ошибка Python. Это результат хранения дробных чисел в формате <code>float</code>.</p>
 <p>Ещё один эксперимент:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">==</span> <span class="mf">0.3</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">==</span> <span class="mf">0.3</span><span class="p">)</span>
 </code></pre></div>
-<p>Результат:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>False
-</code></pre></div>
+<pre class="aristotel-output"><code>False</code></pre>
 <p>Математически <span class="arithmatex">\(0{,}1 + 0{,}2 = 0{,}3\)</span>.</p>
 <p>Но в памяти компьютера хранятся приближения, и сумма приближений может чуть-чуть отличаться от ожидаемого результата.</p>
 <!-- fragment:015 -->
 
 <h3 id="как-сравнивать-float">Как сравнивать <code>float</code><a class="headerlink" href="#как-сравнивать-float" title="Permanent link">&para;</a></h3>
 <p>Не стоит писать так:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">if</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">==</span> <span class="mf">0.3</span><span class="p">:</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Равно"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">if</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">==</span> <span class="mf">0.3</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Равно"</span><span class="p">)</span>
 </code></pre></div>
 <p>Для дробных вычислений используют сравнение с допуском.</p>
 <p>Идея простая:</p>
@@ -2314,13 +2311,14 @@ g \approx 9{,}81 \text{ м/с}^2.
 \]</div>
 <p>Если разность очень мала, считаем числа равными в пределах точности задачи.</p>
 <p>В Python можно использовать <code>math.isclose()</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">y</span> <span class="o">=</span> <span class="mf">0.3</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>  <span class="c1"># True</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">y</span> <span class="o">=</span> <span class="mf">0.3</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>  <span class="c1"># True</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>True</code></pre>
 <p><strong>Ключевая идея</strong></p>
 <p>В компьютере дробное число — это не идеальное математическое число, а приближённое значение в памяти.</p>
 <p>Поэтому для <code>float</code> опасно бездумно использовать <code>==</code>.</p>
@@ -2430,17 +2428,15 @@ L = 0{,}1560 \pm 0{,}0005 \text{ м}.
 0{,}0005 \text{ м} = 5 \cdot 10^{-4} \text{ м}.
 \]</div>
 <h3 id="шаг-4-запишите-в-python">Шаг 4. Запишите в Python<a class="headerlink" href="#шаг-4-запишите-в-python" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">length_cm</span> <span class="o">=</span> <span class="mf">15.60</span>      <span class="c1"># длина, см</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">delta_cm</span> <span class="o">=</span> <span class="mf">0.05</span>        <span class="c1"># погрешность, см</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">length_m</span> <span class="o">=</span> <span class="n">length_cm</span> <span class="o">/</span> <span class="mi">100</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">delta_m</span> <span class="o">=</span> <span class="n">delta_cm</span> <span class="o">/</span> <span class="mi">100</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"L = </span><span class="si">{</span><span class="n">length_m</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> ± </span><span class="si">{</span><span class="n">delta_m</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> м"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">length_cm</span> <span class="o">=</span> <span class="mf">15.60</span>      <span class="c1"># длина, см</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">delta_cm</span> <span class="o">=</span> <span class="mf">0.05</span>        <span class="c1"># погрешность, см</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">length_m</span> <span class="o">=</span> <span class="n">length_cm</span> <span class="o">/</span> <span class="mi">100</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">delta_m</span> <span class="o">=</span> <span class="n">delta_cm</span> <span class="o">/</span> <span class="mi">100</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"L = </span><span class="si">{</span><span class="n">length_m</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> ± </span><span class="si">{</span><span class="n">delta_m</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> м"</span><span class="p">)</span>
 </code></pre></div>
-<p>Результат:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>L = 0.1560 ± 0.0005 м
-</code></pre></div>
+<pre class="aristotel-output"><code>L = 0.1560 ± 0.0005 м</code></pre>
 <p>Теперь одно и то же измерение прошло три формы:</p>
 <ul>
 <li>физическую: измерение с погрешностью;</li>
@@ -2521,13 +2517,13 @@ L_2 = 18{,}45 \pm 0{,}05 \text{ см}.
 <p>Напишите программу, которая получает значение измерения и погрешность в сантиметрах, переводит оба числа в метры и выводит результат в виде:</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>L = ... ± ... м
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>L = ... ± ... м
 </code></pre></div>
 <ol>
 <li>Проверьте в Python:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">)</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">==</span> <span class="mf">0.3</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">==</span> <span class="mf">0.3</span><span class="p">)</span>
 </code></pre></div>
 <p>Затем используйте <code>math.isclose()</code> и объясните результат.</p>
 <!-- fragment:022 -->
@@ -2590,24 +2586,24 @@ L = 16{,}80 \pm 0{,}05 \text{ см}.
 \]</div>
 <h3 id="задача-4-информатика-типы-данных">Задача 4. Информатика: типы данных<a class="headerlink" href="#задача-4-информатика-типы-данных" title="Permanent link">&para;</a></h3>
 <p>Что выведет программа?</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">y</span> <span class="o">=</span> <span class="mf">0.3</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">y</span> <span class="o">=</span> <span class="mf">0.3</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </code></pre></div>
 <p><strong>Решение.</strong></p>
 <p>Сравнение <code>x == y</code> проверяет точное совпадение чисел <code>float</code> в памяти. Из-за приближённого хранения дробей результат может быть:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>False
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>False
 </code></pre></div>
 <p>Функция <code>math.isclose(x, y)</code> проверяет близость чисел с допустимой погрешностью, поэтому результат:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>True
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>True
 </code></pre></div>
 <p>Ответ:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>False
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>True
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>False
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>True
 </code></pre></div>
 <hr />
 <!-- fragment:024 -->
@@ -2647,7 +2643,7 @@ L = 15{,}60 \pm 0{,}05 \text{ см}.
 <ol>
 <li>Python может вывести не <code>0.3</code>, а:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>0.30000000000000004
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>0.30000000000000004
 </code></pre></div>
 <p>Потому что <code>float</code> хранит десятичные дроби приближённо в двоичной памяти.</p>
 <hr />

@@ -2474,6 +2474,12 @@ p=2.
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># Кванторы: all() — для всех, any() — существует</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nb">print</span><span class="p">(</span><span class="nb">all</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">)))</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>{3, 5, 7}
+{1, 2, 3, 5, 7, 9, 11}
+True
+True
+True
+True</code></pre>
 <p>Функция <code>all()</code> ведёт себя как квантор <span class="arithmatex">\(\forall\)</span>: она проверяет, что условие выполнено для всех элементов. Функция <code>any()</code> ведёт себя как квантор <span class="arithmatex">\(\exists\)</span>: ей достаточно одного подходящего элемента.</p>
 <!-- fragment:037 -->
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -2494,6 +2500,9 @@ p=2.
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">comp</span><span class="p">(</span><span class="n">A</span> <span class="o">|</span> <span class="n">B</span><span class="p">)</span> <span class="o">==</span> <span class="n">comp</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">comp</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">comp</span><span class="p">(</span><span class="n">A</span> <span class="o">&amp;</span> <span class="n">B</span><span class="p">)</span> <span class="o">==</span> <span class="n">comp</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">|</span> <span class="n">comp</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>False
+True
+True</code></pre>
 <p>Этот код не заменяет доказательство законов де Моргана, но показывает важную связь: математическая логика превращается в исполняемые проверки.</p>
 <!-- fragment:038 -->
 <h3 id="логика-в-кремнии">Логика в кремнии<a class="headerlink" href="#логика-в-кремнии" title="Permanent link">&para;</a></h3>
