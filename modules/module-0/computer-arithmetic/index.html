@@ -3091,6 +3091,11 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>            <span class="c1"># -128 (переполнение!)</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># 0 (оборот)</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>11111111
+10000000
+01111111
+-128
+0</code></pre>
 <!-- fragment:010 -->
 <h3 id="задачи-к-1">Задачи к §1<a class="headerlink" href="#задачи-к-1" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3236,6 +3241,9 @@
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># Что реально хранится под видом '0.1'</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mf">0.1</span><span class="p">))</span>      <span class="c1"># 3602879701896397/36028797018963968</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>1/2
+Ошибка float: 0.00e+00
+3602879701896397/36028797018963968</code></pre>
 <!-- fragment:019 -->
 <h3 id="33-где-рациональная-арифметика-применяется">3.3 Где рациональная арифметика применяется<a class="headerlink" href="#33-где-рациональная-арифметика-применяется" title="Permanent link">&para;</a></h3>
 <p>Компьютерная алгебра (Mathematica, SymPy, Maple): символьные вычисления требуют точности. Финансы: Python Decimal, Java BigDecimal. Компиляторы: вычисление констант при компиляции. Верификаторы теорем (Coq, Lean, Isabelle). Компьютерная геометрия: предикаты «слева/справа от прямой» должны быть точными.</p>
@@ -3370,6 +3378,10 @@
 <a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="n">eps</span> <span class="o">*=</span> <span class="mi">2</span>
 <a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'eps = </span><span class="si">{</span><span class="n">eps</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>        <span class="c1"># ~2.22e-16</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>sign=0 exp=1019(=-4) mantissa=1001100110011001100110011001100110011001100110011010
+sign=0 exp=1021(=-2) mantissa=0011001100110011001100110011001100110011001100110011
+sign=0 exp=1021(=-2) mantissa=0011001100110011001100110011001100110011001100110100
+eps = 2.22e-16</code></pre>
 <!-- fragment:028 -->
 <h3 id="задачи-к-4">Задачи к §4<a class="headerlink" href="#задачи-к-4" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3432,6 +3444,8 @@
 <a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)])</span>
 <a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'cond(H10) = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">cond</span><span class="p">(</span><span class="n">H</span><span class="p">)</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>  <span class="c1"># ~10^13</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>Прямое: 0.000000e+00, Тейлор: 1.666667e-25
+cond(H10) = 1.60e+13</code></pre>
 <!-- fragment:031 -->
 <h3 id="задачи-к-5">Задачи к §5<a class="headerlink" href="#задачи-к-5" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3550,6 +3564,9 @@
 <a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">to_int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">-</span> <span class="n">to_int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 <a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">ulp_distance</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">))</span>  <span class="c1"># несколько ULP</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>True
+True
+1</code></pre>
 <!-- fragment:043 -->
 <h3 id="-75-инженерный-чеклист">§ 7.5 Инженерный чеклист<a class="headerlink" href="#-75-инженерный-чеклист" title="Permanent link">&para;</a></h3>
 <table>

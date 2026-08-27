@@ -1087,80 +1087,73 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">F_tyazh</span> <span class="o">=</span> <span class="mf">1.96</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">F_upr</span> <span class="o">==</span> <span class="n">F_tyazh</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="go">True</span>
-</code></pre></div>
+<pre class="aristotel-output"><code>True</code></pre>
 <p>Но в опыте силу тяжести вы не набирали, а считали. Подставьте настоящее вычисление — и заодно напечатайте, что получилось:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">F_upr</span> <span class="o">=</span> <span class="mf">1.96</span>           <span class="c1"># показание динамометра, Н</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">F_tyazh</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="mf">9.8</span>    <span class="c1"># сила тяжести: масса × g, Н</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">F_tyazh</span> <span class="o">==</span> <span class="n">F_upr</span><span class="p">)</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">F_tyazh</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">F_upr</span> <span class="o">=</span> <span class="mf">1.96</span>           <span class="c1"># показание динамометра, Н</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">F_tyazh</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="mf">9.8</span>    <span class="c1"># сила тяжести: масса × g, Н</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">F_tyazh</span> <span class="o">==</span> <span class="n">F_upr</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">F_tyazh</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">False</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="go">1.9600000000000002</span>
-</code></pre></div>
+<pre class="aristotel-output"><code>False
+1.9600000000000002</code></pre>
 <p>Вот и ответ. Откуда этот хвост, вы уже знаете — из первого параграфа: дробные числа хранятся в компьютере приближённо, и произведение <span class="arithmatex">\(0{,}2 \cdot 9{,}8\)</span> в памяти — не ровно 1,96, а ближайшее к нему число, которое туда помещается. Сравнивать такие числа знаком <code>==</code> бессмысленно: вы сравниваете хвосты приближений, которых нет ни на одном приборе.</p>
 <p>Правильный вопрос звучит иначе. Не «равны ли эти числа в точности», а «различаются ли они меньше, чем на величину, которой мы готовы пренебречь». Эту величину вы уже встречали в первом параграфе под именем «допуск»: там она обозначалась <span class="arithmatex">\(\varepsilon\)</span>, и вы отдавали её на откуп функции <code>math.isclose()</code>. Выбирает допуск человек, исходя из задачи. Цифровой динамометр с ценой деления 0,01 Н не различает силы, отличающиеся меньше чем на одно деление, — значит, и программе незачем.</p>
 <!-- fragment:012 -->
 
 <p>Чтобы программа могла ответить «да» или «нет», ей нужно уметь делать выбор. До сих пор ваши программы выполняли все свои строки — иногда по многу раз, как в цикле, но ни одну не пропуская. Теперь появляется первая команда, которая умеет пропускать. Мельком вы видели её в первом параграфе, теперь разберём по-настоящему.</p>
 <p><strong>Условный оператор</strong> <code>if</code> выполняет блок команд, только если условие истинно:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">F1</span> <span class="o">=</span> <span class="mf">4.5</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">F2</span> <span class="o">=</span> <span class="mf">4.4</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">if</span> <span class="n">F1</span> <span class="o">&gt;</span> <span class="n">F2</span><span class="p">:</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Первая сила больше"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">F1</span> <span class="o">=</span> <span class="mf">4.5</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">F2</span> <span class="o">=</span> <span class="mf">4.4</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">if</span> <span class="n">F1</span> <span class="o">&gt;</span> <span class="n">F2</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Первая сила больше"</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="go">Первая сила больше</span>
-</code></pre></div>
+<pre class="aristotel-output"><code>Первая сила больше</code></pre>
 <p>Читается буквально: «если <code>F1</code> больше <code>F2</code>, то напечатать». Двоеточие в конце строки и отступ в следующей — уже знакомые вам признаки блока: всё, что сдвинуто вправо, относится к <code>if</code> и выполняется только при истинном условии. Будь условие ложным, строка с <code>print</code> была бы просто пропущена — и программа молча закончилась бы.</p>
 <p>Иногда нужно сделать что-то и в противоположном случае. Тогда добавляют <code>else</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">F1</span> <span class="o">=</span> <span class="mf">4.5</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">F2</span> <span class="o">=</span> <span class="mf">4.4</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">if</span> <span class="n">F1</span> <span class="o">&gt;</span> <span class="n">F2</span><span class="p">:</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Первая сила больше"</span><span class="p">)</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Первая сила не больше второй"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">F1</span> <span class="o">=</span> <span class="mf">4.5</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">F2</span> <span class="o">=</span> <span class="mf">4.4</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">if</span> <span class="n">F1</span> <span class="o">&gt;</span> <span class="n">F2</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Первая сила больше"</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Первая сила не больше второй"</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="go">Первая сила больше</span>
-</code></pre></div>
+<pre class="aristotel-output"><code>Первая сила больше</code></pre>
 <p>Заметьте: во второй ветке написано «не больше», а не «меньше». Силы могут оказаться равными — тогда первая тоже «не больше второй», и именно эту ветку выполнит программа. Слово в <code>print</code> должно говорить ровно то, что проверяет условие.</p>
 <!-- fragment:013 -->
 
 <p>Условие для <code>if</code> строится <strong>операторами сравнения</strong>. Их шесть: <code>&lt;</code> меньше, <code>&gt;</code> больше, <code>&lt;=</code> меньше или равно, <code>&gt;=</code> больше или равно, <code>==</code> равно, <code>!=</code> не равно. Каждый из них — вопрос, на который компьютер отвечает <code>True</code> или <code>False</code>, и <code>if</code> смотрит именно на этот ответ. Вопрос можно задать и без <code>if</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">F1</span> <span class="o">=</span> <span class="mf">4.5</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">F2</span> <span class="o">=</span> <span class="mf">4.4</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">F1</span> <span class="o">&gt;</span> <span class="n">F2</span><span class="p">)</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">F1</span> <span class="o">==</span> <span class="n">F2</span><span class="p">)</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">F1</span> <span class="o">!=</span> <span class="n">F2</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">F1</span> <span class="o">=</span> <span class="mf">4.5</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">F2</span> <span class="o">=</span> <span class="mf">4.4</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">F1</span> <span class="o">&gt;</span> <span class="n">F2</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">F1</span> <span class="o">==</span> <span class="n">F2</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">F1</span> <span class="o">!=</span> <span class="n">F2</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="go">True</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="go">False</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="go">True</span>
-</code></pre></div>
+<pre class="aristotel-output"><code>True
+False
+True</code></pre>
 <p>Не путайте <code>=</code> и <code>==</code>. Один знак равенства — присваивание, команда «положи в переменную это значение». Два — сравнение, вопрос «а равны ли они?». Ошибка настолько частая, что стоит проверять её каждый раз, когда программа ведёт себя странно внутри <code>if</code>.</p>
 <!-- fragment:014 -->
 
 <p>Соберём всё вместе. Нам нужен модуль разности — насколько силы отличаются, безразлично, какая больше. Модуль числа в Python даёт встроенная функция <code>abs()</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mf">4.5</span> <span class="o">-</span> <span class="mf">4.4</span><span class="p">))</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mf">4.4</span> <span class="o">-</span> <span class="mf">4.5</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mf">4.5</span> <span class="o">-</span> <span class="mf">4.4</span><span class="p">))</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mf">4.4</span> <span class="o">-</span> <span class="mf">4.5</span><span class="p">))</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="go">0.09999999999999964</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="go">0.09999999999999964</span>
-</code></pre></div>
+<pre class="aristotel-output"><code>0.09999999999999964
+0.09999999999999964</code></pre>
 <p>Обратите внимание на вывод: вместо ожидаемого <code>0.1</code> — длинный хвост. Это та самая приближённость, о которой шла речь. И это же показывает, почему сравнение с допуском не прихоть, а необходимость.</p>
 <p>Теперь программа целиком:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">F_upr</span> <span class="o">=</span> <span class="mf">1.96</span>           <span class="c1"># показание динамометра, Н</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">F_tyazh</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="mf">9.8</span>    <span class="c1"># сила тяжести: масса × g, Н</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">tol</span> <span class="o">=</span> <span class="mf">0.01</span>             <span class="c1"># допуск: одно деление динамометра, Н</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">F_tyazh</span> <span class="o">-</span> <span class="n">F_upr</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">tol</span><span class="p">:</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Силы уравновешены"</span><span class="p">)</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Равновесия нет"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">F_upr</span> <span class="o">=</span> <span class="mf">1.96</span>           <span class="c1"># показание динамометра, Н</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">F_tyazh</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="mf">9.8</span>    <span class="c1"># сила тяжести: масса × g, Н</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">tol</span> <span class="o">=</span> <span class="mf">0.01</span>             <span class="c1"># допуск: одно деление динамометра, Н</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">F_tyazh</span> <span class="o">-</span> <span class="n">F_upr</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">tol</span><span class="p">:</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Силы уравновешены"</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Равновесия нет"</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="go">Силы уравновешены</span>
-</code></pre></div>
+<pre class="aristotel-output"><code>Силы уравновешены</code></pre>
 <p>Программа выведет <code>Силы уравновешены</code> — и это правильный ответ. Две силы, отличающиеся на величину, которую не покажет ни один прибор, уравновешивают друг друга в любом осмысленном смысле слова.</p>
 <p>Величина <code>tol</code> — ваш выбор, а не свойство компьютера. Мы взяли одно деление прибора: меньшую разницу динамометр всё равно не показывает, а требовать от программы большего, чем умеет прибор, бессмысленно. Для расчёта моста допуск был бы другим. Допуск отвечает на вопрос «какой разницей мы согласны пренебречь», и ответ зависит от задачи, а не от языка программирования.</p>
 <p>Попробуйте сами. Поставьте <code>tol = 0</code> — программа ответит «Равновесия нет», хотя силы те же самые: вы потребовали от неё невозможного. Верните допуск и замените показание на <code>F_upr = 1.98</code> — теперь программа снова ответит «Равновесия нет», и правильно: две сотых ньютона прибор уже различает, и такое показание означало бы, что на груз действует что-то ещё.</p>
@@ -1168,14 +1161,13 @@
 
 <p>С первого параграфа — «Цифра в мире величин» — вы пользуетесь функцией <code>math.isclose()</code>: она проверяет, близки ли два дробных числа. Вы брали её как готовый инструмент, не спрашивая, как она устроена.</p>
 <p>Теперь можете спросить. Внутри неё — почти то же, что вы только что написали своими руками: она берёт модуль разности и сравнивает его с допуском.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">F_upr</span> <span class="o">=</span> <span class="mf">1.96</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">F_tyazh</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="mf">9.8</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">F_tyazh</span><span class="p">,</span> <span class="n">F_upr</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.01</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">F_upr</span> <span class="o">=</span> <span class="mf">1.96</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">F_tyazh</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="mf">9.8</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">F_tyazh</span><span class="p">,</span> <span class="n">F_upr</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.01</span><span class="p">))</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="go">True</span>
-</code></pre></div>
+<pre class="aristotel-output"><code>True</code></pre>
 <p>Никакой магии там нет и не было. Есть вычитание, модуль и сравнение — три действия, каждое из которых вы понимаете.</p>
 <p>Одно отличие всё же есть, и оно полезное. Кроме абсолютного допуска <code>abs_tol</code>, функция умеет относительный: разрешить расхождение не на фиксированную величину, а на долю от самих чисел. Для сил в несколько ньютонов разницы почти нет, но если сравнивать расстояния до звёзд, фиксированный допуск в один метр окажется бессмысленно строгим. Подробно об этом рассказано в Модуле 0, в главе «Арифметика компьютера»; сейчас достаточно знать, что такая возможность есть.</p>
 <p>Так устроены почти все готовые функции: внутри у них то, что вы способны написать сами. Пользоваться ими стоит именно потому, что они написаны аккуратно и проверены, а не потому, что их содержимое недоступно пониманию.</p>
@@ -1204,12 +1196,12 @@
 <p>Что напечатает программа? Ответьте, не запуская её, потом проверьте.</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mf">0.3</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"равны"</span><span class="p">)</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"не равны"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mf">0.3</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"равны"</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"не равны"</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Второй уровень — применить.</strong></p>
 <ol>

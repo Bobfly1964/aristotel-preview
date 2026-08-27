@@ -1514,12 +1514,11 @@
 <p>Самый короткий путь к работающему Python — четыре действия в браузере. Никакая программа на компьютер не ставится.</p>
 <p><strong>Шаг первый.</strong> Откройте <a href="https://colab.research.google.com">https://colab.research.google.com</a>. Если потребуется — войдите в аккаунт Google (тот же, что для Gmail или YouTube).</p>
 <p><strong>Шаг второй.</strong> В меню «Файл» выберите «Создать блокнот». Названия пунктов на разных языках интерфейса звучат немного по-разному, но смысл один: новый пустой блокнот. Перед вами появится серая полоса — это ячейка, в неё пишется код.</p>
-<p><strong>Шаг третий.</strong> Кликните в ячейку и наберите одну строку:</p>
+<p><strong>Шаг третий.</strong> Кликните в ячейку и наберите одну строку.</p>
+<p><strong>Шаг четвёртый.</strong> Нажмите <strong>Shift + Enter</strong>. Под ячейкой появится результат:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, ARISTOTEL"</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Шаг четвёртый.</strong> Нажмите <strong>Shift + Enter</strong>. Под ячейкой появится:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Hello, ARISTOTEL
-</code></pre></div>
+<pre class="aristotel-output"><code>Hello, ARISTOTEL</code></pre>
 <p>Готово — Python только что выполнил вашу первую программу. В первый раз сервер подключается секунд десять, дальше — мгновенно.</p>
 <!-- fig-anchor: figure.cs.python.colab_first_cell -->
 
@@ -1530,12 +1529,12 @@
 
 <h2 id="-4-python-как-калькулятор">§ 4. Python как калькулятор<a class="headerlink" href="#-4-python-как-калькулятор" title="Permanent link">&para;</a></h2>
 <p>Привычная арифметика в Python работает почти как в школьной тетради. Создайте новую ячейку и попробуйте:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="mi">7</span> <span class="o">-</span> <span class="mi">4</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="mi">4</span> <span class="o">*</span> <span class="mi">6</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="mi">20</span> <span class="o">/</span> <span class="mi">4</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span>      <span class="c1"># возведение в степень: 2**3 = 8</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="mi">17</span> <span class="o">%</span> <span class="mi">5</span>      <span class="c1"># остаток от деления; пригодится в задачах на делимость</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="mi">7</span> <span class="o">-</span> <span class="mi">4</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="mi">4</span> <span class="o">*</span> <span class="mi">6</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="mi">20</span> <span class="o">/</span> <span class="mi">4</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span>      <span class="c1"># возведение в степень: 2**3 = 8</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="mi">17</span> <span class="o">%</span> <span class="mi">5</span>      <span class="c1"># остаток от деления; пригодится в задачах на делимость</span>
 </code></pre></div>
 <p>Запустите ячейку — и получите результаты. Шесть ответов на шесть выражений, никаких столбиков.</p>
 <hr />
@@ -1543,32 +1542,34 @@
 
 <h3 id="имена-для-чисел">Имена для чисел<a class="headerlink" href="#имена-для-чисел" title="Permanent link">&para;</a></h3>
 <p>В физике вы пишете: пусть скорость <span class="arithmatex">\(v\)</span> равна 20 м/с, время <span class="arithmatex">\(t\)</span> равно 5 с, найдите путь <span class="arithmatex">\(s = v \cdot t\)</span>. В Python это выглядит почти так же:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">v</span> <span class="o">=</span> <span class="mi">20</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">t</span> <span class="o">=</span> <span class="mi">5</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">s</span> <span class="o">=</span> <span class="n">v</span> <span class="o">*</span> <span class="n">t</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>    <span class="c1"># 100</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">v</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">t</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">s</span> <span class="o">=</span> <span class="n">v</span> <span class="o">*</span> <span class="n">t</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>    <span class="c1"># 100</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>100</code></pre>
 <p>Запись <code>v = 20</code> здесь — не равенство в математическом смысле, а <strong>поручение</strong>: «запомни число 20 под именем <code>v</code>». Такое имя называется <strong>переменной</strong>. Дальше везде, где встретится <code>v</code>, Python подставит 20.</p>
 <!-- fig-anchor: figure.cs.python.variable_as_box -->
 
 <p><img alt="Ящик с табличкой «v» на верхней грани; внутри ящика число 20" src="/assets/images/cs.python_intro/generated/variable_as_box.png" /></p>
 <p><em>Переменная — ящик с именем: имя написано на ящике, значение лежит внутри</em></p>
 <p>Похоже на алгебру — и в то же время не совсем. В алгебре буква обозначает величину, которая может быть какой угодно. В Python имя — это <strong>конкретный ящик</strong>, в котором сейчас лежит конкретное число. Положите туда другое — и старое исчезнет:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">v</span> <span class="o">=</span> <span class="mi">20</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">v</span> <span class="o">=</span> <span class="mi">30</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>    <span class="c1"># 30, а не "20 и 30"</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">v</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">v</span> <span class="o">=</span> <span class="mi">30</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>    <span class="c1"># 30, а не "20 и 30"</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>30</code></pre>
 <p>Подробнее об этом различии — в следующей подглаве.</p>
 <hr />
 <!-- fragment:006 -->
 
 <h3 id="серьёзная-математика-библиотека-math">Серьёзная математика: библиотека <code>math</code><a class="headerlink" href="#серьёзная-математика-библиотека-math" title="Permanent link">&para;</a></h3>
 <p>Квадратный корень, синус, число π — всё это уже написано до вас и собрано в стандартную библиотеку <code>math</code>. Подключается она одной строкой:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>     <span class="c1"># ≈ 1.4142135623730951</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>      <span class="c1"># 0.0</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">math</span><span class="o">.</span><span class="n">pi</span>          <span class="c1"># 3.141592653589793</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>     <span class="c1"># ≈ 1.4142135623730951</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>      <span class="c1"># 0.0</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">math</span><span class="o">.</span><span class="n">pi</span>          <span class="c1"># 3.141592653589793</span>
 </code></pre></div>
 <p>Запустите — и убедитесь, что всё считает. К функциям <code>sqrt</code>, <code>sin</code>, и числу <code>pi</code> мы будем возвращаться в курсе постоянно.</p>
 <hr />
@@ -1576,18 +1577,18 @@
 
 <h2 id="-5-первый-график--от-формулы-к-картинке">§ 5. Первый график — от формулы к картинке<a class="headerlink" href="#-5-первый-график--от-формулы-к-картинке" title="Permanent link">&para;</a></h2>
 <p>Это тот момент, ради которого стоило открывать Colab. В новую ячейку введите такие строки:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'y'</span><span class="p">)</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'y = x²'</span><span class="p">)</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'y'</span><span class="p">)</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'y = x²'</span><span class="p">)</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p>Нажмите <strong>Shift + Enter</strong> — и под ячейкой появится парабола. Настоящий математический график, с подписями осей. Десять строк кода — полминуты на набор.</p>
 <p>Что здесь произошло? Строка <code>x = np.linspace(-5, 5, 200)</code> создала двести чисел, равномерно разложенных от −5 до 5; это будут координаты по оси <span class="arithmatex">\(x\)</span>. Следующая строка — <code>y = x ** 2</code> — возвела в квадрат сразу все двести чисел; ни одного цикла, ни одной таблицы. Команда <code>plt.plot(x, y)</code> соединила точки линией. Остальные строки добавили сетку и подписи.</p>
@@ -1608,14 +1609,15 @@
 
 <h3 id="комментарии-в-коде">Комментарии в коде<a class="headerlink" href="#комментарии-в-коде" title="Permanent link">&para;</a></h3>
 <p>И ещё одно — про комментарии в коде. Строка, начинающаяся со знака <code>#</code>, Python не выполняет; она существует только для человека, который потом будет читать программу. Этим человеком, скорее всего, окажетесь вы сами через неделю — и будете благодарны прошлому себе за подсказку. Вот пример хорошего стиля:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Свободное падение: начальная скорость 0, ускорение 9.81 м/с²</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">v0</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">t</span> <span class="o">=</span> <span class="mi">3</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">s</span> <span class="o">=</span> <span class="n">v0</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>    <span class="c1"># путь за 3 секунды</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Свободное падение: начальная скорость 0, ускорение 9.81 м/с²</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">v0</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">t</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">s</span> <span class="o">=</span> <span class="n">v0</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>    <span class="c1"># путь за 3 секунды</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>44.145</code></pre>
 <p>Без комментариев тот же код через месяц выглядит как загадка. С комментариями — как нормальный текст, по которому видно, что и зачем делается.</p>
 <!-- fig-anchor: figure.cs.python.notebook_comments -->
 
@@ -1632,43 +1634,47 @@
 
 <h2 id="-4-часть-2-функция--формула-с-входом-и-выходом">§ 4 (часть 2). Функция — формула с входом и выходом<a class="headerlink" href="#-4-часть-2-функция--формула-с-входом-и-выходом" title="Permanent link">&para;</a></h2>
 <p>В первой части мы решали путь равномерного движения единственной строкой <code>s = v * t</code>. А если нужно посчитать путь не для одной пары (v, t), а для десятка? Перепечатывать формулу десять раз? Скучно и ошибкоопасно. Правильное решение — <strong>функция</strong>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">path</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="k">return</span> <span class="n">v</span> <span class="o">*</span> <span class="n">t</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>   <span class="c1"># 100</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>   <span class="c1"># 120</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span> <span class="c1"># 20.0</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">path</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">return</span> <span class="n">v</span> <span class="o">*</span> <span class="n">t</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>   <span class="c1"># 100</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>   <span class="c1"># 120</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span> <span class="c1"># 20.0</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>100
+120
+20.0</code></pre>
 <p>Запись <code>def path(v, t):</code> сообщает Python: «дальше идёт описание функции с именем <code>path</code>, у которой два входа — <code>v</code> и <code>t</code>». Строка <code>return v * t</code> — это собственно «что делать с входами»: умножить и вернуть результат. И всё — функция готова.</p>
 <p>Дальше её можно <strong>вызывать</strong> сколько угодно раз: <code>path(20, 5)</code>, <code>path(15, 8)</code>, <code>path(40, 0.5)</code>. Внутри каждого вызова Python подставляет ваши числа на место <code>v</code> и <code>t</code>, выполняет умножение и отдаёт результат наружу.</p>
 <p>Перепишем для свободного падения:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">path</span><span class="p">(</span><span class="n">v0</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="k">return</span> <span class="n">v0</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9.81</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>     <span class="c1"># 44.145 м за 3 с</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9.81</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>     <span class="c1"># 4.905 м за 1 с</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">9.81</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>     <span class="c1"># 23.62 м за 2 с</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">path</span><span class="p">(</span><span class="n">v0</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="k">return</span> <span class="n">v0</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9.81</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>     <span class="c1"># 44.145 м за 3 с</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9.81</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>     <span class="c1"># 4.905 м за 1 с</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">9.81</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>     <span class="c1"># 23.62 м за 2 с</span>
 </code></pre></div>
+<pre class="aristotel-output"><code>44.145
+4.905
+23.62</code></pre>
 <p>Функция — это формула, которую вы записали один раз, а вызываете сколько угодно раз и с любыми числами. Не нужно каждый раз заново копировать вычисление: одна формула — одна функция. И если в формуле обнаружится ошибка, исправлять её придётся ровно в одном месте, а не в десяти разных ячейках.</p>
 <hr />
 <!-- fragment:011 -->
 
 <h2 id="-5-часть-2-цикл-for--многократное-вычисление">§ 5 (часть 2). Цикл <code>for</code> — многократное вычисление<a class="headerlink" href="#-5-часть-2-цикл-for--многократное-вычисление" title="Permanent link">&para;</a></h2>
-<p>Представьте такую задачу: посчитать путь свободного падения для каждой секунды от нуля до пяти. Можно написать шесть отдельных вычислений и шесть отдельных <code>print</code>. А можно — одно, но в цикле, и он сам всё повторит:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">s</span> <span class="o">=</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<p>Представьте такую задачу: посчитать путь свободного падения для каждой секунды от нуля до пяти. Можно написать шесть отдельных вычислений и шесть отдельных <code>print</code>. А можно — одно, но в цикле, и он сам всё повторит. Запустите — и получите шесть строк:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="n">s</span> <span class="o">=</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </code></pre></div>
-<p>Запустите — и получите шесть строк:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>0.0
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>4.905
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>19.62
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>44.145
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>78.48
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>122.625
-</code></pre></div>
+<pre class="aristotel-output"><code>0.0
+4.905
+19.62
+44.145
+78.48
+122.625</code></pre>
 <p>Что здесь сделал Python? Строка <code>for t in range(6):</code> означает: «повтори тело цикла, подставляя вместо <code>t</code> последовательно числа 0, 1, 2, 3, 4, 5». Команда <code>range(n)</code> создаёт последовательность от нуля до <span class="arithmatex">\(n-1\)</span>; если нужно от 1 до 5 — пишут <code>range(1, 6)</code>. А <strong>тело цикла</strong> — это всё, что идёт с отступом после двоеточия; именно эти строки повторяются на каждом шаге.</p>
 <p>Шесть строк вывода получились из трёх строк кода. А если вместо шести секунд понадобится сто — поменяете одну цифру в скобках, и Python посчитает сто значений. Вот ради этого и существуют циклы.</p>
 <!-- fig-anchor: figure.cs.python.for_loop_trace -->
@@ -1679,24 +1685,22 @@
 <!-- fragment:012 -->
 
 <h2 id="-6-часть-2-список-значений--данные-для-графика">§ 6 (часть 2). Список значений — данные для графика<a class="headerlink" href="#-6-часть-2-список-значений--данные-для-графика" title="Permanent link">&para;</a></h2>
-<p>В предыдущей подглаве мы выводили результаты на экран — и они там оставались как набор строчек. Для графика этого мало: чтобы построить кривую, нужно сохранить все значения и по оси <span class="arithmatex">\(x\)</span>, и по оси <span class="arithmatex">\(y\)</span>, и сохранить их так, чтобы потом можно было передать в <code>plt.plot()</code>. Для этого в Python есть <strong>списки</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">ts</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">ss</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="n">s</span> <span class="o">=</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="n">ts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="n">ss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
+<p>В предыдущей подглаве мы выводили результаты на экран — и они там оставались как набор строчек. Для графика этого мало: чтобы построить кривую, нужно сохранить все значения и по оси <span class="arithmatex">\(x\)</span>, и по оси <span class="arithmatex">\(y\)</span>, и сохранить их так, чтобы потом можно было передать в <code>plt.plot()</code>. Для этого в Python есть <strong>списки</strong>. Запустите — увидите две строки:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">ts</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">ss</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="n">s</span> <span class="o">=</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="n">ts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    <span class="n">ss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
 </code></pre></div>
-<p>Запустите — увидите две строки:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>[0, 1, 2, 3, 4, 5]
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>[0.0, 4.905, 19.62, 44.145, 78.48, 122.625]
-</code></pre></div>
+<pre class="aristotel-output"><code>[0, 1, 2, 3, 4, 5]
+[0.0, 4.905, 19.62, 44.145, 78.48, 122.625]</code></pre>
 <p>Список — это упорядоченный набор значений в квадратных скобках. Запись <code>ts = []</code> создаёт пустой список; команда <code>ts.append(t)</code> добавляет очередное значение в его конец. Когда цикл закончится, у вас на руках будут две колонки чисел одинаковой длины — заготовка для таблицы и графика.</p>
 <p>Здесь, к слову, видно, что стояло за «магией» из предыдущей подглавы. Когда мы строили параболу через <code>numpy</code>, библиотека сама готовила нам похожие два списка значений и сама передавала их в <code>plt.plot()</code> — мы только не видели промежуточного шага.</p>
 <p>Никакой магии в этом нет: набор значений <span class="arithmatex">\(x\)</span>, набор значений <span class="arithmatex">\(y\)</span>, и линия, соединяющая точки. Остальное — техническая работа графической библиотеки.</p>
@@ -1705,24 +1709,24 @@
 
 <h2 id="-7-часть-2-первый-осознанный-график">§ 7 (часть 2). Первый осознанный график<a class="headerlink" href="#-7-часть-2-первый-осознанный-график" title="Permanent link">&para;</a></h2>
 <p>Соберём всё, что у нас уже есть, в одну вещь: переменные, цикл, список — и получим график. Не из чужого шаблона, а из собственных данных:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="n">ts</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="n">ss</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>       <span class="c1"># от 0 до 10 секунд</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>    <span class="n">s</span> <span class="o">=</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    <span class="n">ts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    <span class="n">ss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">)</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Время, с'</span><span class="p">)</span>
-<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Путь, м'</span><span class="p">)</span>
-<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Свободное падение'</span><span class="p">)</span>
-<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">ts</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">ss</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>       <span class="c1"># от 0 до 10 секунд</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="n">s</span> <span class="o">=</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    <span class="n">ts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    <span class="n">ss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">)</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Время, с'</span><span class="p">)</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Путь, м'</span><span class="p">)</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Свободное падение'</span><span class="p">)</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p>На экране появится парабола, поднимающаяся всё круче. Точки отмечены кружками, между ними — линия; оси подписаны, у графика есть заголовок. Это уже не «картинка по образцу», а портрет конкретной физической зависимости, рассчитанной вами.</p>
 <p>Заметьте, что <strong>говорит</strong> этот график — а не только как он выглядит. По горизонтали идёт время, по вертикали — пройденный путь. Чем дольше падает тело, тем больший путь оно проходит за каждую новую секунду. Кривая загибается вверх — и именно это означает: движение ускоряется. Если бы скорость была постоянной, мы получили бы прямую. Прямая — равномерное движение; парабола — равноускоренное. Форма кривой рассказывает о физике.</p>
@@ -1732,18 +1736,18 @@
 
 <h3 id="тот-же-график-через-numpy">Тот же график через <code>numpy</code><a class="headerlink" href="#тот-же-график-через-numpy" title="Permanent link">&para;</a></h3>
 <p>Сравните с подходом из предыдущей подглавы:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="n">s</span> <span class="o">=</span> <span class="mf">9.81</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Время, с'</span><span class="p">)</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Путь, м'</span><span class="p">)</span>
-<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Свободное падение (numpy)'</span><span class="p">)</span>
-<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">s</span> <span class="o">=</span> <span class="mf">9.81</span> <span class="o">*</span> <span class="n">t</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Время, с'</span><span class="p">)</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Путь, м'</span><span class="p">)</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Свободное падение (numpy)'</span><span class="p">)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p>Три строки вместо цикла и двух списков. Результат — тот же график. В курсе мы будем пользоваться обоими способами. Когда важна прозрачность — берём цикл и список: видно каждый шаг, легко отлаживать. Когда важна скорость и формула уже отлажена — берём <code>numpy</code>: короче и быстрее.</p>
 <p><strong>Цикл — для понимания, <code>numpy</code> — для дела.</strong></p>
@@ -1753,41 +1757,39 @@
 <h2 id="-8-мини-лаборатория-равномерное-движение">§ 8. Мини-лаборатория: равномерное движение<a class="headerlink" href="#-8-мини-лаборатория-равномерное-движение" title="Permanent link">&para;</a></h2>
 <p>А теперь сложим все инструменты в одну работу. Задача такая: автомобиль идёт с постоянной скоростью 60 километров в час. Нужно построить таблицу пути за первые пять часов и нарисовать график. Сделаем по шагам.</p>
 <p><strong>Шаг первый.</strong> Задаём начальные данные:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">v</span> <span class="o">=</span> <span class="mi">60</span>      <span class="c1"># км/ч</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">T</span> <span class="o">=</span> <span class="mi">5</span>       <span class="c1"># часов наблюдения</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">v</span> <span class="o">=</span> <span class="mi">60</span>      <span class="c1"># км/ч</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">T</span> <span class="o">=</span> <span class="mi">5</span>       <span class="c1"># часов наблюдения</span>
 </code></pre></div>
 <p><strong>Шаг второй.</strong> Определяем функцию для пути:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">path</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="k">return</span> <span class="n">v</span> <span class="o">*</span> <span class="n">t</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">path</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="k">return</span> <span class="n">v</span> <span class="o">*</span> <span class="n">t</span>
 </code></pre></div>
-<p><strong>Шаг третий.</strong> Считаем в цикле и сохраняем результаты в списки:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">ts</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">ss</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>    <span class="c1"># от 0 до 5 часов включительно</span>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    <span class="n">ts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    <span class="n">ss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">ss</span><span class="p">):</span>
-<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"t = </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2"> ч,  s = </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2"> км"</span><span class="p">)</span>
+<p><strong>Шаг третий.</strong> Считаем в цикле и сохраняем результаты в списки. На экране появятся шесть строк:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">ts</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">ss</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>    <span class="c1"># от 0 до 5 часов включительно</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="n">ts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    <span class="n">ss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">ss</span><span class="p">):</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"t = </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2"> ч,  s = </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2"> км"</span><span class="p">)</span>
 </code></pre></div>
-<p>На экране появятся шесть строк:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>t = 0 ч,  s = 0 км
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>t = 1 ч,  s = 60 км
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>t = 2 ч,  s = 120 км
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>t = 3 ч,  s = 180 км
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>t = 4 ч,  s = 240 км
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>t = 5 ч,  s = 300 км
-</code></pre></div>
+<pre class="aristotel-output"><code>t = 0 ч,  s = 0 км
+t = 1 ч,  s = 60 км
+t = 2 ч,  s = 120 км
+t = 3 ч,  s = 180 км
+t = 4 ч,  s = 240 км
+t = 5 ч,  s = 300 км</code></pre>
 <p><strong>Шаг четвёртый.</strong> Строим график:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">)</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Время, ч'</span><span class="p">)</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Путь, км'</span><span class="p">)</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Равномерное движение: v = 60 км/ч'</span><span class="p">)</span>
-<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">)</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Время, ч'</span><span class="p">)</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Путь, км'</span><span class="p">)</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Равномерное движение: v = 60 км/ч'</span><span class="p">)</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p>Получится прямая, идущая из начала координат под одним и тем же наклоном. Прямая — потому что движение равномерное; наклон — потому что скорость одна и та же на всём промежутке. Поменяете скорость — наклон изменится.</p>
 <!-- fig-anchor: figure.physics.kinematics.uniform_motion_graph -->
