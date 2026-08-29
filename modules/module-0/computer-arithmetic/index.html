@@ -3392,7 +3392,7 @@ eps = 2.22e-16</code></pre>
 <!-- fragment:029 -->
 <h2 id="-5-как-накапливается-ошибка-три-механизма">§ 5. Как накапливается ошибка: три механизма<a class="headerlink" href="#-5-как-накапливается-ошибка-три-механизма" title="Permanent link">&para;</a></h2>
 <h3 id="провокация_4">Провокация<a class="headerlink" href="#провокация_4" title="Permanent link">&para;</a></h3>
-<p><code>sum(0.1 for _ in range(10))</code> → <code>0.9999999999999999</code> (не 1.0!)</p>
+<p>Просуммируйте <code>0.1</code> десять раз явным циклом <code>+=</code> — получится <code>0.9999999999999999</code>, не <code>1.0</code> (встроенная <code>sum()</code> с Python 3.12 эту потерю прячет — почему, см. § 6).</p>
 <p>Сложили ровно 10 раз по 0.1. Откуда ошибка в последнем знаке? Это не единственный сценарий. Бывает, что ошибка не в 16-м знаке, а в первом.</p>
 <h3 id="механизм-1-ошибка-представления-roundoff-error">Механизм 1: ошибка представления (roundoff error)<a class="headerlink" href="#механизм-1-ошибка-представления-roundoff-error" title="Permanent link">&para;</a></h3>
 <p>Правило: <span class="arithmatex">\(\mathrm{fl}(x) = x \cdot (1 + \delta)\)</span>, где <span class="arithmatex">\(|\delta| \le \text{eps}/2\)</span>.</p>
@@ -3592,7 +3592,7 @@ True
 </tr>
 <tr>
 <td>Суммируете много чисел?</td>
-<td>Кэхэн или <code>math.fsum()</code>. Не <code>sum()</code>.</td>
+<td>Кэхэн или <code>math.fsum()</code>; встроенная <code>sum()</code> начиная с Python 3.12 — тоже компенсированная.</td>
 </tr>
 <tr>
 <td>Сравниваете <strong>вычисленные</strong> вещественные результаты?</td>
