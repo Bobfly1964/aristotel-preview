@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "stembook_version": "0.1.0",
-  "concept_count": 150,
+  "concept_count": 156,
   "concepts": [
     {
       "id": "cs.arbitrary_precision_integer",
@@ -360,7 +360,7 @@
       "title": "Функция zip()",
       "subject": "cs",
       "area": "python",
-      "importance": "low",
+      "importance": "high",
       "href": "/concepts/cs-python-zip/"
     },
     {
@@ -780,6 +780,14 @@
       "href": "/concepts/math-peano_axioms/"
     },
     {
+      "id": "math.polygon_rule",
+      "title": "Правило многоугольника",
+      "subject": "math",
+      "area": "geometry",
+      "importance": "critical",
+      "href": "/concepts/math-polygon_rule/"
+    },
+    {
       "id": "math.prime_number",
       "title": "Простое число",
       "subject": "math",
@@ -948,12 +956,36 @@
       "href": "/concepts/math-vector_addition/"
     },
     {
+      "id": "math.vector_coordinates",
+      "title": "Координаты вектора",
+      "subject": "math",
+      "area": "geometry",
+      "importance": "critical",
+      "href": "/concepts/math-vector_coordinates/"
+    },
+    {
       "id": "math.vector_length",
       "title": "Длина вектора",
       "subject": "math",
       "area": "geometry",
       "importance": "normal",
       "href": "/concepts/math-vector_length/"
+    },
+    {
+      "id": "math.vector_projection",
+      "title": "Проекция вектора на ось",
+      "subject": "math",
+      "area": "geometry",
+      "importance": "critical",
+      "href": "/concepts/math-vector_projection/"
+    },
+    {
+      "id": "math.vector_subtraction",
+      "title": "Вычитание векторов",
+      "subject": "math",
+      "area": "geometry",
+      "importance": "critical",
+      "href": "/concepts/math-vector_subtraction/"
     },
     {
       "id": "math.weighted_mean",
@@ -1042,6 +1074,14 @@
       "area": "dynamics",
       "importance": "critical",
       "href": "/concepts/physics-force/"
+    },
+    {
+      "id": "physics.force_decomposition",
+      "title": "Разложение силы на составляющие",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "critical",
+      "href": "/concepts/physics-force_decomposition/"
     },
     {
       "id": "physics.gravity_coefficient",
@@ -1170,6 +1210,14 @@
       "area": "dynamics",
       "importance": "high",
       "href": "/concepts/physics-spring_stiffness/"
+    },
+    {
+      "id": "physics.tension_force",
+      "title": "Сила натяжения",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "critical",
+      "href": "/concepts/physics-tension_force/"
     },
     {
       "id": "physics.trajectory",

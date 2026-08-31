@@ -185,6 +185,10 @@
          <lastmod>2026-08-31</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-python-zip/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/cs-rational_arithmetic/</loc>
          <lastmod>2026-08-31</lastmod>
     </url>
@@ -393,6 +397,10 @@
          <lastmod>2026-08-31</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/math-polygon_rule/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/math-prime_number/</loc>
          <lastmod>2026-08-31</lastmod>
     </url>
@@ -477,7 +485,19 @@
          <lastmod>2026-08-31</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/math-vector_coordinates/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/math-vector_length/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/math-vector_projection/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/math-vector_subtraction/</loc>
          <lastmod>2026-08-31</lastmod>
     </url>
     <url>
@@ -522,6 +542,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/physics-force/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/physics-force_decomposition/</loc>
          <lastmod>2026-08-31</lastmod>
     </url>
     <url>
@@ -582,6 +606,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/physics-spring_stiffness/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/physics-tension_force/</loc>
          <lastmod>2026-08-31</lastmod>
     </url>
     <url>
