@@ -1,0 +1,2756 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AI-powered STEM Education для 7-11 класса">
+      
+      
+      
+        <link rel="canonical" href="https://preview.aristotel.academy/modules/module-1/numbers-three-worlds/">
+      
+      
+        <link rel="prev" href="../../module-0/sets-logic-language/">
+      
+      
+        <link rel="next" href="../coordinates-vectors/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Цифра в мире величин: число в физике, математике и компьютере - ARISTOTEL Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/aristotel.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <!-- Branch preview: never to be indexed. Paired with robots.txt in the
+       preview repository; robots.txt stops crawlers that ask, this stops
+       the ones that read the page anyway.
+
+       No canonical override here: material already emits one from site_url,
+       a second tag would contradict it, and pointing it at the live site
+       would aim at a 404 for any chapter that is not published yet. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-цифра-в-мире-величин" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div style="text-align:center;font-weight:600">
+    Черновик, не публикация — сборка из ветки, содержимое может быть
+    неполным или неверным.
+    Учебник: <a href="https://aristotel.academy" style="color:inherit;text-decoration:underline">aristotel.academy</a>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../../.." title="ARISTOTEL Knowledge Base" class="md-header__button md-logo" aria-label="ARISTOTEL Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ARISTOTEL Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Цифра в мире величин: число в физике, математике и компьютере
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Переключить на светлую"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключить на светлую" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Переключить на тёмную"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключить на тёмную" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-0/python-intro/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Модуль 0
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Модуль 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-2/force-vector/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Модуль 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../concepts/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Концепты
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ARISTOTEL Knowledge Base" class="md-nav__button md-logo" aria-label="ARISTOTEL Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    ARISTOTEL Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Модуль 0
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Модуль 0
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-0/python-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §1 — Python — ваш рабочий инструмент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-0/natural-numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §2 — Натуральные числа: от счёта до глубин теории чисел
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-0/computer-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §3 — Арифметика компьютера: точность, ошибки и цена вычислений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-0/sets-logic-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §4 — Множества, логика и язык математики: от интуиции к доказательству
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Модуль 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Модуль 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §1 — Цифра в мире величин: число в физике, математике и компьютере
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §1 — Цифра в мире величин: число в физике, математике и компьютере
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#вопросы-к-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вопросы к §1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-физика-число-рождается-из-измерения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.1. Физика: число рождается из измерения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.1. Физика: число рождается из измерения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#единицы-си" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Единицы СИ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#цена-деления-прибора" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Цена деления прибора
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#погрешность-измерения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Погрешность измерения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#почему-важно-писать-1560-а-не-156" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему важно писать \(15{,}60\), а не \(15{,}6\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-математика-как-записывать-очень-большие-и-очень-малые-числа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.2. Математика: как записывать очень большие и очень малые числа
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.2. Математика: как записывать очень большие и очень малые числа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#приставки-си" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приставки СИ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#округление-и-значащие-цифры" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Округление и значащие цифры
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-информатика-число-в-памяти-компьютера" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.3. Информатика: число в памяти компьютера
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.3. Информатика: число в памяти компьютера">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#тип-int-целые-числа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Тип int: целые числа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#тип-float-дробные-числа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Тип float: дробные числа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#сюрприз-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сюрприз Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#как-сравнивать-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как сравнивать float
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-три-мира-одной-цифры" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.4. Три мира одной цифры
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.4. Три мира одной цифры">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#в-мире-физики" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        В мире физики
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#в-мире-математики" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        В мире математики
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#в-мире-компьютера" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        В мире компьютера
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#сравнение-трёх-миров" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сравнение трёх миров
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-мини-лаборатория-от-линейки-до-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.5. Мини-лаборатория: от линейки до Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.5. Мини-лаборатория: от линейки до Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#шаг-1-измерьте" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 1. Измерьте
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#шаг-2-переведите-в-си" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 2. Переведите в СИ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#шаг-3-запишите-в-стандартном-виде" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 3. Запишите в стандартном виде
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#шаг-4-запишите-в-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 4. Запишите в Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-задачи" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.6. Задачи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.6. Задачи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#базовые" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Базовые
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#аналитические" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аналитические
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#программирование" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Программирование
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#исследовательские" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Исследовательские
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-задачи-приближённые-к-огэ-и-егэ" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.7. Задачи, приближённые к ОГЭ и ЕГЭ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.7. Задачи, приближённые к ОГЭ и ЕГЭ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#задача-1-физика-огэ-единицы-измерения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 1. Физика, ОГЭ: единицы измерения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задача-2-физика-огэ-погрешность-измерения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 2. Физика, ОГЭ: погрешность измерения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задача-3-математика-стандартный-вид-числа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 3. Математика: стандартный вид числа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задача-4-информатика-типы-данных" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 4. Информатика: типы данных
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-итог" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.8. Итог
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.8. Итог">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#главный-вывод" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Главный вывод
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#что-нужно-запомнить" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что нужно запомнить
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ответы-на-три-вопроса-из-начала" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ответы на три вопроса из начала
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#мост-к-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мост к §2
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinates-vectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §2 — Координаты и векторы: где находится тело и куда оно сместилось
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uniform-motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §3 — Ритм движения: скорость и равномерное движение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §4 — Графический язык: как читать историю движения по линии
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mean-value/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §5 — Среднее значение: как заменить набор чисел одним числом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Модуль 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Модуль 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-2/force-vector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М2 §1 — Сила как вектор: почему санки едут не туда, куда тянут
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-2/equilibrium-two-forces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М2 §2 — Равновесие: почему книга на столе никуда не падает
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Концепты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#вопросы-к-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вопросы к §1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-физика-число-рождается-из-измерения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.1. Физика: число рождается из измерения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.1. Физика: число рождается из измерения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#единицы-си" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Единицы СИ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#цена-деления-прибора" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Цена деления прибора
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#погрешность-измерения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Погрешность измерения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#почему-важно-писать-1560-а-не-156" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему важно писать \(15{,}60\), а не \(15{,}6\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-математика-как-записывать-очень-большие-и-очень-малые-числа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.2. Математика: как записывать очень большие и очень малые числа
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.2. Математика: как записывать очень большие и очень малые числа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#приставки-си" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приставки СИ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#округление-и-значащие-цифры" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Округление и значащие цифры
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-информатика-число-в-памяти-компьютера" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.3. Информатика: число в памяти компьютера
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.3. Информатика: число в памяти компьютера">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#тип-int-целые-числа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Тип int: целые числа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#тип-float-дробные-числа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Тип float: дробные числа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#сюрприз-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сюрприз Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#как-сравнивать-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как сравнивать float
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-три-мира-одной-цифры" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.4. Три мира одной цифры
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.4. Три мира одной цифры">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#в-мире-физики" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        В мире физики
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#в-мире-математики" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        В мире математики
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#в-мире-компьютера" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        В мире компьютера
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#сравнение-трёх-миров" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сравнение трёх миров
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-мини-лаборатория-от-линейки-до-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.5. Мини-лаборатория: от линейки до Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.5. Мини-лаборатория: от линейки до Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#шаг-1-измерьте" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 1. Измерьте
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#шаг-2-переведите-в-си" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 2. Переведите в СИ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#шаг-3-запишите-в-стандартном-виде" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 3. Запишите в стандартном виде
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#шаг-4-запишите-в-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 4. Запишите в Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-задачи" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.6. Задачи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.6. Задачи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#базовые" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Базовые
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#аналитические" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аналитические
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#программирование" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Программирование
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#исследовательские" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Исследовательские
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-задачи-приближённые-к-огэ-и-егэ" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.7. Задачи, приближённые к ОГЭ и ЕГЭ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.7. Задачи, приближённые к ОГЭ и ЕГЭ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#задача-1-физика-огэ-единицы-измерения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 1. Физика, ОГЭ: единицы измерения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задача-2-физика-огэ-погрешность-измерения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 2. Физика, ОГЭ: погрешность измерения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задача-3-математика-стандартный-вид-числа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 3. Математика: стандартный вид числа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задача-4-информатика-типы-данных" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 4. Информатика: типы данных
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-итог" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        §1.8. Итог
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§1.8. Итог">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#главный-вывод" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Главный вывод
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#что-нужно-запомнить" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что нужно запомнить
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ответы-на-три-вопроса-из-начала" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ответы на три вопроса из начала
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#мост-к-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мост к §2
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1-цифра-в-мире-величин">§1. Цифра в мире величин<a class="headerlink" href="#1-цифра-в-мире-величин" title="Permanent link">&para;</a></h1>
+<!-- fragment:001 -->
+
+<h2 id="вопросы-к-1">Вопросы к §1<a class="headerlink" href="#вопросы-к-1" title="Permanent link">&para;</a></h2>
+<p>Запишите ответы — не подглядывая в текст.</p>
+<ul>
+<li>Вы измерили длину карандаша школьной линейкой и получили <span class="arithmatex">\(15{,}6\)</span> см. Это точное значение? Или честнее написать как-то иначе?</li>
+<li>Расстояние от Земли до Солнца — примерно <span class="arithmatex">\(150\,000\,000\,000\)</span> м. Диаметр атома — примерно <span class="arithmatex">\(0{,}000\,000\,000\,106\)</span> м. Можно ли записать такие числа коротко и без длинной цепочки нулей?</li>
+<li>Не запуская Python, скажите: что выведет программа?</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mf">0.2</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+<p>Будет ли на экране просто <code>0.3</code>?</p>
+<p>К концу параграфа все три вопроса станут понятными. А пока заметим главное: число в STEM живёт не в одном мире, а сразу в трёх — в физике, в математике и в компьютере.</p>
+<hr />
+<!-- fragment:002 -->
+
+<h2 id="11-физика-число-рождается-из-измерения">§1.1. Физика: число рождается из измерения<a class="headerlink" href="#11-физика-число-рождается-из-измерения" title="Permanent link">&para;</a></h2>
+<p>Физика начинается не с формулы, а с измерения.</p>
+<p>Мы хотим узнать длину карандаша, массу груза, температуру воды, время падения шарика. Для этого берём прибор: линейку, весы, термометр, секундомер. Прибор даёт число. Но это число никогда не бывает абсолютно точным.</p>
+<p>Линейка имеет деления. Весы имеют шаг измерения. Секундомер запускает человек, а человек нажимает кнопку не идеально. Даже хороший прибор показывает результат с некоторой погрешностью.</p>
+<!-- fragment:003 -->
+
+<p><strong>Определение. Измерение</strong></p>
+<p>Измерение — это сравнение физической величины с выбранной единицей измерения при помощи прибора.</p>
+<p>Например, когда мы говорим:</p>
+<div class="arithmatex">\[
+L = 15{,}6 \text{ см},
+\]</div>
+<p>мы на самом деле имеем в виду не идеально точную длину, а результат, полученный конкретной линейкой.</p>
+<!-- fragment:004 -->
+
+<h3 id="единицы-си">Единицы СИ<a class="headerlink" href="#единицы-си" title="Permanent link">&para;</a></h3>
+<p>Чтобы разные люди понимали друг друга, в физике используют Международную систему единиц — СИ.</p>
+<p>Основные единицы, которые нам понадобятся в начале курса:</p>
+<table>
+<thead>
+<tr>
+<th>Величина</th>
+<th>Единица СИ</th>
+<th>Обозначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>длина</td>
+<td>метр</td>
+<td>м</td>
+</tr>
+<tr>
+<td>масса</td>
+<td>килограмм</td>
+<td>кг</td>
+</tr>
+<tr>
+<td>время</td>
+<td>секунда</td>
+<td>с</td>
+</tr>
+<tr>
+<td>температура</td>
+<td>кельвин</td>
+<td>К</td>
+</tr>
+</tbody>
+</table>
+<p>В школьных задачах часто встречаются сантиметры, миллиметры, минуты, часы, граммы. Но перед вычислениями в физике полезно переводить всё в СИ.</p>
+<p>Примеры:</p>
+<div class="arithmatex">\[
+15{,}6 \text{ см} = 0{,}156 \text{ м},
+\]</div>
+<div class="arithmatex">\[
+3 \text{ мин} = 180 \text{ с},
+\]</div>
+<div class="arithmatex">\[
+250 \text{ г} = 0{,}250 \text{ кг}.
+\]</div>
+<p><strong>Ключевая идея</strong></p>
+<p>Число без единицы измерения в физике почти бессмысленно.</p>
+<p>Фраза «длина равна 15» неполна. Нужно сказать: 15 чего? Миллиметров, сантиметров, метров?</p>
+<!-- fragment:005 -->
+
+<h3 id="цена-деления-прибора">Цена деления прибора<a class="headerlink" href="#цена-деления-прибора" title="Permanent link">&para;</a></h3>
+<p>Посмотрите на школьную линейку. Между отметками 3 см и 4 см обычно десять маленьких промежутков. Значит, цена одного деления равна:</p>
+<div class="arithmatex">\[
+c = \frac{4 - 3}{10} = 0{,}1 \text{ см} = 1 \text{ мм}.
+\]</div>
+<p><strong>Определение. Цена деления</strong></p>
+<p>Цена деления — это разность значений, соответствующих двум соседним штрихам шкалы прибора.</p>
+<p>Если между двумя подписанными делениями <span class="arithmatex">\(a_1\)</span> и <span class="arithmatex">\(a_2\)</span> находится <span class="arithmatex">\(n\)</span> промежутков, то</p>
+<div class="arithmatex">\[
+c = \frac{a_2 - a_1}{n}.
+\]</div>
+<p>Чем меньше цена деления, тем точнее прибор может показать результат.</p>
+<!-- fragment:006 -->
+
+<h3 id="погрешность-измерения">Погрешность измерения<a class="headerlink" href="#погрешность-измерения" title="Permanent link">&para;</a></h3>
+<p>Если цена деления линейки равна 1 мм, мы обычно не можем уверенно отличить длину <span class="arithmatex">\(15{,}60\)</span> см от <span class="arithmatex">\(15{,}61\)</span> см. Но можем сказать, что истинное значение лежит примерно в маленьком интервале около измеренного числа.</p>
+<p>Для школьных измерений удобно использовать оценку:</p>
+<div class="arithmatex">\[
+\Delta = \frac{c}{2},
+\]</div>
+<p>где <span class="arithmatex">\(c\)</span> — цена деления прибора.</p>
+<p>Если <span class="arithmatex">\(c = 1\)</span> мм, то</p>
+<div class="arithmatex">\[
+\Delta = 0{,}5 \text{ мм} = 0{,}05 \text{ см}.
+\]</div>
+<p>Тогда результат измерения записывают так:</p>
+<div class="arithmatex">\[
+L = L_0 \pm \Delta.
+\]</div>
+<p>Например:</p>
+<div class="arithmatex">\[
+L = 15{,}60 \pm 0{,}05 \text{ см}.
+\]</div>
+<p>Это означает: истинная длина, скорее всего, находится в интервале от <span class="arithmatex">\(15{,}55\)</span> см до <span class="arithmatex">\(15{,}65\)</span> см.</p>
+<!-- fragment:007 -->
+
+<h3 id="почему-важно-писать-1560-а-не-156">Почему важно писать <span class="arithmatex">\(15{,}60\)</span>, а не <span class="arithmatex">\(15{,}6\)</span><a class="headerlink" href="#почему-важно-писать-1560-а-не-156" title="Permanent link">&para;</a></h3>
+<p>На первый взгляд ноль в конце лишний. Ведь в математике</p>
+<div class="arithmatex">\[
+15{,}60 = 15{,}6.
+\]</div>
+<p>Но в физике эти записи несут разную информацию.</p>
+<p>Запись</p>
+<div class="arithmatex">\[
+15{,}6 \text{ см}
+\]</div>
+<p>говорит только о числе.</p>
+<p>А запись</p>
+<div class="arithmatex">\[
+15{,}60 \pm 0{,}05 \text{ см}
+\]</div>
+<p>говорит ещё и о точности измерения.</p>
+<p><strong>Типичная ошибка</strong></p>
+<p>Писать результат измерения без погрешности.</p>
+<p>Неверно:</p>
+<div class="arithmatex">\[
+L = 15{,}6 \text{ см}.
+\]</div>
+<p>Лучше:</p>
+<div class="arithmatex">\[
+L = 15{,}60 \pm 0{,}05 \text{ см}.
+\]</div>
+<p>В первом варианте потеряна информация о приборе. Во втором — видно, насколько числу можно доверять.</p>
+<hr />
+<!-- fragment:008 -->
+
+<h2 id="12-математика-как-записывать-очень-большие-и-очень-малые-числа">§1.2. Математика: как записывать очень большие и очень малые числа<a class="headerlink" href="#12-математика-как-записывать-очень-большие-и-очень-малые-числа" title="Permanent link">&para;</a></h2>
+<p>Физика часто работает с числами, которые трудно записывать обычным способом.</p>
+<p>Расстояние от Земли до Солнца:</p>
+<div class="arithmatex">\[
+150\,000\,000\,000 \text{ м}.
+\]</div>
+<p>Диаметр атома водорода по порядку величины:</p>
+<div class="arithmatex">\[
+0{,}000\,000\,000\,106 \text{ м}.
+\]</div>
+<p>В таких записях легко ошибиться: пропустить ноль, добавить лишний ноль, перепутать масштаб.</p>
+<p>Математика предлагает удобный язык — стандартный вид числа.</p>
+<!-- fragment:009 -->
+
+<p><strong>Определение. Стандартный вид числа</strong></p>
+<p>Стандартный вид числа — это запись</p>
+<div class="arithmatex">\[
+a \cdot 10^n,
+\]</div>
+<p>где</p>
+<div class="arithmatex">\[
+1 \leq a &lt; 10,
+\]</div>
+<p>а <span class="arithmatex">\(n\)</span> — целое число.</p>
+<p>Число <span class="arithmatex">\(a\)</span> называют значащей частью, или мантиссой. Число <span class="arithmatex">\(n\)</span> называют порядком.</p>
+<p>Примеры:</p>
+<div class="arithmatex">\[
+150\,000\,000\,000 = 1{,}5 \cdot 10^{11},
+\]</div>
+<div class="arithmatex">\[
+0{,}000\,000\,000\,106 = 1{,}06 \cdot 10^{-10},
+\]</div>
+<div class="arithmatex">\[
+300\,000\,000 = 3 \cdot 10^8.
+\]</div>
+<p>В стандартном виде сразу виден масштаб числа.</p>
+<p>Порядок <span class="arithmatex">\(10^{11}\)</span> говорит: число огромное.</p>
+<p>Порядок <span class="arithmatex">\(10^{-10}\)</span> говорит: число очень маленькое.</p>
+<!-- fragment:010 -->
+
+<h3 id="приставки-си">Приставки СИ<a class="headerlink" href="#приставки-си" title="Permanent link">&para;</a></h3>
+<p>Для повседневной работы удобно использовать приставки СИ.</p>
+<table>
+<thead>
+<tr>
+<th>Приставка</th>
+<th style="text-align: right;">Множитель</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>кило</td>
+<td style="text-align: right;"><span class="arithmatex">\(10^3\)</span></td>
+<td><span class="arithmatex">\(1 \text{ км} = 10^3 \text{ м}\)</span></td>
+</tr>
+<tr>
+<td>мега</td>
+<td style="text-align: right;"><span class="arithmatex">\(10^6\)</span></td>
+<td><span class="arithmatex">\(1 \text{ МВт} = 10^6 \text{ Вт}\)</span></td>
+</tr>
+<tr>
+<td>гига</td>
+<td style="text-align: right;"><span class="arithmatex">\(10^9\)</span></td>
+<td><span class="arithmatex">\(1 \text{ ГБ} = 10^9 \text{ байт}\)</span></td>
+</tr>
+<tr>
+<td>милли</td>
+<td style="text-align: right;"><span class="arithmatex">\(10^{-3}\)</span></td>
+<td><span class="arithmatex">\(1 \text{ мм} = 10^{-3} \text{ м}\)</span></td>
+</tr>
+<tr>
+<td>микро</td>
+<td style="text-align: right;"><span class="arithmatex">\(10^{-6}\)</span></td>
+<td><span class="arithmatex">\(1 \text{ мкм} = 10^{-6} \text{ м}\)</span></td>
+</tr>
+<tr>
+<td>нано</td>
+<td style="text-align: right;"><span class="arithmatex">\(10^{-9}\)</span></td>
+<td><span class="arithmatex">\(1 \text{ нм} = 10^{-9} \text{ м}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Например:</p>
+<div class="arithmatex">\[
+1 \text{ км} = 1000 \text{ м} = 10^3 \text{ м},
+\]</div>
+<div class="arithmatex">\[
+1 \text{ мм} = 0{,}001 \text{ м} = 10^{-3} \text{ м}.
+\]</div>
+<p><strong>Ключевая идея</strong></p>
+<p>Стандартный вид числа отделяет смысл от количества нулей.</p>
+<p>Вместо длинной записи мы видим две вещи:</p>
+<ul>
+<li>значащую часть;</li>
+<li>порядок величины.</li>
+</ul>
+<!-- fragment:011 -->
+
+<h3 id="округление-и-значащие-цифры">Округление и значащие цифры<a class="headerlink" href="#округление-и-значащие-цифры" title="Permanent link">&para;</a></h3>
+<p>Когда мы пишем</p>
+<div class="arithmatex">\[
+\pi \approx 3{,}14,
+\]</div>
+<p>мы не утверждаем, что число <span class="arithmatex">\(\pi\)</span> закончилось на второй цифре после запятой. Мы сознательно округляем его до нужной точности.</p>
+<p>Округление — это математическое решение: оставить столько цифр, сколько нужно для задачи.</p>
+<p>Например, для грубой оценки можно взять:</p>
+<div class="arithmatex">\[
+g \approx 10 \text{ м/с}^2.
+\]</div>
+<p>Для более точного расчёта:</p>
+<div class="arithmatex">\[
+g \approx 9{,}8 \text{ м/с}^2.
+\]</div>
+<p>А в инженерной таблице может быть:</p>
+<div class="arithmatex">\[
+g \approx 9{,}81 \text{ м/с}^2.
+\]</div>
+<p>Все три записи могут быть допустимы — если понятно, какая точность нужна.</p>
+<hr />
+<!-- fragment:012 -->
+
+<h2 id="13-информатика-число-в-памяти-компьютера">§1.3. Информатика: число в памяти компьютера<a class="headerlink" href="#13-информатика-число-в-памяти-компьютера" title="Permanent link">&para;</a></h2>
+<p>Теперь передадим число компьютеру.</p>
+<p>Человек видит запись:</p>
+<div class="arithmatex">\[
+0{,}1.
+\]</div>
+<p>Математик понимает точное десятичное число.</p>
+<p>Компьютер должен записать это число в память. Но память конечна: у компьютера есть ограниченное число битов.</p>
+<p>Здесь появляется важное различие между двумя типами данных: <code>int</code> и <code>float</code>.</p>
+<h3 id="тип-int-целые-числа">Тип <code>int</code>: целые числа<a class="headerlink" href="#тип-int-целые-числа" title="Permanent link">&para;</a></h3>
+<p><code>int</code> хранит целые числа:</p>
+<div class="arithmatex">\[
+\ldots, -2, -1, 0, 1, 2, \ldots
+\]</div>
+<p>В Python целые числа могут быть очень большими. Например:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">50</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>100000000000000000000000000000000000000000000000000</code></pre>
+<p>Python спокойно выведет число с 51 цифрой.</p>
+<p>Для школьных задач можно считать: <code>int</code> хранит целые числа точно.</p>
+<p>Используйте <code>int</code>, когда считаете штуки:</p>
+<ul>
+<li>количество опытов;</li>
+<li>номер шага;</li>
+<li>число учеников;</li>
+<li>количество измерений;</li>
+<li>индекс в списке.</li>
+</ul>
+<!-- fragment:013 -->
+
+<h3 id="тип-float-дробные-числа">Тип <code>float</code>: дробные числа<a class="headerlink" href="#тип-float-дробные-числа" title="Permanent link">&para;</a></h3>
+<p><code>float</code> хранит числа с дробной частью:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">y</span> <span class="o">=</span> <span class="mf">3.14</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.5</span>
+</code></pre></div>
+<p>Но <code>float</code> хранит не любое дробное число точно, а ближайшее приближение, которое помещается в память.</p>
+<p>Почему?</p>
+<p>Потому что компьютер хранит числа в двоичной системе. А десятичная дробь <span class="arithmatex">\(0{,}1\)</span> в двоичной системе оказывается бесконечной:</p>
+<div class="arithmatex">\[
+0{,}1_{10} = 0{,}0001100110011001100\ldots_2.
+\]</div>
+<p>Это похоже на дробь <span class="arithmatex">\(\frac{1}{3}\)</span> в десятичной системе:</p>
+<div class="arithmatex">\[
+\frac{1}{3} = 0{,}333333\ldots
+\]</div>
+<p>Записать её полностью невозможно. Нужно обрезать.</p>
+<p>Компьютер тоже обрезает бесконечную двоичную запись. Поэтому <span class="arithmatex">\(0{,}1\)</span> хранится не идеально точно, а почти точно.</p>
+<!-- fragment:014 -->
+
+<h3 id="сюрприз-python">Сюрприз Python<a class="headerlink" href="#сюрприз-python" title="Permanent link">&para;</a></h3>
+<p>Запустите код — скорее всего, вы увидите:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mf">0.2</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>0.30000000000000004</code></pre>
+<p>Это не ошибка Python. Это результат хранения дробных чисел в формате <code>float</code>.</p>
+<p>Ещё один эксперимент:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">==</span> <span class="mf">0.3</span><span class="p">)</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>False</code></pre>
+<p>Математически <span class="arithmatex">\(0{,}1 + 0{,}2 = 0{,}3\)</span>.</p>
+<p>Но в памяти компьютера хранятся приближения, и сумма приближений может чуть-чуть отличаться от ожидаемого результата.</p>
+<!-- fragment:015 -->
+
+<h3 id="как-сравнивать-float">Как сравнивать <code>float</code><a class="headerlink" href="#как-сравнивать-float" title="Permanent link">&para;</a></h3>
+<p>Не стоит писать так:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">if</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">==</span> <span class="mf">0.3</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Равно"</span><span class="p">)</span>
+</code></pre></div>
+<p>Для дробных вычислений используют сравнение с допуском.</p>
+<p>Идея простая:</p>
+<div class="arithmatex">\[
+|a - b| &lt; \varepsilon.
+\]</div>
+<p>Если разность очень мала, считаем числа равными в пределах точности задачи.</p>
+<p>В Python можно использовать <code>math.isclose()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">y</span> <span class="o">=</span> <span class="mf">0.3</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>  <span class="c1"># True</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>True</code></pre>
+<p><strong>Ключевая идея</strong></p>
+<p>В компьютере дробное число — это не идеальное математическое число, а приближённое значение в памяти.</p>
+<p>Поэтому для <code>float</code> опасно бездумно использовать <code>==</code>.</p>
+<hr />
+<!-- fragment:016 -->
+
+<h2 id="14-три-мира-одной-цифры">§1.4. Три мира одной цифры<a class="headerlink" href="#14-три-мира-одной-цифры" title="Permanent link">&para;</a></h2>
+<p>Вернёмся к главной идее курса: одно и то же понятие можно увидеть в трёх мирах.</p>
+<h3 id="в-мире-физики">В мире физики<a class="headerlink" href="#в-мире-физики" title="Permanent link">&para;</a></h3>
+<p>Число появляется из измерения.</p>
+<p>Например:</p>
+<div class="arithmatex">\[
+L = 15{,}60 \pm 0{,}05 \text{ см}.
+\]</div>
+<p>Здесь важны:</p>
+<ul>
+<li>прибор;</li>
+<li>единица измерения;</li>
+<li>цена деления;</li>
+<li>погрешность;</li>
+<li>честная запись результата.</li>
+</ul>
+<p>Физик спрашивает не только «какое число?», но и «насколько ему можно доверять?»</p>
+<h3 id="в-мире-математики">В мире математики<a class="headerlink" href="#в-мире-математики" title="Permanent link">&para;</a></h3>
+<p>Число — точный объект или результат сознательного округления.</p>
+<p>Математик может записать:</p>
+<div class="arithmatex">\[
+150\,000\,000\,000 = 1{,}5 \cdot 10^{11}.
+\]</div>
+<p>Он работает со стандартным видом, степенями десяти, округлением и значащими цифрами.</p>
+<p>Математик спрашивает: «Как записать число удобно, точно и без лишних нулей?»</p>
+<h3 id="в-мире-компьютера">В мире компьютера<a class="headerlink" href="#в-мире-компьютера" title="Permanent link">&para;</a></h3>
+<p>Число хранится в памяти.</p>
+<p>Целое число <code>int</code> обычно ведёт себя точно.</p>
+<p>Дробное число <code>float</code> хранится приближённо.</p>
+<p>Компьютер спрашивает не словами, но фактически: «Можно ли это число представить конечным набором битов?»</p>
+<!-- fragment:017 -->
+
+<h3 id="сравнение-трёх-миров">Сравнение трёх миров<a class="headerlink" href="#сравнение-трёх-миров" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Вопрос</th>
+<th>Физика</th>
+<th>Математика</th>
+<th>Информатика</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Откуда берётся число?</td>
+<td>Из измерения</td>
+<td>Из определения или вычисления</td>
+<td>Из записи в памяти</td>
+</tr>
+<tr>
+<td>Что ограничивает точность?</td>
+<td>Прибор</td>
+<td>Выбранное округление</td>
+<td>Конечное число битов</td>
+</tr>
+<tr>
+<td>Пример</td>
+<td><span class="arithmatex">\(15{,}60 \pm 0{,}05\)</span> см</td>
+<td><span class="arithmatex">\(1{,}5 \cdot 10^{11}\)</span></td>
+<td><code>0.1 + 0.2</code></td>
+</tr>
+<tr>
+<td>Главная опасность</td>
+<td>забыть погрешность</td>
+<td>ошибиться в порядке</td>
+<td>сравнить <code>float</code> через <code>==</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ключевая идея</strong></p>
+<p>Линейка, округление и память компьютера — разные инструменты, но у них есть общее свойство: конечная точность.</p>
+<p>Грамотный STEM-ученик не просто считает. Он понимает, откуда взялось число, как оно записано и что могло потеряться по дороге.</p>
+<hr />
+<!-- fragment:018 -->
+
+<h2 id="15-мини-лаборатория-от-линейки-до-python">§1.5. Мини-лаборатория: от линейки до Python<a class="headerlink" href="#15-мини-лаборатория-от-линейки-до-python" title="Permanent link">&para;</a></h2>
+<p>Проведём одно измерение через все три мира.</p>
+<h3 id="шаг-1-измерьте">Шаг 1. Измерьте<a class="headerlink" href="#шаг-1-измерьте" title="Permanent link">&para;</a></h3>
+<p>Возьмите линейку с ценой деления 1 мм и измерьте длину любого предмета: карандаша, телефона, тетради.</p>
+<p>Пусть получилось:</p>
+<div class="arithmatex">\[
+L = 15{,}60 \pm 0{,}05 \text{ см}.
+\]</div>
+<h3 id="шаг-2-переведите-в-си">Шаг 2. Переведите в СИ<a class="headerlink" href="#шаг-2-переведите-в-си" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+15{,}60 \text{ см} = 0{,}1560 \text{ м}.
+\]</div>
+<p>Погрешность:</p>
+<div class="arithmatex">\[
+0{,}05 \text{ см} = 0{,}0005 \text{ м}.
+\]</div>
+<p>Итак:</p>
+<div class="arithmatex">\[
+L = 0{,}1560 \pm 0{,}0005 \text{ м}.
+\]</div>
+<h3 id="шаг-3-запишите-в-стандартном-виде">Шаг 3. Запишите в стандартном виде<a class="headerlink" href="#шаг-3-запишите-в-стандартном-виде" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+0{,}1560 \text{ м} = 1{,}560 \cdot 10^{-1} \text{ м}.
+\]</div>
+<div class="arithmatex">\[
+0{,}0005 \text{ м} = 5 \cdot 10^{-4} \text{ м}.
+\]</div>
+<h3 id="шаг-4-запишите-в-python">Шаг 4. Запишите в Python<a class="headerlink" href="#шаг-4-запишите-в-python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">length_cm</span> <span class="o">=</span> <span class="mf">15.60</span>      <span class="c1"># длина, см</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">delta_cm</span> <span class="o">=</span> <span class="mf">0.05</span>        <span class="c1"># погрешность, см</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">length_m</span> <span class="o">=</span> <span class="n">length_cm</span> <span class="o">/</span> <span class="mi">100</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">delta_m</span> <span class="o">=</span> <span class="n">delta_cm</span> <span class="o">/</span> <span class="mi">100</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"L = </span><span class="si">{</span><span class="n">length_m</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> ± </span><span class="si">{</span><span class="n">delta_m</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> м"</span><span class="p">)</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>L = 0.1560 ± 0.0005 м</code></pre>
+<p>Теперь одно и то же измерение прошло три формы:</p>
+<ul>
+<li>физическую: измерение с погрешностью;</li>
+<li>математическую: перевод единиц и стандартный вид;</li>
+<li>компьютерную: переменные и вычисление в Python.</li>
+</ul>
+<hr />
+<h2 id="16-задачи">§1.6. Задачи<a class="headerlink" href="#16-задачи" title="Permanent link">&para;</a></h2>
+<!-- fragment:019 -->
+
+<h3 id="базовые">Базовые<a class="headerlink" href="#базовые" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Линейка имеет цену деления 1 мм. Ученик измерил длину ручки и получил <span class="arithmatex">\(14{,}2\)</span> см. Запишите результат с погрешностью в сантиметрах.</p>
+</li>
+<li>
+<p>Переведите в СИ:</p>
+</li>
+<li><span class="arithmatex">\(25\)</span> см;</li>
+<li><span class="arithmatex">\(3{,}5\)</span> км;</li>
+<li><span class="arithmatex">\(250\)</span> г;</li>
+<li>
+<p><span class="arithmatex">\(2\)</span> мин.</p>
+</li>
+<li>
+<p>Запишите в стандартном виде:</p>
+</li>
+<li><span class="arithmatex">\(5000\)</span>;</li>
+<li><span class="arithmatex">\(72\,000\,000\)</span>;</li>
+<li><span class="arithmatex">\(0{,}0045\)</span>;</li>
+<li>
+<p><span class="arithmatex">\(0{,}000\,000\,32\)</span>.</p>
+</li>
+<li>
+<p>Найдите цену деления прибора, если между отметками <span class="arithmatex">\(2\)</span> см и <span class="arithmatex">\(3\)</span> см находится <span class="arithmatex">\(5\)</span> равных промежутков.</p>
+</li>
+<li>
+<p>Почему запись <span class="arithmatex">\(L = 12{,}3\)</span> см хуже, чем <span class="arithmatex">\(L = 12{,}30 \pm 0{,}05\)</span> см?</p>
+</li>
+</ol>
+<!-- fragment:020 -->
+
+<h3 id="аналитические">Аналитические<a class="headerlink" href="#аналитические" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ученик записал расстояние до некоторого объекта так:</li>
+</ol>
+<div class="arithmatex">\[
+42{,}7 \cdot 10^5 \text{ м}.
+\]</div>
+<p>Является ли это стандартным видом числа? Если нет, исправьте запись.</p>
+<ol>
+<li>Два ученика измерили один и тот же предмет.</li>
+</ol>
+<p>Первый получил:</p>
+<div class="arithmatex">\[
+L_1 = 18{,}4 \pm 0{,}1 \text{ см}.
+\]</div>
+<p>Второй получил:</p>
+<div class="arithmatex">\[
+L_2 = 18{,}45 \pm 0{,}05 \text{ см}.
+\]</div>
+<p>Чьё измерение точнее? Почему?</p>
+<ol>
+<li>Объясните, почему математическое равенство</li>
+</ol>
+<div class="arithmatex">\[
+0{,}1 + 0{,}2 = 0{,}3
+\]</div>
+<p>не противоречит тому, что Python может вывести <code>0.30000000000000004</code>.</p>
+<!-- fragment:021 -->
+
+<h3 id="программирование">Программирование<a class="headerlink" href="#программирование" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Напишите программу, которая переводит длину из сантиметров в метры и выводит результат.</p>
+</li>
+<li>
+<p>Напишите программу, которая получает значение измерения и погрешность в сантиметрах, переводит оба числа в метры и выводит результат в виде:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>L = ... ± ... м
+</code></pre></div>
+<ol>
+<li>Проверьте в Python:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span> <span class="o">==</span> <span class="mf">0.3</span><span class="p">)</span>
+</code></pre></div>
+<p>Затем используйте <code>math.isclose()</code> и объясните результат.</p>
+<!-- fragment:022 -->
+
+<h3 id="исследовательские">Исследовательские<a class="headerlink" href="#исследовательские" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Найдите дома три прибора со шкалой: линейку, термометр, кухонные весы, мерный стакан или рулетку. Для каждого определите цену деления и оцените погрешность.</p>
+</li>
+<li>
+<p>Напишите программу, которая получает список измерений длины и считает среднее значение. Пока не учитывайте погрешность — к этому мы вернёмся в §5.</p>
+</li>
+</ol>
+<hr />
+<!-- fragment:023 -->
+
+<h2 id="17-задачи-приближённые-к-огэ-и-егэ">§1.7. Задачи, приближённые к ОГЭ и ЕГЭ<a class="headerlink" href="#17-задачи-приближённые-к-огэ-и-егэ" title="Permanent link">&para;</a></h2>
+<h3 id="задача-1-физика-огэ-единицы-измерения">Задача 1. Физика, ОГЭ: единицы измерения<a class="headerlink" href="#задача-1-физика-огэ-единицы-измерения" title="Permanent link">&para;</a></h3>
+<p>Выразите <span class="arithmatex">\(72\)</span> км/ч в м/с.</p>
+<p><strong>Решение.</strong></p>
+<div class="arithmatex">\[
+72 \text{ км/ч} = 72 \cdot \frac{1000 \text{ м}}{3600 \text{ с}}.
+\]</div>
+<div class="arithmatex">\[
+72 \cdot \frac{1000}{3600} = 72 \cdot \frac{5}{18} = 20.
+\]</div>
+<p>Ответ:</p>
+<div class="arithmatex">\[
+72 \text{ км/ч} = 20 \text{ м/с}.
+\]</div>
+<h3 id="задача-2-физика-огэ-погрешность-измерения">Задача 2. Физика, ОГЭ: погрешность измерения<a class="headerlink" href="#задача-2-физика-огэ-погрешность-измерения" title="Permanent link">&para;</a></h3>
+<p>Цена деления линейки равна <span class="arithmatex">\(1\)</span> мм. Длина карандаша по линейке равна <span class="arithmatex">\(16{,}8\)</span> см. Запишите результат измерения с погрешностью, если погрешность принимается равной половине цены деления.</p>
+<p><strong>Решение.</strong></p>
+<p>Цена деления:</p>
+<div class="arithmatex">\[
+c = 1 \text{ мм} = 0{,}1 \text{ см}.
+\]</div>
+<p>Погрешность:</p>
+<div class="arithmatex">\[
+\Delta = \frac{c}{2} = 0{,}05 \text{ см}.
+\]</div>
+<p>Результат:</p>
+<div class="arithmatex">\[
+L = 16{,}80 \pm 0{,}05 \text{ см}.
+\]</div>
+<p>Ответ:</p>
+<div class="arithmatex">\[
+L = 16{,}80 \pm 0{,}05 \text{ см}.
+\]</div>
+<h3 id="задача-3-математика-стандартный-вид-числа">Задача 3. Математика: стандартный вид числа<a class="headerlink" href="#задача-3-математика-стандартный-вид-числа" title="Permanent link">&para;</a></h3>
+<p>Запишите число <span class="arithmatex">\(0{,}000\,000\,48\)</span> в стандартном виде.</p>
+<p><strong>Решение.</strong></p>
+<p>Переносим запятую так, чтобы перед ней стояла одна ненулевая цифра:</p>
+<div class="arithmatex">\[
+0{,}000\,000\,48 = 4{,}8 \cdot 10^{-7}.
+\]</div>
+<p>Ответ:</p>
+<div class="arithmatex">\[
+4{,}8 \cdot 10^{-7}.
+\]</div>
+<h3 id="задача-4-информатика-типы-данных">Задача 4. Информатика: типы данных<a class="headerlink" href="#задача-4-информатика-типы-данных" title="Permanent link">&para;</a></h3>
+<p>Что выведет программа?</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">y</span> <span class="o">=</span> <span class="mf">0.3</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+</code></pre></div>
+<p><strong>Решение.</strong></p>
+<p>Сравнение <code>x == y</code> проверяет точное совпадение чисел <code>float</code> в памяти. Из-за приближённого хранения дробей результат может быть:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>False
+</code></pre></div>
+<p>Функция <code>math.isclose(x, y)</code> проверяет близость чисел с допустимой погрешностью, поэтому результат:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>True
+</code></pre></div>
+<p>Ответ:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>False
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>True
+</code></pre></div>
+<hr />
+<!-- fragment:024 -->
+
+<h2 id="18-итог">§1.8. Итог<a class="headerlink" href="#18-итог" title="Permanent link">&para;</a></h2>
+<h3 id="главный-вывод">Главный вывод<a class="headerlink" href="#главный-вывод" title="Permanent link">&para;</a></h3>
+<p>Число в STEM нужно понимать сразу в трёх мирах.</p>
+<p>В физике число рождается из измерения. У измерения есть прибор, единица, цена деления и погрешность.</p>
+<p>В математике число можно записывать удобно: округлять, переводить в стандартный вид, работать со степенями десяти и значащими цифрами.</p>
+<p>В информатике число хранится в памяти. Целые числа <code>int</code> обычно ведут себя точно, а дробные числа <code>float</code> хранятся приближённо.</p>
+<h3 id="что-нужно-запомнить">Что нужно запомнить<a class="headerlink" href="#что-нужно-запомнить" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Физическую величину нельзя записывать без единицы измерения.</li>
+<li>Результат измерения честнее записывать в виде <span class="arithmatex">\(L = L_0 \pm \Delta\)</span>.</li>
+<li>Цена деления прибора помогает оценить погрешность.</li>
+<li>Стандартный вид числа имеет форму <span class="arithmatex">\(a \cdot 10^n\)</span>, где <span class="arithmatex">\(1 \leq a &lt; 10\)</span>.</li>
+<li><code>int</code> хранит целые числа точно.</li>
+<li><code>float</code> хранит дробные числа приближённо.</li>
+<li>Для сравнения дробных результатов в Python лучше использовать <code>math.isclose()</code> или сравнение с допуском.</li>
+</ul>
+<h3 id="ответы-на-три-вопроса-из-начала">Ответы на три вопроса из начала<a class="headerlink" href="#ответы-на-три-вопроса-из-начала" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Запись <span class="arithmatex">\(15{,}6\)</span> см неполна как результат измерения. Если линейка имеет цену деления 1 мм, честнее записать:</li>
+</ol>
+<div class="arithmatex">\[
+L = 15{,}60 \pm 0{,}05 \text{ см}.
+\]</div>
+<ol>
+<li>Да, большие и маленькие числа можно записывать коротко:</li>
+</ol>
+<div class="arithmatex">\[
+150\,000\,000\,000 = 1{,}5 \cdot 10^{11},
+\]</div>
+<div class="arithmatex">\[
+0{,}000\,000\,000\,106 = 1{,}06 \cdot 10^{-10}.
+\]</div>
+<ol>
+<li>Python может вывести не <code>0.3</code>, а:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>0.30000000000000004
+</code></pre></div>
+<p>Потому что <code>float</code> хранит десятичные дроби приближённо в двоичной памяти.</p>
+<hr />
+<!-- fragment:025 -->
+
+<h2 id="мост-к-2">Мост к §2<a class="headerlink" href="#мост-к-2" title="Permanent link">&para;</a></h2>
+<p>Мы научились честно записывать числа: измерять, оценивать погрешность, переводить единицы, использовать стандартный вид и понимать ограничения <code>float</code>.</p>
+<p>Но физический мир — это не просто набор чисел. Тело находится где-то. Оно может двигаться вправо или влево, вверх или вниз. Чтобы описывать положение и перемещение, одного числа уже недостаточно: нужны координаты, оси, система отсчёта и векторы.</p>
+<p>Этим мы займёмся в следующем параграфе:</p>
+<p><strong>§2. Координаты и векторы</strong> (<code>math.coordinates_vectors</code>).</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 ARISTOTEL
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../assets/javascripts/katex-init.js"></script>
+      
+    
+  </body>
+</html>

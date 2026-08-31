@@ -1,0 +1,3896 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AI-powered STEM Education для 7-11 класса">
+      
+      
+      
+        <link rel="canonical" href="https://preview.aristotel.academy/modules/module-0/computer-arithmetic/">
+      
+      
+        <link rel="prev" href="../natural-numbers/">
+      
+      
+        <link rel="next" href="../sets-logic-language/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Арифметика компьютера: точность, ошибки и цена вычислений - ARISTOTEL Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/aristotel.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <!-- Branch preview: never to be indexed. Paired with robots.txt in the
+       preview repository; robots.txt stops crawlers that ask, this stops
+       the ones that read the page anyway.
+
+       No canonical override here: material already emits one from site_url,
+       a second tag would contradict it, and pointing it at the live site
+       would aim at a 404 for any chapter that is not published yet. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#арифметика-компьютера-точность-ошибки-и-цена-вычислений" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div style="text-align:center;font-weight:600">
+    Черновик, не публикация — сборка из ветки, содержимое может быть
+    неполным или неверным.
+    Учебник: <a href="https://aristotel.academy" style="color:inherit;text-decoration:underline">aristotel.academy</a>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../../.." title="ARISTOTEL Knowledge Base" class="md-header__button md-logo" aria-label="ARISTOTEL Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ARISTOTEL Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Арифметика компьютера: точность, ошибки и цена вычислений
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Переключить на светлую"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключить на светлую" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Переключить на тёмную"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключить на тёмную" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../python-intro/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Модуль 0
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-1/numbers-three-worlds/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Модуль 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-2/force-vector/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Модуль 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../concepts/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Концепты
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ARISTOTEL Knowledge Base" class="md-nav__button md-logo" aria-label="ARISTOTEL Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    ARISTOTEL Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Модуль 0
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Модуль 0
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §1 — Python — ваш рабочий инструмент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../natural-numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §2 — Натуральные числа: от счёта до глубин теории чисел
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §3 — Арифметика компьютера: точность, ошибки и цена вычислений
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §3 — Арифметика компьютера: точность, ошибки и цена вычислений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#прежде-чем-начать-три-вопроса-без-ответа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прежде чем начать: три вопроса без ответа
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Прежде чем начать: три вопроса без ответа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#от-симптома-к-механизму" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        От симптома к механизму
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#часть-i-целые-числа--физика-битов" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть I. Целые числа — физика битов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-1-целые-числа-в-памяти-точная-арифметика-с-конечным-диапазоном" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1. Целые числа в памяти: точная арифметика с конечным диапазоном
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1. Целые числа в памяти: точная арифметика с конечным диапазоном">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-11-почему-n-бит--это-ровно-2ⁿ-состояний" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.1 Почему n бит — это ровно 2ⁿ состояний
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-12-беззнаковые-целые-чистая-арифметика-по-модулю" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.2 Беззнаковые целые: чистая арифметика по модулю
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-13-знаковые-целые-дополнение-до-двух" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.3 Знаковые целые: дополнение до двух
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-14-битовые-операции-как-быстрая-арифметика" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.4 Битовые операции как быстрая арифметика
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-15-стандартные-типы-и-их-реальные-размеры" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.5 Стандартные типы и их реальные размеры
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ariane-5-370-миллионов-долларов-за-37-секунд" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ariane 5: 370 миллионов долларов за 37 секунд
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#типичная-ошибка" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Типичная ошибка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-переполнение-и-дополнение-до-двух" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: переполнение и дополнение до двух
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#часть-ii-точная-арифметика-за-пределами-фиксированного-слова" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть II. Точная арифметика за пределами фиксированного слова
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-2-арифметика-произвольной-точности-за-пределами-64-бит" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 2. Арифметика произвольной точности: за пределами 64 бит
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 2. Арифметика произвольной точности: за пределами 64 бит">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-21-архитектура-python-int-массив-цифр-в-системе-2³⁰" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 2.1 Архитектура Python int: массив «цифр» в системе 2³⁰
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#анатолий-карацуба-19372008" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Анатолий Карацуба (1937–2008)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-22-алгоритм-карацубы-разделяй-и-властвуй-в-арифметике" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 2.2 Алгоритм Карацубы: «разделяй и властвуй» в арифметике
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-23-сравнение-алгоритмов-умножения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 2.3 Сравнение алгоритмов умножения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-алгоритм-карацубы-и-быстрое-возведение-в-степень" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: алгоритм Карацубы и быстрое возведение в степень
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ваш-браузер-умножает-2048-битные-числа-прямо-сейчас" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ваш браузер умножает 2048-битные числа прямо сейчас
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-3-дробные-числа-без-потерь-рациональная-арифметика" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 3. Дробные числа без потерь: рациональная арифметика
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 3. Дробные числа без потерь: рациональная арифметика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-31-проблема-некоторые-дроби-не-имеют-конечного-представления" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 3.1 Проблема: некоторые дроби не имеют конечного представления
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-32-рациональная-арифметика-хранить-числитель-и-знаменатель" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 3.2 Рациональная арифметика: хранить числитель и знаменатель
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-fraction-и-точная-арифметика" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: Fraction и точная арифметика
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-где-рациональная-арифметика-применяется" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Где рациональная арифметика применяется
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patriot-не-перехватил-scud-28-жертв-из-за-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patriot не перехватил Scud: 28 жертв из-за 0.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#часть-iii-float--механизм-не-магия" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть III. Float — механизм, не магия
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-4-вещественные-числа-стандарт-ieee-754" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 4. Вещественные числа: стандарт IEEE 754
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 4. Вещественные числа: стандарт IEEE 754">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-41-идея-число-в-форме-m--2ᵉ" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 4.1 Идея: число в форме ±m · 2ᵉ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#разбор-числа-0375--38-в-float32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Разбор числа 0.375 = 3/8 в float32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-42-специальные-значения-расширенная-числовая-система" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 4.2 Специальные значения: расширенная числовая система
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-43-машинное-эпсилон-главная-характеристика-точности" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 4.3 Машинное эпсилон: главная характеристика точности
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-44-неравномерное-распределение-float-на-числовой-оси" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 4.4 Неравномерное распределение float на числовой оси
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-побитовое-устройство-float64-и-машинное-эпсилон" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: побитовое устройство float64 и машинное эпсилон
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-5-как-накапливается-ошибка-три-механизма" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 5. Как накапливается ошибка: три механизма
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 5. Как накапливается ошибка: три механизма">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#механизм-1-ошибка-представления-roundoff-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Механизм 1: ошибка представления (roundoff error)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#механизм-2-катастрофическое-вычитание-cancellation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Механизм 2: катастрофическое вычитание (cancellation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#механизм-3-число-обусловленности" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Механизм 3: число обусловленности
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-cancellation-устойчивое-квадратное-уравнение-обусловленность" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: cancellation, устойчивое квадратное уравнение, обусловленность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §5
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#часть-iv-численная-инженерия-как-не-сделать-ошибку" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть IV. Численная инженерия: как не сделать ошибку
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-6-алгоритмы-и-точность-устойчивые-против-неустойчивых" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 6. Алгоритмы и точность: устойчивые против неустойчивых
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 6. Алгоритмы и точность: устойчивые против неустойчивых">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-61-численная-устойчивость-определение" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 6.1 Численная устойчивость: определение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#уильям-кэхэн-род-1933" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Уильям Кэхэн (род. 1933)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-62-алгоритм-кэхэна-компенсированное-суммирование" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 6.2 Алгоритм Кэхэна: компенсированное суммирование
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-алгоритм-кэхэна-и-сравнение-с-наивным" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: алгоритм Кэхэна и сравнение с наивным
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-63-решение-систем-линейных-уравнений-ведущий-элемент" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 6.3 Решение систем линейных уравнений: ведущий элемент
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sleipner-a-700-миллионов-долларов-и-47-ошибки" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sleipner A: 700 миллионов долларов и 47% ошибки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#углубление" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Углубление
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-7-как-оценивать-точность-вычислений" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7. Как оценивать точность вычислений
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 7. Как оценивать точность вычислений">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-71-абсолютная-и-относительная-погрешность" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7.1 Абсолютная и относительная погрешность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-72-ulp--единицы-на-последнем-месте" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7.2 ULP — единицы на последнем месте
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-73-правильное-сравнение-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7.3 Правильное сравнение float
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-74-интервальная-арифметика" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7.4 Интервальная арифметика
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-сравнение-float-и-ulp-расстояние" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: сравнение float и ULP-расстояние
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-75-инженерный-чеклист" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7.5 Инженерный чеклист
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#теорема-годунова-математический-предел-точности" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теорема Годунова: математический предел точности
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §7
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-8-дерево-решений-какой-числовой-тип-выбрать" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 8. Дерево решений: какой числовой тип выбрать?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 8. Дерево решений: какой числовой тип выбрать?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-tree-выбор-числового-типа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision tree: выбор числового типа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#сводная-таблица-числа-в-компьютере" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сводная таблица: числа в компьютере
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-9-проектная-задача-спасите-вычисление" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 9. Проектная задача: спасите вычисление
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 9. Проектная задача: спасите вычисление">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#задание" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#проект-катастрофическое-cancellation-и-его-лечение" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проект: катастрофическое cancellation и его лечение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#итог-от-транзистора-до-гарантированной-точности" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Итог: от транзистора до гарантированной точности
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Итог: от транзистора до гарантированной точности">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#главный-вывод-главы" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Главный вывод главы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ответы-на-три-вопроса-из-начала-главы" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ответы на три вопроса из начала главы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#мост-к-следующей-главе" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мост к следующей главе
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#что-за-пределами-этой-главы" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что за пределами этой главы
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sets-logic-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §4 — Множества, логика и язык математики: от интуиции к доказательству
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Модуль 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Модуль 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/numbers-three-worlds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §1 — Цифра в мире величин: число в физике, математике и компьютере
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/coordinates-vectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §2 — Координаты и векторы: где находится тело и куда оно сместилось
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/uniform-motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §3 — Ритм движения: скорость и равномерное движение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/graphs-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §4 — Графический язык: как читать историю движения по линии
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/mean-value/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §5 — Среднее значение: как заменить набор чисел одним числом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Модуль 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Модуль 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-2/force-vector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М2 §1 — Сила как вектор: почему санки едут не туда, куда тянут
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-2/equilibrium-two-forces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М2 §2 — Равновесие: почему книга на столе никуда не падает
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Концепты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#прежде-чем-начать-три-вопроса-без-ответа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прежде чем начать: три вопроса без ответа
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Прежде чем начать: три вопроса без ответа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#от-симптома-к-механизму" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        От симптома к механизму
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#часть-i-целые-числа--физика-битов" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть I. Целые числа — физика битов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-1-целые-числа-в-памяти-точная-арифметика-с-конечным-диапазоном" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1. Целые числа в памяти: точная арифметика с конечным диапазоном
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1. Целые числа в памяти: точная арифметика с конечным диапазоном">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-11-почему-n-бит--это-ровно-2ⁿ-состояний" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.1 Почему n бит — это ровно 2ⁿ состояний
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-12-беззнаковые-целые-чистая-арифметика-по-модулю" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.2 Беззнаковые целые: чистая арифметика по модулю
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-13-знаковые-целые-дополнение-до-двух" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.3 Знаковые целые: дополнение до двух
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-14-битовые-операции-как-быстрая-арифметика" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.4 Битовые операции как быстрая арифметика
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-15-стандартные-типы-и-их-реальные-размеры" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.5 Стандартные типы и их реальные размеры
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ariane-5-370-миллионов-долларов-за-37-секунд" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ariane 5: 370 миллионов долларов за 37 секунд
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#типичная-ошибка" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Типичная ошибка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-переполнение-и-дополнение-до-двух" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: переполнение и дополнение до двух
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#часть-ii-точная-арифметика-за-пределами-фиксированного-слова" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть II. Точная арифметика за пределами фиксированного слова
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-2-арифметика-произвольной-точности-за-пределами-64-бит" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 2. Арифметика произвольной точности: за пределами 64 бит
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 2. Арифметика произвольной точности: за пределами 64 бит">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-21-архитектура-python-int-массив-цифр-в-системе-2³⁰" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 2.1 Архитектура Python int: массив «цифр» в системе 2³⁰
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#анатолий-карацуба-19372008" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Анатолий Карацуба (1937–2008)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-22-алгоритм-карацубы-разделяй-и-властвуй-в-арифметике" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 2.2 Алгоритм Карацубы: «разделяй и властвуй» в арифметике
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-23-сравнение-алгоритмов-умножения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 2.3 Сравнение алгоритмов умножения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-алгоритм-карацубы-и-быстрое-возведение-в-степень" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: алгоритм Карацубы и быстрое возведение в степень
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ваш-браузер-умножает-2048-битные-числа-прямо-сейчас" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ваш браузер умножает 2048-битные числа прямо сейчас
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-3-дробные-числа-без-потерь-рациональная-арифметика" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 3. Дробные числа без потерь: рациональная арифметика
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 3. Дробные числа без потерь: рациональная арифметика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-31-проблема-некоторые-дроби-не-имеют-конечного-представления" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 3.1 Проблема: некоторые дроби не имеют конечного представления
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-32-рациональная-арифметика-хранить-числитель-и-знаменатель" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 3.2 Рациональная арифметика: хранить числитель и знаменатель
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-fraction-и-точная-арифметика" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: Fraction и точная арифметика
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-где-рациональная-арифметика-применяется" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Где рациональная арифметика применяется
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patriot-не-перехватил-scud-28-жертв-из-за-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patriot не перехватил Scud: 28 жертв из-за 0.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#часть-iii-float--механизм-не-магия" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть III. Float — механизм, не магия
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-4-вещественные-числа-стандарт-ieee-754" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 4. Вещественные числа: стандарт IEEE 754
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 4. Вещественные числа: стандарт IEEE 754">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-41-идея-число-в-форме-m--2ᵉ" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 4.1 Идея: число в форме ±m · 2ᵉ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#разбор-числа-0375--38-в-float32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Разбор числа 0.375 = 3/8 в float32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-42-специальные-значения-расширенная-числовая-система" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 4.2 Специальные значения: расширенная числовая система
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-43-машинное-эпсилон-главная-характеристика-точности" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 4.3 Машинное эпсилон: главная характеристика точности
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-44-неравномерное-распределение-float-на-числовой-оси" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 4.4 Неравномерное распределение float на числовой оси
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-побитовое-устройство-float64-и-машинное-эпсилон" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: побитовое устройство float64 и машинное эпсилон
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-5-как-накапливается-ошибка-три-механизма" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 5. Как накапливается ошибка: три механизма
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 5. Как накапливается ошибка: три механизма">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#механизм-1-ошибка-представления-roundoff-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Механизм 1: ошибка представления (roundoff error)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#механизм-2-катастрофическое-вычитание-cancellation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Механизм 2: катастрофическое вычитание (cancellation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#механизм-3-число-обусловленности" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Механизм 3: число обусловленности
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-cancellation-устойчивое-квадратное-уравнение-обусловленность" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: cancellation, устойчивое квадратное уравнение, обусловленность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §5
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#часть-iv-численная-инженерия-как-не-сделать-ошибку" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Часть IV. Численная инженерия: как не сделать ошибку
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-6-алгоритмы-и-точность-устойчивые-против-неустойчивых" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 6. Алгоритмы и точность: устойчивые против неустойчивых
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 6. Алгоритмы и точность: устойчивые против неустойчивых">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-61-численная-устойчивость-определение" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 6.1 Численная устойчивость: определение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#уильям-кэхэн-род-1933" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Уильям Кэхэн (род. 1933)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-62-алгоритм-кэхэна-компенсированное-суммирование" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 6.2 Алгоритм Кэхэна: компенсированное суммирование
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-алгоритм-кэхэна-и-сравнение-с-наивным" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: алгоритм Кэхэна и сравнение с наивным
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-63-решение-систем-линейных-уравнений-ведущий-элемент" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 6.3 Решение систем линейных уравнений: ведущий элемент
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sleipner-a-700-миллионов-долларов-и-47-ошибки" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sleipner A: 700 миллионов долларов и 47% ошибки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#углубление" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Углубление
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-7-как-оценивать-точность-вычислений" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7. Как оценивать точность вычислений
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 7. Как оценивать точность вычислений">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#провокация_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Провокация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-71-абсолютная-и-относительная-погрешность" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7.1 Абсолютная и относительная погрешность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-72-ulp--единицы-на-последнем-месте" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7.2 ULP — единицы на последнем месте
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-73-правильное-сравнение-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7.3 Правильное сравнение float
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-74-интервальная-арифметика" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7.4 Интервальная арифметика
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#код-сравнение-float-и-ulp-расстояние" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код: сравнение float и ULP-расстояние
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-75-инженерный-чеклист" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 7.5 Инженерный чеклист
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#теорема-годунова-математический-предел-точности" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теорема Годунова: математический предел точности
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задачи-к-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задачи к §7
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-8-дерево-решений-какой-числовой-тип-выбрать" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 8. Дерево решений: какой числовой тип выбрать?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 8. Дерево решений: какой числовой тип выбрать?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-tree-выбор-числового-типа" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision tree: выбор числового типа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#сводная-таблица-числа-в-компьютере" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сводная таблица: числа в компьютере
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-9-проектная-задача-спасите-вычисление" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 9. Проектная задача: спасите вычисление
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 9. Проектная задача: спасите вычисление">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#задание" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#проект-катастрофическое-cancellation-и-его-лечение" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проект: катастрофическое cancellation и его лечение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#итог-от-транзистора-до-гарантированной-точности" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Итог: от транзистора до гарантированной точности
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Итог: от транзистора до гарантированной точности">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#главный-вывод-главы" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Главный вывод главы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ответы-на-три-вопроса-из-начала-главы" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ответы на три вопроса из начала главы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#мост-к-следующей-главе" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мост к следующей главе
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#что-за-пределами-этой-главы" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что за пределами этой главы
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="арифметика-компьютера-точность-ошибки-и-цена-вычислений">Арифметика компьютера: точность, ошибки и цена вычислений<a class="headerlink" href="#арифметика-компьютера-точность-ошибки-и-цена-вычислений" title="Permanent link">&para;</a></h1>
+<p><em>Точность, ошибки и инженерные компромиссы в цифровом счёте</em></p>
+<!-- fragment:001 -->
+<h2 id="прежде-чем-начать-три-вопроса-без-ответа">Прежде чем начать: три вопроса без ответа<a class="headerlink" href="#прежде-чем-начать-три-вопроса-без-ответа" title="Permanent link">&para;</a></h2>
+<p>Запишите ответы на листке — не обсуждая с соседом.</p>
+<ol>
+<li>В базовом курсе мы увидели: <code>0.1 + 0.2 != 0.3</code> в Python. Вы знаете симптом. А можете ли вы объяснить, какой именно бит отличает <code>0.1 + 0.2</code> от <code>0.3</code> в памяти процессора?</li>
+<li><code>int</code> в Python никогда не переполняется. В Java <code>int</code> переполняется по модулю. В C переполнение signed <code>int</code> — неопределённое поведение. Три языка, три ответа. Почему?</li>
+<li>Ракета Ariane 5 стоимостью 370 миллионов долларов взорвалась через 37 секунд из-за одной операции с числом. Что именно пошло не так?</li>
+</ol>
+<p>На первый вопрос у большинства программистов нет правильного ответа. На второй — удивляет всех, кто привык к одному языку. Третий изменил историю ракетостроения.</p>
+<h3 id="от-симптома-к-механизму">От симптома к механизму<a class="headerlink" href="#от-симптома-к-механизму" title="Permanent link">&para;</a></h3>
+<p>В базовом курсе мы увидели, что <code>0.1 + 0.2 ≠ 0.3</code>, что числа в компьютере конечны, и что <code>math.isclose()</code> спасает от наивного сравнения. Это были симптомы.</p>
+<p>Эта глава — диагноз и инженерное лечение. Мы разберём, <em>как именно</em> бит кодирует число: от транзистора до регистра процессора. Увидим, где рождается ошибка — не «где-то в компьютере», а в конкретном разряде мантиссы. И научимся принимать <em>инженерное решение</em>: какой тип данных выбрать под конкретную задачу, как оценить погрешность до запуска программы, и когда точность вычисления уже не имеет значения — потому что ограничена точностью измерения.</p>
+<p>Предыдущая глава ответила на вопрос «что такое число». Эта глава отвечает на другой: «что компьютер с ним делает — и чего это стоит».</p>
+<!-- fragment:002 -->
+<h2 id="часть-i-целые-числа--физика-битов">Часть I. Целые числа — физика битов<a class="headerlink" href="#часть-i-целые-числа--физика-битов" title="Permanent link">&para;</a></h2>
+<h2 id="-1-целые-числа-в-памяти-точная-арифметика-с-конечным-диапазоном">§ 1. Целые числа в памяти: точная арифметика с конечным диапазоном<a class="headerlink" href="#-1-целые-числа-в-памяти-точная-арифметика-с-конечным-диапазоном" title="Permanent link">&para;</a></h2>
+<h3 id="провокация">Провокация<a class="headerlink" href="#провокация" title="Permanent link">&para;</a></h3>
+<p>Напишем на доске: <code>int x = 2147483647; x = x + 1;</code> — каков результат?</p>
+<p>Ожидаемый ответ: 2147483648. В Java на типе <code>int</code> получится -2147483648: гарантированное переполнение по модулю <span class="arithmatex">\(2^{32}\)</span>. В C для signed <code>int</code> такое выражение формально приводит к <em>undefined behavior</em> — стандарт не гарантирует результат, хотя на большинстве платформ вы увидите то же значение. Это не баг — это следствие разных контрактов языка с программистом.</p>
+<h3 id="-11-почему-n-бит--это-ровно-2ⁿ-состояний">§ 1.1 Почему n бит — это ровно 2ⁿ состояний<a class="headerlink" href="#-11-почему-n-бит--это-ровно-2ⁿ-состояний" title="Permanent link">&para;</a></h3>
+<p>Компьютерная память построена на транзисторах. Каждый транзистор имеет два устойчивых состояния: есть ток / нет тока, заряжен / разряжен. Одно состояние — один бит: 0 или 1. Это физика полупроводников, не соглашение.
+При n битах возможно ровно <span class="arithmatex">\(2^n\)</span> различных комбинаций. Никак не больше и не меньше. Это означает: целое число в n-битной ячейке памяти может принять ровно <span class="arithmatex">\(2^n\)</span> различных значений. Какие именно — определяет выбор кодирования.</p>
+<!-- fragment:003 -->
+<h3 id="-12-беззнаковые-целые-чистая-арифметика-по-модулю">§ 1.2 Беззнаковые целые: чистая арифметика по модулю<a class="headerlink" href="#-12-беззнаковые-целые-чистая-арифметика-по-модулю" title="Permanent link">&para;</a></h3>
+<p>uint8: 8 бит → <span class="arithmatex">\(2^8\)</span> = 256 значений → диапазон 0..255</p>
+<p>uint16: 16 бит → <span class="arithmatex">\(2^{16}\)</span> = 65 536 значений → диапазон 0..65 535</p>
+<p>uint32: 32 бита → <span class="arithmatex">\(2^{32}\)</span> ≈ 4.3 млрд значений → диапазон 0..4 294 967 295</p>
+<p>uint64: 64 бита → <span class="arithmatex">\(2^{64}\)</span> ≈ 1.8 · <span class="arithmatex">\(10^{19}\)</span> значений</p>
+<p>Все арифметические операции выполняются по модулю <span class="arithmatex">\(2^n\)</span>. 255 + 1 = 0 для uint8 — не ошибка, а математически корректный результат в ℤ/256ℤ.</p>
+<p>Арифметика по модулю — это не упрощение и не ошибка языка программирования. Это прямое следствие физики: n транзисторов не могут хранить больше <span class="arithmatex">\(2^n\)</span> состояний.</p>
+<h4 id="арифметика-uint8-в-действии">Арифметика uint8 в действии<a class="headerlink" href="#арифметика-uint8-в-действии" title="Permanent link">&para;</a></h4>
+<p>200 + 100 = 300 → 300 mod 256 = 44 (переполнение!)</p>
+<p>255 + 1 = 256 → 256 mod 256 = 0 (оборот к нулю)</p>
+<p>0 - 1 = -1 → -1 mod 256 = 255 (оборот к максимуму)</p>
+<p>На Python: <code>import numpy as np; x = np.uint8(200); x + np.uint8(100)</code> → 44</p>
+<p>Практическое применение: IP-адрес — это uint32 (четыре байта, каждый 0–255). Именно поэтому IPv4-адресов всего ~4.3 миллиарда — в точности <span class="arithmatex">\(2^{32}\)</span>. Именно поэтому интернет «закончился» в 2011 году и пришлось переходить на IPv6 с uint128.</p>
+<!-- fragment:004 -->
+<h3 id="-13-знаковые-целые-дополнение-до-двух">§ 1.3 Знаковые целые: дополнение до двух<a class="headerlink" href="#-13-знаковые-целые-дополнение-до-двух" title="Permanent link">&para;</a></h3>
+<p>Как закодировать отрицательные числа? Первый вариант: один бит — знак, остальные — значение (sign-and-magnitude). Проблема: два нуля (+0 и -0) и разные схемы сложения для положительных и отрицательных.
+Решение, принятое во всех современных процессорах: дополнение до двух (two's complement). Оно устраняет обе проблемы.</p>
+<h4 id="кодирование-в-дополнение-до-двух">Кодирование в дополнение до двух<a class="headerlink" href="#кодирование-в-дополнение-до-двух" title="Permanent link">&para;</a></h4>
+<p><strong>Кодирование в дополнение до двух.</strong>
+Неотрицательные числа 0..<span class="arithmatex">\(2^{n-1}-1\)</span>: кодируются обычно, в двоичном представлении.</p>
+<p>Отрицательное число -x (где x &gt; 0): кодируется как <span class="arithmatex">\(2^n\)</span> - x.</p>
+<p>Практическое правило: инвертировать все биты и прибавить 1.</p>
+<p>Диапазон int8: от -128 до +127. Почему асимметрия? -128 = 10000000₂, и у него нет положительного двойника.</p>
+<p>Ключевое свойство: сложение в дополнении до двух работает как сложение по модулю <span class="arithmatex">\(2^n\)</span> — одна схема для всех случаев.</p>
+<h4 id="пример-кодирование-42-в-int8">Пример: кодирование −42 в int8<a class="headerlink" href="#пример-кодирование-42-в-int8" title="Permanent link">&para;</a></h4>
+<p><strong>Кодирование −42 в int8.</strong>
+1. Записываем 42 в двоичном: 00101010₂</p>
+<ol>
+<li>
+<p>Инвертируем все биты: 11010101₂</p>
+</li>
+<li>
+<p>Прибавляем 1: 11010110₂</p>
+</li>
+</ol>
+<p>Проверка: 11010110₂ = 128+64+16+4+2 = 214 в uint8. И действительно: -42 + 256 = 214.</p>
+<p>Обратное декодирование: старший бит = 1 → число отрицательное. Значение: -(~11010110₂ + 1) = -00101010₂ = -42.</p>
+<!-- fragment:005 -->
+<h3 id="-14-битовые-операции-как-быстрая-арифметика">§ 1.4 Битовые операции как быстрая арифметика<a class="headerlink" href="#-14-битовые-операции-как-быстрая-арифметика" title="Permanent link">&para;</a></h3>
+<p>Битовые операции — это не «хакерский трюк». Они связывают двоичное представление числа с арифметикой и активно используются в низкоуровневом программировании, криптографии и оптимизации.</p>
+<h4 id="битовые-операции-и-их-арифметический-смысл">Битовые операции и их арифметический смысл<a class="headerlink" href="#битовые-операции-и-их-арифметический-смысл" title="Permanent link">&para;</a></h4>
+<p><code>x &lt;&lt; k</code> (сдвиг влево на k): для беззнаковых или неотрицательных целых — умножение на <span class="arithmatex">\(2^k\)</span>.</p>
+<p><code>x &gt;&gt; k</code> (сдвиг вправо): для беззнаковых или неотрицательных — целочисленное деление на <span class="arithmatex">\(2^k\)</span> с отбросом дробной части. (Для отрицательных знаковых целых поведение зависит от языка.)</p>
+<p><code>x &amp; ($2^k$-1)</code>: в типичной двоичной арифметике для беззнаковых или неотрицательных целых даёт остаток от деления на <span class="arithmatex">\(2^k\)</span>. Пример: <code>x &amp; 7</code> = x mod 8.</p>
+<p><code>x &amp; (x-1)</code>: обнуляет младший установленный бит. Применение: подсчёт битов, проверка степеней двойки.</p>
+<p>Эти операции — основа хеш-функций, алгоритмов сжатия, криптографических примитивов.</p>
+<!-- fragment:006 -->
+<h3 id="-15-стандартные-типы-и-их-реальные-размеры">§ 1.5 Стандартные типы и их реальные размеры<a class="headerlink" href="#-15-стандартные-типы-и-их-реальные-размеры" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Тип</th>
+<th>Размер</th>
+<th>Диапазон</th>
+<th>Применение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int8 / uint8</td>
+<td>1 байт</td>
+<td>−128..127 / 0..255</td>
+<td>Байты, пиксели, ASCII</td>
+</tr>
+<tr>
+<td>int16 / uint16</td>
+<td>2 байта</td>
+<td>−32768..32767 / 0..65535</td>
+<td>Порты TCP/UDP, аудио</td>
+</tr>
+<tr>
+<td>int32 / uint32</td>
+<td>4 байта</td>
+<td>±2.1·10⁹ / 0..4.3·10⁹</td>
+<td>Стандартный int (C/Java)</td>
+</tr>
+<tr>
+<td>int64 / uint64</td>
+<td>8 байт</td>
+<td>±9.2·10¹⁸ / 0..1.8·10¹⁹</td>
+<td>long, файловые позиции</td>
+</tr>
+<tr>
+<td>Python int</td>
+<td>переменный</td>
+<td>неограничен</td>
+<td>BigInt (подробнее в §2)</td>
+</tr>
+</tbody>
+</table>
+<!-- fragment:007 -->
+<h3 id="ariane-5-370-миллионов-долларов-за-37-секунд">Ariane 5: 370 миллионов долларов за 37 секунд<a class="headerlink" href="#ariane-5-370-миллионов-долларов-за-37-секунд" title="Permanent link">&para;</a></h3>
+<p>4 июня 1996 года. Ariane 5, первый полёт нового европейского носителя. 37 секунд после старта — ракета разрушила себя сама.</p>
+<p>Причина: модуль инерциальной навигационной системы (IRS), унаследованный от Ariane 4, содержал код, преобразующий 64-битное число с плавающей точкой (горизонтальная скорость) в 16-битное знаковое целое (<code>int16</code>). Для Ariane 4 это значение никогда не превышало 32 767. Для Ariane 5 с её другой траекторией — превысило.</p>
+<p>Преобразование <code>float64 → int16</code> выбросило исключение переполнения. Исключение не было обработано. Система перешла в диагностический режим и начала передавать диагностические данные вместо полётных. Бортовой компьютер интерпретировал диагностику как данные об ориентации, дал коррекционную команду — ракета резко отклонилась и разрушилась.</p>
+<p>Стоимость: 370 миллионов долларов и груз научных спутников. Технически: одна непроверенная операция приведения типов и одно необработанное исключение. Урок, который этот случай оставил инженерному сообществу, прост и беспощаден: каждое приведение типа к более узкому требует обязательной проверки диапазона; код унаследованной системы не переносится на новую платформу без ревизии допущений о входных данных.</p>
+<!-- fragment:008 -->
+<h3 id="типичная-ошибка">Типичная ошибка<a class="headerlink" href="#типичная-ошибка" title="Permanent link">&para;</a></h3>
+<p>Знаковое/беззнаковое сравнение в C: <code>if (x &lt; y)</code> при <code>x = -1</code> (int, знаковое) и <code>y = 1</code> (unsigned int, беззнаковое) даёт FALSE. Компилятор C преобразует -1 к типу unsigned int: -1 в дополнении до двух = 0xFFFFFFFF = 4 294 967 295. Это огромное положительное число, больше 1.</p>
+<p>Этот класс ошибок (integer sign confusion) стабильно входит в топ критических уязвимостей безопасности (CWE Top 25).</p>
+<!-- fragment:009 -->
+<h3 id="код-переполнение-и-дополнение-до-двух">Код: переполнение и дополнение до двух<a class="headerlink" href="#код-переполнение-и-дополнение-до-двух" title="Permanent link">&para;</a></h3>
+<p>Что демонстрирует: кодирование отрицательных чисел в two's complement, наблюдение переполнения через <code>numpy</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">twos_complement</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">bits</span><span class="p">):</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="n">n</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">bits</span><span class="p">)</span> <span class="o">+</span> <span class="n">n</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">return</span> <span class="nb">format</span><span class="p">(</span><span class="n">n</span> <span class="o">&amp;</span> <span class="p">((</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">bits</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="sa">f</span><span class="s1">'0</span><span class="si">{</span><span class="n">bits</span><span class="si">}</span><span class="s1">b'</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">twos_complement</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>    <span class="c1"># 11111111</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">twos_complement</span><span class="p">(</span><span class="o">-</span><span class="mi">128</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>  <span class="c1"># 10000000</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">twos_complement</span><span class="p">(</span><span class="mi">127</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>   <span class="c1"># 01111111</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Реальное переполнение через numpy</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">(</span><span class="mi">127</span><span class="p">)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>            <span class="c1"># -128 (переполнение!)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># 0 (оборот)</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>11111111
+10000000
+01111111
+-128
+0</code></pre>
+<!-- fragment:010 -->
+<h3 id="задачи-к-1">Задачи к §1<a class="headerlink" href="#задачи-к-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>Базовый.</em> Закодируйте вручную числа -1, -127, -128 в 8-битное дополнение до двух. Проверьте через Python.</li>
+<li><em>Аналитический.</em> Напишите функцию <code>decode_twos(bits_str) → int</code>, которая декодирует строку битов обратно в целое.</li>
+<li><em>Аналитический.</em> Объясните: почему <code>int8(-128) / int8(-1)</code> является «неопределённым поведением» в C? (Подсказка: что такое -(-128) в 8 битах?)</li>
+<li><em>Исследовательский.</em> Найдите максимальный int16. Какую физическую величину он ограничивал в Ariane 5?</li>
+</ul>
+<!-- fragment:011 -->
+<h2 id="часть-ii-точная-арифметика-за-пределами-фиксированного-слова">Часть II. Точная арифметика за пределами фиксированного слова<a class="headerlink" href="#часть-ii-точная-арифметика-за-пределами-фиксированного-слова" title="Permanent link">&para;</a></h2>
+<h2 id="-2-арифметика-произвольной-точности-за-пределами-64-бит">§ 2. Арифметика произвольной точности: за пределами 64 бит<a class="headerlink" href="#-2-арифметика-произвольной-точности-за-пределами-64-бит" title="Permanent link">&para;</a></h2>
+<h3 id="провокация_1">Провокация<a class="headerlink" href="#провокация_1" title="Permanent link">&para;</a></h3>
+<p>В Python: <code>2 ** 1000</code> — число с 302 цифрами. Вычисляется мгновенно. В C: <code>pow(2.0, 1024)</code> уже переполняет double. А числа вроде <code>2**53 + 1</code> в float64 уже не различаются: соседние целые начинают сливаться.</p>
+<p>Одна задача, разные ответы. Как Python хранит число с 302 цифрами в обычной оперативной памяти?</p>
+<h3 id="-21-архитектура-python-int-массив-цифр-в-системе-2³⁰">§ 2.1 Архитектура Python int: массив «цифр» в системе 2³⁰<a class="headerlink" href="#-21-архитектура-python-int-массив-цифр-в-системе-2³⁰" title="Permanent link">&para;</a></h3>
+<p>Тип int в Python реализован не как фиксированная ячейка памяти, а как динамический массив. Python хранит большое целое число как последовательность 30-битных «цифр» (в документации CPython они называются digits) с основанием <span class="arithmatex">\(2^{30}\)</span> = 1 073 741 824.
+Это аналог столбчатой арифметики из начальной школы — только вместо «цифр» от 0 до 9 используются «цифры» от 0 до <span class="arithmatex">\(2^{30}\)</span>-1, и столбцов может быть столько, сколько нужно.</p>
+<h4 id="структура-python-bigint">Структура Python bigint<a class="headerlink" href="#структура-python-bigint" title="Permanent link">&para;</a></h4>
+<p>Число хранится как знак + массив d[0], d[1], ..., d[k-1], где 0 ≤ d[i] &lt; <span class="arithmatex">\(2^{30}\)</span>.</p>
+<p>Значение числа: d[0] + d[1]·<span class="arithmatex">\(2^{30}\)</span> + d[2]·<span class="arithmatex">\(2^{60}\)</span> + ... + d[k-1]·<span class="arithmatex">\(2^{30(k-1)}\)</span></p>
+<p>Число <span class="arithmatex">\(2^{1000}\)</span> хранится в ⌈1000/30⌉ = 34 элементах — всего ~136 байт памяти.</p>
+<p>Сложение: O(n) операций. Умножение наивным алгоритмом: O(n²). Деление (алгоритм Кнута D): O(n²).</p>
+<!-- fragment:012 -->
+<h3 id="анатолий-карацуба-19372008">Анатолий Карацуба (1937–2008)<a class="headerlink" href="#анатолий-карацуба-19372008" title="Permanent link">&para;</a></h3>
+<p>Советский и российский математик, специалист по теории чисел. Колмогоров выдвинул гипотезу: умножение двух n-значных чисел невозможно быстрее, чем за O(n²) операций, и организовал семинар для обсуждения. Карацуба, присутствовавший на семинаре, за одну неделю нашёл алгоритм с меньшей сложностью — опровергнув гипотезу. Работа была опубликована в 1962 году.</p>
+<!-- fragment:013 -->
+<h3 id="-22-алгоритм-карацубы-разделяй-и-властвуй-в-арифметике">§ 2.2 Алгоритм Карацубы: «разделяй и властвуй» в арифметике<a class="headerlink" href="#-22-алгоритм-карацубы-разделяй-и-властвуй-в-арифметике" title="Permanent link">&para;</a></h3>
+<p>Наивное умножение двух n-значных чисел требует n² однозначных умножений. В 1960 году советский математик Анатолий Карацуба показал: это можно сделать быстрее.</p>
+<h4 id="идея-алгоритма-карацубы">Идея алгоритма Карацубы<a class="headerlink" href="#идея-алгоритма-карацубы" title="Permanent link">&para;</a></h4>
+<p>Пусть a и b — числа с 2n цифрами. Представим: a = a₁·Bⁿ + a₀, b = b₁·Bⁿ + b₀, где B — основание.</p>
+<p>Наивное произведение: a·b = a₁b₁·B²ⁿ + (a₁b₀ + a₀b₁)·Bⁿ + a₀b₀ — нужно 4 умножения.</p>
+<p>Трюк Карацубы: p = a₁b₁, q = a₀b₀, r = (a₁+a₀)(b₁+b₀). Тогда a₁b₀ + a₀b₁ = r - p - q.</p>
+<p>Итого: 3 умножения вместо 4. Плюс несколько сложений (они быстрые).</p>
+<p>Сложность: T(n) = 3T(n/2) + O(n) → T(n) = O(n^log₂3) ≈ O(n¹·⁵⁸⁵). При n = <span class="arithmatex">\(10^6\)</span> это в ~1600 раз быстрее наивного.</p>
+<h3 id="-23-сравнение-алгоритмов-умножения">§ 2.3 Сравнение алгоритмов умножения<a class="headerlink" href="#-23-сравнение-алгоритмов-умножения" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Алгоритм</th>
+<th>Сложность</th>
+<th>Применение</th>
+<th>Порог</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Школьный</td>
+<td>O(n²)</td>
+<td>Python: &lt; 70 цифр</td>
+<td>&lt; 70 цифр</td>
+</tr>
+<tr>
+<td>Карацуба</td>
+<td>O(n¹·⁵⁸⁵)</td>
+<td>Python: 70–300 цифр</td>
+<td>70–300 цифр</td>
+</tr>
+<tr>
+<td>Тоом-Кук</td>
+<td>O(n¹·⁴⁶⁵)</td>
+<td>GMP: средние</td>
+<td>&gt; 300 цифр</td>
+</tr>
+<tr>
+<td>Шёнхаге–Штрассен</td>
+<td>O(n log n log log n)</td>
+<td>GMP: миллионы цифр</td>
+<td>&gt; 10⁶ цифр</td>
+</tr>
+<tr>
+<td>Harvey–Hoeven</td>
+<td>O(n log n)</td>
+<td>Теор. предел (2019)</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<!-- fragment:014 -->
+<h3 id="код-алгоритм-карацубы-и-быстрое-возведение-в-степень">Код: алгоритм Карацубы и быстрое возведение в степень<a class="headerlink" href="#код-алгоритм-карацубы-и-быстрое-возведение-в-степень" title="Permanent link">&para;</a></h3>
+<p>Что демонстрирует: рекурсивное умножение «разделяй и властвуй»; бинарное возведение в степень по модулю (основа RSA).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">karatsuba</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">1000</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">)))</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">m</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">B</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">m</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">a1</span><span class="p">,</span> <span class="n">a0</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">b1</span><span class="p">,</span> <span class="n">b0</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">p</span> <span class="o">=</span> <span class="n">karatsuba</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">q</span> <span class="o">=</span> <span class="n">karatsuba</span><span class="p">(</span><span class="n">a0</span><span class="p">,</span> <span class="n">b0</span><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">r</span> <span class="o">=</span> <span class="n">karatsuba</span><span class="p">(</span><span class="n">a1</span> <span class="o">+</span> <span class="n">a0</span><span class="p">,</span> <span class="n">b1</span> <span class="o">+</span> <span class="n">b0</span><span class="p">)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="k">return</span> <span class="n">p</span> <span class="o">*</span> <span class="n">B</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">p</span> <span class="o">-</span> <span class="n">q</span><span class="p">)</span> <span class="o">*</span> <span class="n">B</span><span class="o">**</span><span class="n">m</span> <span class="o">+</span> <span class="n">q</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">fast_pow_mod</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">exp</span><span class="p">,</span> <span class="n">mod</span><span class="p">):</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">base</span> <span class="o">%=</span> <span class="n">mod</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="k">while</span> <span class="n">exp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        <span class="k">if</span> <span class="n">exp</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">*</span> <span class="n">base</span> <span class="o">%</span> <span class="n">mod</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        <span class="n">base</span> <span class="o">=</span> <span class="n">base</span> <span class="o">*</span> <span class="n">base</span> <span class="o">%</span> <span class="n">mod</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        <span class="n">exp</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+<!-- fragment:015 -->
+<h3 id="ваш-браузер-умножает-2048-битные-числа-прямо-сейчас">Ваш браузер умножает 2048-битные числа прямо сейчас<a class="headerlink" href="#ваш-браузер-умножает-2048-битные-числа-прямо-сейчас" title="Permanent link">&para;</a></h3>
+<p>Протокол HTTPS требует RSA-операций с числами длиной 617 десятичных цифр. Типичная операция: возвести 617-значное число в степень ~65537 по 617-значному модулю. Без быстрых алгоритмов (Карацуба + square-and-multiply) каждое соединение занимало бы секунды. С ними — единицы миллисекунд.</p>
+<!-- fragment:016 -->
+<h3 id="задачи-к-2">Задачи к §2<a class="headerlink" href="#задачи-к-2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>Базовый.</em> Оцените: сколько байт занимает Python bigint, равный <span class="arithmatex">\(2^{1000}\)</span>? Используйте <code>sys.getsizeof()</code>.</li>
+<li><em>Аналитический.</em> Сравните скорость <code>fast_pow_mod(2, 10**6, 10**9+7)</code> и наивного метода. Измерьте через <code>timeit</code>.</li>
+<li><em>Исследовательский.</em> При каком размере чисел (в цифрах) алгоритм Карацубы начинает выигрывать у наивного? Проведите эксперимент.</li>
+</ul>
+<!-- fragment:017 -->
+<h2 id="-3-дробные-числа-без-потерь-рациональная-арифметика">§ 3. Дробные числа без потерь: рациональная арифметика<a class="headerlink" href="#-3-дробные-числа-без-потерь-рациональная-арифметика" title="Permanent link">&para;</a></h2>
+<h3 id="провокация_2">Провокация<a class="headerlink" href="#провокация_2" title="Permanent link">&para;</a></h3>
+<p>Что такое 1/3 + 1/6? Любой школьник ответит: 1/2. Проверим:</p>
+<p>Python: <code>1/3 + 1/6</code> → <code>0.49999999999999994</code></p>
+<p>Почему не 0.5? Потому что 1/3 не имеет конечного двоичного представления. В памяти хранится не дробь 1/3, а «ближайшее представимое» число.</p>
+<h3 id="-31-проблема-некоторые-дроби-не-имеют-конечного-представления">§ 3.1 Проблема: некоторые дроби не имеют конечного представления<a class="headerlink" href="#-31-проблема-некоторые-дроби-не-имеют-конечного-представления" title="Permanent link">&para;</a></h3>
+<p>Дробь p/q имеет конечное представление в системе с основанием b тогда и только тогда, когда все простые делители q делят b. В двоичной системе (b = 2): только дроби со знаменателем вида <span class="arithmatex">\(2^k\)</span> представляются точно.</p>
+<h4 id="критерий-точного-двоичного-представления">Критерий точного двоичного представления<a class="headerlink" href="#критерий-точного-двоичного-представления" title="Permanent link">&para;</a></h4>
+<p>Дробь p/q (несократимая) имеет конечное двоичное представление тогда и только тогда, когда q = <span class="arithmatex">\(2^k\)</span> для некоторого натурального k.</p>
+<p>Точные: 1/2 = 0.1₂, 1/4 = 0.01₂, 3/8 = 0.011₂</p>
+<p>Неточные: 1/3, 1/5, 1/6, 1/7, 1/9, 1/10 = 0.0001100110011...₂</p>
+<p>Следствие: числа 0.1, 0.2, 0.3, 0.4, 0.6, 0.7, 0.8, 0.9 не представимы точно в double.</p>
+<h3 id="-32-рациональная-арифметика-хранить-числитель-и-знаменатель">§ 3.2 Рациональная арифметика: хранить числитель и знаменатель<a class="headerlink" href="#-32-рациональная-арифметика-хранить-числитель-и-знаменатель" title="Permanent link">&para;</a></h3>
+<p>Решение: хранить рациональное число не как приближённое вещественное, а как пару целых (числитель, знаменатель). Все операции выполняются точно. Ошибок округления нет.</p>
+<h4 id="рациональная-арифметика-операции">Рациональная арифметика: операции<a class="headerlink" href="#рациональная-арифметика-операции" title="Permanent link">&para;</a></h4>
+<p>Представление: q = p/r, где p ∈ ℤ, r ∈ ℕ, НОД(|p|, r) = 1.</p>
+<p>Сложение: a/b + c/d = (a·d + b·c) / (b·d), затем сократить на НОД.</p>
+<p>Умножение: a/b · c/d = (a·c) / (b·d), затем сократить на НОД.</p>
+<p>Цена точности: числители и знаменатели растут. Сумма n дробей может дать числитель с тысячами цифр → неявно используется BigInt.</p>
+<!-- fragment:018 -->
+<h3 id="код-fraction-и-точная-арифметика">Код: Fraction и точная арифметика<a class="headerlink" href="#код-fraction-и-точная-арифметика" title="Permanent link">&para;</a></h3>
+<p>Что демонстрирует: точное вычисление дробей без потери знаков; что именно хранится «под видом 0.1» в float64.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fractions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fraction</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">a</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">b</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>              <span class="c1"># Fraction(1, 2) -- точно!</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">exact</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">approx</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Ошибка float: </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">exact</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">approx</span><span class="p">)</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># Что реально хранится под видом '0.1'</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mf">0.1</span><span class="p">))</span>      <span class="c1"># 3602879701896397/36028797018963968</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>1/2
+Ошибка float: 0.00e+00
+3602879701896397/36028797018963968</code></pre>
+<!-- fragment:019 -->
+<h3 id="33-где-рациональная-арифметика-применяется">3.3 Где рациональная арифметика применяется<a class="headerlink" href="#33-где-рациональная-арифметика-применяется" title="Permanent link">&para;</a></h3>
+<p>Компьютерная алгебра (Mathematica, SymPy, Maple): символьные вычисления требуют точности. Финансы: Python Decimal, Java BigDecimal. Компиляторы: вычисление констант при компиляции. Верификаторы теорем (Coq, Lean, Isabelle). Компьютерная геометрия: предикаты «слева/справа от прямой» должны быть точными.</p>
+<!-- fragment:020 -->
+<h3 id="patriot-не-перехватил-scud-28-жертв-из-за-01">Patriot не перехватил Scud: 28 жертв из-за 0.1<a class="headerlink" href="#patriot-не-перехватил-scud-28-жертв-из-за-01" title="Permanent link">&para;</a></h3>
+<p>Дахран, Саудовская Аравия, 25 февраля 1991 года. Иракская ракета Scud поразила казарму. 28 погибших, 98 раненых. Зенитный комплекс Patriot не произвёл пуск.</p>
+<p>Причина: система отслеживала время в единицах 1/10 секунды. Это значение хранилось как 24-битное двоичное число. <span class="arithmatex">\(1/10 = 0.0001100110011\ldots_2\)</span> — бесконечная дробь. При обрезке до 24 бит: ошибка <span class="arithmatex">\(\approx 9.54 \cdot 10^{-8}\)</span> на каждые 0.1 с.</p>
+<p>За 100 часов непрерывной работы накопилась ошибка: <span class="arithmatex">\(0.0000000954 \cdot 100 \cdot 3600 \cdot 10 \approx 0.34\)</span> секунды. Ракета Scud летит со скоростью ~1700 м/с. За 0.34 с — ~580 метров. Система искала цель в неверном секторе.</p>
+<p>Если бы система отслеживала накопленную погрешность или периодически перезагружалась (как рекомендовала документация!) — катастрофы не было бы. Хранение времени в рациональной арифметике устранило бы ошибку полностью, но для встраиваемой системы реального времени 1991 года это было технически невозможно.</p>
+<p>Урок Patriot вошёл во все курсы численных методов как канонический пример: усечённая двоичная дробь, помноженная на время, растёт линейно — и для систем реального времени это означает обязательное отслеживание накопленной погрешности либо периодическую пересинхронизацию.</p>
+<!-- fragment:021 -->
+<h3 id="задачи-к-3">Задачи к §3<a class="headerlink" href="#задачи-к-3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>Базовый.</em> Вычислите через <code>Fraction</code> точное значение 1 + 1/4 + 1/9 + ... + 1/n² для n = 100. Сравните с π²/6.</li>
+<li><em>Аналитический.</em> Запишите двоичное представление 0.1 с точностью 53 знаков (мантисса double).</li>
+<li><em>Исследовательский.</em> Если рациональная арифметика точная, почему её не используют везде? Подсказка: сравните <code>sys.getsizeof()</code> и скорость <span class="arithmatex">\(10^6\)</span> операций для <code>float</code> и <code>Fraction</code>.</li>
+</ul>
+<!-- fragment:022 -->
+<h2 id="часть-iii-float--механизм-не-магия">Часть III. Float — механизм, не магия<a class="headerlink" href="#часть-iii-float--механизм-не-магия" title="Permanent link">&para;</a></h2>
+<h2 id="-4-вещественные-числа-стандарт-ieee-754">§ 4. Вещественные числа: стандарт IEEE 754<a class="headerlink" href="#-4-вещественные-числа-стандарт-ieee-754" title="Permanent link">&para;</a></h2>
+<h3 id="провокация_3">Провокация<a class="headerlink" href="#провокация_3" title="Permanent link">&para;</a></h3>
+<p>В Python: <code>float('nan') == float('nan')</code> даёт <code>False</code>. «Не число» не равно самому себе.</p>
+<p>А <code>float('inf') - float('inf')</code> даёт <code>nan</code>, а не 0.</p>
+<p>И <code>-0.0</code> отличается от <code>+0.0</code> на физическом уровне, хотя математически они равны.</p>
+<p>Вещественная арифметика компьютера содержит объекты, которых нет в школьной математике. Разберём, откуда они берутся.</p>
+<h3 id="-41-идея-число-в-форме-m--2ᵉ">§ 4.1 Идея: число в форме ±m · 2ᵉ<a class="headerlink" href="#-41-идея-число-в-форме-m--2ᵉ" title="Permanent link">&para;</a></h3>
+<p>Числа с плавающей точкой — это аналог научной нотации в двоичной системе. Так же, как физик пишет 3.14  <span class="arithmatex">\(10^8\)</span> м/с, компьютер хранит число в форме ±1.мантисса  2^порядок.
+Стандарт IEEE 754, принятый в 1985 году и обновлённый в 2008, определяет точный формат хранения для всех современных процессоров. Именно поэтому Python, C, Java, Rust — все дают одинаковый результат для float-вычислений.</p>
+<h4 id="структура-float32-single-precision-32-бита">Структура float32 (single precision, 32 бита)<a class="headerlink" href="#структура-float32-single-precision-32-бита" title="Permanent link">&para;</a></h4>
+<p>Бит 31: знак (s). 0 = положительное, 1 = отрицательное.</p>
+<p>Биты 30–23: порядок (e, 8 бит). Хранится со смещением 127: реальный порядок = e - 127.</p>
+<p>Биты 22–0: мантисса (m, 23 бита). Хранит дробную часть числа 1.xxxxx. Целая «1» подразумевается.</p>
+<p>Значение: <span class="arithmatex">\((-1)^s \cdot 1.m \cdot 2^{e-127}\)</span>. Диапазон: ±1.18·<span class="arithmatex">\(10^{-38}\)</span> ... ±3.4·<span class="arithmatex">\(10^{38}\)</span>. Точность: ~7 десятичных знаков.</p>
+<h4 id="структура-float64--double-64-бита">Структура float64 / double (64 бита)<a class="headerlink" href="#структура-float64--double-64-бита" title="Permanent link">&para;</a></h4>
+<p>Знак: 1 бит. Порядок: 11 бит, смещение 1023. Мантисса: 52 бита.</p>
+<p>Значение: <span class="arithmatex">\((-1)^s \cdot 1.m \cdot 2^{e-1023}\)</span>. Диапазон: ±2.2·<span class="arithmatex">\(10^{-308}\)</span> ... ±1.8·<span class="arithmatex">\(10^{308}\)</span>. Точность: ~15–16 знаков.</p>
+<p>В стандартной реализации CPython все числа с плавающей точкой — это float64.</p>
+<!-- fragment:023 -->
+<h3 id="разбор-числа-0375--38-в-float32">Разбор числа 0.375 = 3/8 в float32<a class="headerlink" href="#разбор-числа-0375--38-в-float32" title="Permanent link">&para;</a></h3>
+<p>Шаг 1. 0.375 &gt; 0, знаковый бит s = 0.</p>
+<p>Шаг 2. 0.375 = 0.011₂ = 1.1₂  <span class="arithmatex">\(2^{-2}\)</span>, порядок e = -2. Хранится: e + 127 = 125 = 01111101₂.</p>
+<p>Шаг 3. Мантисса: дробная часть 1.1₂ = 1₂ = 10000000000000000000000₂ (23 бита).</p>
+<p>Итого: <code>0 01111101 10000000000000000000000₂</code></p>
+<p>Проверка: <span class="arithmatex">\((-1)^0 \cdot 1.1_2 \cdot 2^{125-127} = 1.5 \cdot 2^{-2}\)</span> = 0.375.</p>
+<!-- fragment:024 -->
+<h3 id="-42-специальные-значения-расширенная-числовая-система">§ 4.2 Специальные значения: расширенная числовая система<a class="headerlink" href="#-42-специальные-значения-расширенная-числовая-система" title="Permanent link">&para;</a></h3>
+<p>На уровне стандарта IEEE 754 определены специальные битовые паттерны для исключительных случаев. Вместо немедленного аварийного завершения операция может возвращать специальное значение.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Порядок e</th>
+<th>Мантисса</th>
+<th>Когда возникает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+Infinity</td>
+<td>все 1</td>
+<td>m=0, s=0</td>
+<td>1.0/0.0, overflow</td>
+</tr>
+<tr>
+<td>−Infinity</td>
+<td>все 1</td>
+<td>m=0, s=1</td>
+<td>−1.0/0.0, −overflow</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>все 1</td>
+<td>m≠0</td>
+<td>0/0, sqrt(−1), inf−inf</td>
+</tr>
+<tr>
+<td>−0.0</td>
+<td>e=0</td>
+<td>m=0, s=1</td>
+<td>Предел слева</td>
+</tr>
+<tr>
+<td>Денорм.</td>
+<td>e=0</td>
+<td>m≠0</td>
+<td>Числа &lt; 2⁻¹²⁶</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ieee-754-vs-python">IEEE 754 vs Python<a class="headerlink" href="#ieee-754-vs-python" title="Permanent link">&para;</a></h4>
+<p>Таблица выше описывает поведение на уровне стандарта IEEE 754 (и, соответственно, C, NumPy, Rust). В Python на уровне языка поведение отличается: <code>1.0 / 0.0</code> вызывает <code>ZeroDivisionError</code> (а не даёт <code>+Infinity</code>), <code>math.sqrt(-1)</code> вызывает <code>ValueError</code> (а не даёт <code>NaN</code>). Через NumPy (<code>np.float64(1.0) / np.float64(0.0)</code>) вы увидите именно IEEE-поведение.</p>
+<h4 id="поведение-специальных-значений">Поведение специальных значений<a class="headerlink" href="#поведение-специальных-значений" title="Permanent link">&para;</a></h4>
+<p>На уровне IEEE/NumPy: <code>inf + 1</code> → <code>inf</code>,  <code>inf - inf</code> → <code>nan</code>,  <code>inf · 0</code> → <code>nan</code></p>
+<p>В Python <code>math</code>: <code>1.0 / 0.0</code> → <code>ZeroDivisionError</code> (не <code>+Infinity</code>!). Через NumPy: <code>np.float64(1.0) / np.float64(0.0)</code> → <code>inf</code>.</p>
+<p><code>nan == nan</code> → <code>False</code> — NaN не равен ничему, включая себя. Это поведение одинаково и в Python, и в C, и в NumPy.</p>
+<p><code>-0.0 == 0.0</code> → <code>True</code> (равны при сравнении), но <code>1/(-0.0)</code> → <code>-inf</code> через NumPy (в Python <code>math</code> — <code>ZeroDivisionError</code>). На уровне битов <code>-0.0</code> и <code>+0.0</code> различимы.</p>
+<!-- fragment:025 -->
+<h3 id="-43-машинное-эпсилон-главная-характеристика-точности">§ 4.3 Машинное эпсилон: главная характеристика точности<a class="headerlink" href="#-43-машинное-эпсилон-главная-характеристика-точности" title="Permanent link">&para;</a></h3>
+<p>Машинное эпсилон eps — наименьшее положительное число такое, что <code>1.0 + eps ≠ 1.0</code>.</p>
+<p>float32: eps ≈ <span class="arithmatex">\(1.19 \cdot 10^{-7}\)</span>. Точность: ~7 десятичных знаков.</p>
+<p>float64: eps ≈ <span class="arithmatex">\(2.22 \cdot 10^{-16}\)</span>. Точность: ~15–16 знаков.</p>
+<p>Физический смысл: две соседние float-точки вблизи 1.0 отличаются на eps. Любое вещественное число x округляется до ближайшего float с относительной ошибкой ≤ eps/2.</p>
+<p>Python: <code>import sys; sys.float_info.epsilon</code> → <code>2.220446049250313e-16</code></p>
+<!-- fragment:026 -->
+<h3 id="-44-неравномерное-распределение-float-на-числовой-оси">§ 4.4 Неравномерное распределение float на числовой оси<a class="headerlink" href="#-44-неравномерное-распределение-float-на-числовой-оси" title="Permanent link">&para;</a></h3>
+<p>Здесь скрыт главный источник неинтуитивного поведения float. В отличие от целых чисел, которые распределены равномерно, числа с плавающей точкой распределены неравномерно: они плотнее около нуля и реже к бесконечности.</p>
+<h4 id="float-точки-не-равноудалены">Float-точки не равноудалены<a class="headerlink" href="#float-точки-не-равноудалены" title="Permanent link">&para;</a></h4>
+<p>Между 1.0 и 2.0 в float32 ровно <span class="arithmatex">\(2^{23}\)</span> = 8 388 608 представимых чисел. Шаг <span class="arithmatex">\(\approx 1.19 \cdot 10^{-7}\)</span>.</p>
+<p>Между 2.0 и 4.0 — тоже <span class="arithmatex">\(2^{23}\)</span>, но шаг вдвое больше: <span class="arithmatex">\(\approx 2.38 \cdot 10^{-7}\)</span>.</p>
+<p>Между 1024 и 2048 — снова <span class="arithmatex">\(2^{23}\)</span>, но шаг <span class="arithmatex">\(= 1/8192 \approx 1.2 \cdot 10^{-4}\)</span>. В 1000 раз хуже, чем вблизи 1.</p>
+<p>Между <span class="arithmatex">\(10^{15}\)</span> и <span class="arithmatex">\(10^{15} + 1\)</span> в float64 нет ни одного представимого числа. То есть <code>10**15 + 0.5 == 10**15</code> в double-арифметике.</p>
+<h4 id="что-отличает-01--02-от-03--теперь-по-битам">Что отличает 0.1 + 0.2 от 0.3 — теперь по битам<a class="headerlink" href="#что-отличает-01--02-от-03--теперь-по-битам" title="Permanent link">&para;</a></h4>
+<p>Возвращаемся к первому вопросу из начала главы. Тождество <code>0.1 + 0.2 == 0.3</code> ложно в любом языке с IEEE 754. Причина теперь видна на уровне битов: ни 0.1, ни 0.2 не имеют конечного двоичного представления (их знаменатель — не степень двойки). Оба числа округляются до ближайших float64-точек; сумма этих приближений отличается от приближения суммы ровно на 1 ULP — единицу в последнем разряде мантиссы. Это и есть тот бит, о котором спрашивал первый вопрос. Инженерное следствие просто и обязательно: сравнение float-результатов — всегда через допуск; <code>math.isclose(a, b)</code> либо <code>abs(a - b) &lt;= atol + rtol * scale</code>, и никогда не <code>==</code>.</p>
+<!-- fragment:027 -->
+<h3 id="код-побитовое-устройство-float64-и-машинное-эпсилон">Код: побитовое устройство float64 и машинное эпсилон<a class="headerlink" href="#код-побитовое-устройство-float64-и-машинное-эпсилон" title="Permanent link">&para;</a></h3>
+<p>Что демонстрирует: разложение float64 на знак, порядок и мантиссу; экспериментальное нахождение eps.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">struct</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">float_to_bits</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">bits</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">'&gt;d'</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span> <span class="s1">'big'</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">63</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">e</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">52</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x7FF</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">m</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&amp;</span> <span class="p">((</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">52</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">'sign=</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s1"> exp=</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s1">(=</span><span class="si">{</span><span class="n">e</span><span class="o">-</span><span class="mi">1023</span><span class="si">}</span><span class="s1">) mantissa=</span><span class="si">{</span><span class="n">m</span><span class="si">:</span><span class="s1">052b</span><span class="si">}</span><span class="s1">'</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">float_to_bits</span><span class="p">(</span><span class="mf">0.1</span><span class="p">))</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">float_to_bits</span><span class="p">(</span><span class="mf">0.3</span><span class="p">))</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">float_to_bits</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">))</span>  <span class="c1"># отличается от 0.3!</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="c1"># Найти машинное эпсилон экспериментально</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">eps</span> <span class="o">=</span> <span class="mf">1.0</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="k">while</span> <span class="mf">1.0</span> <span class="o">+</span> <span class="n">eps</span> <span class="o">!=</span> <span class="mf">1.0</span><span class="p">:</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    <span class="n">eps</span> <span class="o">/=</span> <span class="mi">2</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="n">eps</span> <span class="o">*=</span> <span class="mi">2</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'eps = </span><span class="si">{</span><span class="n">eps</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>        <span class="c1"># ~2.22e-16</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>sign=0 exp=1019(=-4) mantissa=1001100110011001100110011001100110011001100110011010
+sign=0 exp=1021(=-2) mantissa=0011001100110011001100110011001100110011001100110011
+sign=0 exp=1021(=-2) mantissa=0011001100110011001100110011001100110011001100110100
+eps = 2.22e-16</code></pre>
+<!-- fragment:028 -->
+<h3 id="задачи-к-4">Задачи к §4<a class="headerlink" href="#задачи-к-4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>Базовый.</em> Найдите машинное эпсилон для float32 и float64 экспериментально. Сравните с теоретическим.</li>
+<li><em>Аналитический.</em> Объясните: почему <code>(1.0 + 1e-16) == 1.0</code> в Python? Вычислите: при каком x ещё <code>(1.0 + x) != 1.0</code>?</li>
+<li><em>Исследовательский.</em> Найдите наименьшее целое n такое, что <code>float(n) == float(n+1)</code>. Объясните через структуру float64.</li>
+</ul>
+<!-- fragment:029 -->
+<h2 id="-5-как-накапливается-ошибка-три-механизма">§ 5. Как накапливается ошибка: три механизма<a class="headerlink" href="#-5-как-накапливается-ошибка-три-механизма" title="Permanent link">&para;</a></h2>
+<h3 id="провокация_4">Провокация<a class="headerlink" href="#провокация_4" title="Permanent link">&para;</a></h3>
+<p>Просуммируйте <code>0.1</code> десять раз явным циклом <code>+=</code> — получится <code>0.9999999999999999</code>, не <code>1.0</code> (встроенная <code>sum()</code> с Python 3.12 эту потерю прячет — почему, см. § 6).</p>
+<p>Сложили ровно 10 раз по 0.1. Откуда ошибка в последнем знаке? Это не единственный сценарий. Бывает, что ошибка не в 16-м знаке, а в первом.</p>
+<h3 id="механизм-1-ошибка-представления-roundoff-error">Механизм 1: ошибка представления (roundoff error)<a class="headerlink" href="#механизм-1-ошибка-представления-roundoff-error" title="Permanent link">&para;</a></h3>
+<p>Правило: <span class="arithmatex">\(\mathrm{fl}(x) = x \cdot (1 + \delta)\)</span>, где <span class="arithmatex">\(|\delta| \le \text{eps}/2\)</span>.</p>
+<p>Для float64: <span class="arithmatex">\(|\delta| \le 1.11 \cdot 10^{-16}\)</span>. Мало.</p>
+<p>Для <span class="arithmatex">\(n\)</span> операций: ошибка <span class="arithmatex">\(O(n \cdot \text{eps})\)</span>. При <span class="arithmatex">\(n = 10^6\)</span> — <span class="arithmatex">\(\sim 10^{-10}\)</span>. Терпимо.</p>
+<p>Проблема начинается, когда другие механизмы усиливают эту ошибку.</p>
+<h3 id="механизм-2-катастрофическое-вычитание-cancellation">Механизм 2: катастрофическое вычитание (cancellation)<a class="headerlink" href="#механизм-2-катастрофическое-вычитание-cancellation" title="Permanent link">&para;</a></h3>
+<p>Самый опасный механизм. При вычитании двух близких чисел старшие значащие цифры уничтожают друг друга, и результат состоит почти целиком из погрешностей.</p>
+<p>Пусть <span class="arithmatex">\(a \approx b\)</span>. Оба известны с относительной погрешностью eps.</p>
+<p><span class="arithmatex">\(a - b =\)</span> маленькое число. Абсолютная погрешность: <span class="arithmatex">\(\sim \text{eps} \cdot |a|\)</span>.</p>
+<p>Относительная погрешность результата: <span class="arithmatex">\(\text{eps} \cdot |a| / |a - b|\)</span>.</p>
+<p>Если <span class="arithmatex">\(|a - b| \ll |a|\)</span>, то относительная погрешность <span class="arithmatex">\(\gg 1\)</span>. Все значащие цифры потеряны.</p>
+<p>Пример: <span class="arithmatex">\(a = 1.000000001\)</span>, <span class="arithmatex">\(b = 1.000000000\)</span> (с точностью <span class="arithmatex">\(\pm 10^{-16}\)</span>). Разность <span class="arithmatex">\(= 10^{-9}\)</span>. Относительная ошибка <span class="arithmatex">\(\sim 10^{-7}\)</span> — потеряно 7 знаков!</p>
+<h4 id="катастрофическое-вычитание-в-квадратном-уравнении">Катастрофическое вычитание в квадратном уравнении<a class="headerlink" href="#катастрофическое-вычитание-в-квадратном-уравнении" title="Permanent link">&para;</a></h4>
+<p>Задача: корни <span class="arithmatex">\(x^2 - 10000x + 1 = 0\)</span>. Дискриминант <span class="arithmatex">\(D \approx 10^8\)</span>, <span class="arithmatex">\(\sqrt{D} \approx 9999.9998\)</span>.</p>
+<p><span class="arithmatex">\(x_1 = (10000 + 9999.9998)/2 \approx 9999.9999\)</span> ← вычисляется хорошо.</p>
+<p><span class="arithmatex">\(x_2 = (10000 - 9999.9998)/2 \approx 0.0001\)</span> ← катастрофическое вычитание!</p>
+<p>Исправление: <span class="arithmatex">\(x_1 = (-b - \mathrm{sign}(b) \cdot \sqrt{D}) / 2a\)</span>, <span class="arithmatex">\(x_2 = c / (a \cdot x_1)\)</span> — теорема Виета устраняет вычитание.</p>
+<h3 id="механизм-3-число-обусловленности">Механизм 3: число обусловленности<a class="headerlink" href="#механизм-3-число-обусловленности" title="Permanent link">&para;</a></h3>
+<p>Некоторые задачи чувствительны к малым изменениям входных данных. Такие задачи называются плохо обусловленными. Компьютер не виноват — математика такова.</p>
+<p><span class="arithmatex">\(K =\)</span> отношение относительного изменения результата к относительному изменению входных данных.</p>
+<p><span class="arithmatex">\(K \sim 1\)</span>: хорошо обусловленная задача. <span class="arithmatex">\(K \gg 1\)</span>: плохо обусловленная.</p>
+<p>Для системы <span class="arithmatex">\(Ax = b\)</span>: <span class="arithmatex">\(K(A) = \|A\| \cdot \|A^{-1}\|\)</span>. Правило: <span class="arithmatex">\(K = 10^k \Rightarrow\)</span> теряем <span class="arithmatex">\(\sim k\)</span> знаков.</p>
+<p>Важно: плохая обусловленность — свойство задачи, не алгоритма. Даже идеальный алгоритм не поможет.</p>
+<h4 id="полином-уилкинсона">Полином Уилкинсона<a class="headerlink" href="#полином-уилкинсона" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(p(x) = (x-1)(x-2)\ldots(x-20)\)</span>. Корни: <span class="arithmatex">\(1, 2, \ldots, 20\)</span>.</p>
+<p>Уилкинсон изменил коэффициент при <span class="arithmatex">\(x^{19}\)</span> на <span class="arithmatex">\(-210 - 2^{-23}\)</span> (изменение в 8-м знаке!).</p>
+<p>Результат: корни разлетелись в комплексную плоскость. 10 комплексных пар вместо 20 вещественных. Число обусловленности <span class="arithmatex">\(\sim 10^{13}\)</span>.</p>
+<p>Вывод: задача нахождения корней полинома по коэффициентам — принципиально плохо обусловленная.</p>
+<!-- fragment:030 -->
+<h3 id="код-cancellation-устойчивое-квадратное-уравнение-обусловленность">Код: cancellation, устойчивое квадратное уравнение, обусловленность<a class="headerlink" href="#код-cancellation-устойчивое-квадратное-уравнение-обусловленность" title="Permanent link">&para;</a></h3>
+<p>Что демонстрирует: потеря знаков при вычитании близких чисел; исправление через ряд Тейлора и теорему Виета; рост cond(H) для матриц Гильберта.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># Катастрофическое вычитание</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">1e-8</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">direct</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>            <span class="c1"># плохой способ</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">taylor</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="mi">6</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">5</span><span class="o">/</span><span class="mi">120</span>        <span class="c1"># хороший способ</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Прямое: </span><span class="si">{</span><span class="n">direct</span><span class="si">:</span><span class="s1">.6e</span><span class="si">}</span><span class="s1">, Тейлор: </span><span class="si">{</span><span class="n">taylor</span><span class="si">:</span><span class="s1">.6e</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Устойчивое квадратное уравнение</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">def</span><span class="w"> </span><span class="nf">stable_quadratic</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">D</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="k">if</span> <span class="n">D</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="kc">None</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">sqrt_D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="k">if</span> <span class="n">b</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span> <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="n">sqrt_D</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="k">else</span><span class="p">:</span>      <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">sqrt_D</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="n">x2</span> <span class="o">=</span> <span class="n">c</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">x1</span><span class="p">)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="c1"># Число обусловленности матрицы Гильберта</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)])</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'cond(H10) = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">cond</span><span class="p">(</span><span class="n">H</span><span class="p">)</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>  <span class="c1"># ~10^13</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>Прямое: 0.000000e+00, Тейлор: 1.666667e-25
+cond(H10) = 1.60e+13</code></pre>
+<!-- fragment:031 -->
+<h3 id="задачи-к-5">Задачи к §5<a class="headerlink" href="#задачи-к-5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>Базовый.</em> Вычислите x - sin(x) при x = <span class="arithmatex">\(10^{-8}\)</span> двумя способами. Используйте <code>mpmath</code> для эталона. Сколько верных знаков?</li>
+<li><em>Аналитический.</em> Сравните <code>stable_quadratic</code> и наивную формулу для x² - <span class="arithmatex">\(10^8\)</span>x + 1 = 0.</li>
+<li><em>Исследовательский.</em> Вычислите cond(H(n)) для n = 5, 8, 10, 12. Что происходит?</li>
+</ul>
+<!-- fragment:032 -->
+<h2 id="часть-iv-численная-инженерия-как-не-сделать-ошибку">Часть IV. Численная инженерия: как не сделать ошибку<a class="headerlink" href="#часть-iv-численная-инженерия-как-не-сделать-ошибку" title="Permanent link">&para;</a></h2>
+<p>До сих пор мы изучали, как представлено одно число: целое, рациональное, с плавающей точкой. Теперь посмотрим, как ограничения представления ведут себя внутри алгоритмов — при суммировании тысяч слагаемых, решении систем уравнений и оценке ошибки. Здесь ошибки одиночных операций складываются, усиливаются и иногда уничтожают результат целиком.</p>
+<h2 id="-6-алгоритмы-и-точность-устойчивые-против-неустойчивых">§ 6. Алгоритмы и точность: устойчивые против неустойчивых<a class="headerlink" href="#-6-алгоритмы-и-точность-устойчивые-против-неустойчивых" title="Permanent link">&para;</a></h2>
+<h3 id="провокация_5">Провокация<a class="headerlink" href="#провокация_5" title="Permanent link">&para;</a></h3>
+<p>Два алгоритма вычисляют одно: сумму n чисел. Первый — наивный. Второй — алгоритм Кэхэна: четыре строки дополнительного кода.</p>
+<p>Математически они тождественны. Численно — разница в точности в миллион раз при n = <span class="arithmatex">\(10^6\)</span>.</p>
+<h3 id="-61-численная-устойчивость-определение">§ 6.1 Численная устойчивость: определение<a class="headerlink" href="#-61-численная-устойчивость-определение" title="Permanent link">&para;</a></h3>
+<p>Численно устойчивый алгоритм: ошибка результата растёт не быстрее, чем полиномиально от размера задачи.</p>
+<p>Численно неустойчивый: ошибка может расти экспоненциально — результат теряет все значащие цифры.</p>
+<p><strong>Прямая устойчивость (forward stability):</strong> ошибка результата мала — алгоритм возвращает ответ, близкий к точному.</p>
+<p><strong>Обратная устойчивость (backward stability):</strong> результат является точным решением слегка возмущённой задачи. Более сильное и полезное свойство.</p>
+<p>Ключевой факт: плохая обусловленность + устойчивый алгоритм = приемлемый результат. Хорошая обусловленность + неустойчивый алгоритм = потеря точности.</p>
+<!-- fragment:033 -->
+<h3 id="уильям-кэхэн-род-1933">Уильям Кэхэн (род. 1933)<a class="headerlink" href="#уильям-кэхэн-род-1933" title="Permanent link">&para;</a></h3>
+<p>Канадский математик, профессор UC Berkeley. Главный архитектор стандарта IEEE 754. Лауреат премии Тьюринга (1989) — за работу по стандарту IEEE 754 и численным методам. Алгоритм компенсированного суммирования — 1965 год.</p>
+<!-- fragment:034 -->
+<h3 id="-62-алгоритм-кэхэна-компенсированное-суммирование">§ 6.2 Алгоритм Кэхэна: компенсированное суммирование<a class="headerlink" href="#-62-алгоритм-кэхэна-компенсированное-суммирование" title="Permanent link">&para;</a></h3>
+<p>Наивное суммирование: при прибавлении маленького слагаемого к большой сумме «маленькая» часть теряется при округлении. Кэхэн эту потерю отслеживает и компенсирует.</p>
+<p>Наивное суммирование n чисел: ошибка O(n · eps · max|xᵢ|). При n = <span class="arithmatex">\(10^6\)</span> теряем 6 знаков.</p>
+<p>Алгоритм Кэхэна: ошибка O(eps · |результат|) независимо от n. Практически машинная точность.</p>
+<p>Идея: на каждом шаге вычисляем «потерянную» часть и передаём на следующий шаг как компенсацию.</p>
+<!-- fragment:035 -->
+<h3 id="код-алгоритм-кэхэна-и-сравнение-с-наивным">Код: алгоритм Кэхэна и сравнение с наивным<a class="headerlink" href="#код-алгоритм-кэхэна-и-сравнение-с-наивным" title="Permanent link">&para;</a></h3>
+<p>Что демонстрирует: компенсация потери при суммировании; разница в точности на <span class="arithmatex">\(10^6\)</span> слагаемых.</p>
+<p>С версии CPython 3.12 встроенная <code>sum()</code> складывает числа с плавающей точкой с компенсацией и потерю точности уже не показывает — поэтому в роли «наивного» суммирования здесь явный цикл <code>+=</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">naive_sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        <span class="n">total</span> <span class="o">+=</span> <span class="n">x</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">return</span> <span class="n">total</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">kahan_sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">compensation</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">compensation</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        <span class="n">t</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">y</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="n">compensation</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">total</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span>  <span class="c1"># что потеряно</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        <span class="n">total</span> <span class="o">=</span> <span class="n">t</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="k">return</span> <span class="n">total</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fractions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fraction</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="n">n</span> <span class="o">=</span> <span class="mi">1_000_000</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="n">exact</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Наивное:  ошибка </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">naive_sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="n">exact</span><span class="p">)</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Кэхэн:   ошибка </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">kahan_sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="n">exact</span><span class="p">)</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'fsum:     ошибка </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">fsum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="n">exact</span><span class="p">)</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>Наивное:  ошибка 1.33e-06
+Кэхэн:   ошибка 0.00e+00
+fsum:     ошибка 0.00e+00</code></pre>
+<!-- fragment:036 -->
+<h3 id="-63-решение-систем-линейных-уравнений-ведущий-элемент">§ 6.3 Решение систем линейных уравнений: ведущий элемент<a class="headerlink" href="#-63-решение-систем-линейных-уравнений-ведущий-элемент" title="Permanent link">&para;</a></h3>
+<p>Метод Гаусса — главный алгоритм линейной алгебры. Но в наивной реализации скрыта численная проблема: деление на малый диагональный элемент усиливает ошибки.</p>
+<h4 id="метод-гаусса-устойчивый-против-неустойчивого">Метод Гаусса: устойчивый против неустойчивого<a class="headerlink" href="#метод-гаусса-устойчивый-против-неустойчивого" title="Permanent link">&para;</a></h4>
+<p><strong>Без выбора ведущего элемента:</strong> O(n³). Неустойчив. В продакшн-коде не использовать.</p>
+<p><strong>С частичным выбором ведущего (partial pivoting):</strong> O(n³). Устойчив для большинства задач. Стандарт: LAPACK, <code>scipy.linalg.solve</code>.</p>
+<p>Для более сложных случаев существуют LU-разложение, QR-разложение и SVD (сингулярное разложение) — каждый со своей областью применения.</p>
+<!-- fragment:037 -->
+<h3 id="sleipner-a-700-миллионов-долларов-и-47-ошибки">Sleipner A: 700 миллионов долларов и 47% ошибки<a class="headerlink" href="#sleipner-a-700-миллионов-долларов-и-47-ошибки" title="Permanent link">&para;</a></h3>
+<p>23 августа 1991 года. Норвегия. Бетонное основание нефтяной платформы Sleipner A разрушилось при контролируемом погружении на рабочую глубину в Северном море. Ущерб: около 700 миллионов долларов.</p>
+<p>Причина: численная ошибка в конечно-элементном расчёте прочности бетонных перегородок. Слишком грубая сетка усилила ошибку в оценке сдвиговых напряжений. Расчётная нагрузка была занижена примерно на 47%. Перегородки треснули под давлением воды.</p>
+<p>Урок прост: верификация численного алгоритма — не академический вопрос, а вопрос безопасности. То, что в учебнике выглядит как «выбор разрешения сетки», в инженерной практике может стоить сотен миллионов долларов и человеческих жизней.</p>
+<!-- fragment:038 -->
+<h3 id="задачи-к-6">Задачи к §6<a class="headerlink" href="#задачи-к-6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>Базовый.</em> Сравните наивное суммирование и Кэхэна для n = <span class="arithmatex">\(10^6\)</span> случайных float64 из [0,1]. <code>Fraction</code> как эталон.</li>
+<li><em>Аналитический.</em> Создайте матрицу Гильберта H(n), n = 5, 8, 10, 12. Решите Hx = b (x = вектор единиц). График ошибки от n.</li>
+<li><em>Исследовательский.</em> Объясните: что такое «невязка» и почему она лучше характеризует качество решения, чем ‖x_комп - x_точн‖?</li>
+</ul>
+<!-- fragment:039 -->
+<h3 id="углубление">Углубление<a class="headerlink" href="#углубление" title="Permanent link">&para;</a></h3>
+<p>Всё ниже — для тех, кто хочет понять, как оценивать точность вычислений и какие инструменты для этого существуют. Этот материал не обязателен при первом чтении, но необходим для реальной инженерной работы.</p>
+<h2 id="-7-как-оценивать-точность-вычислений">§ 7. Как оценивать точность вычислений<a class="headerlink" href="#-7-как-оценивать-точность-вычислений" title="Permanent link">&para;</a></h2>
+<h3 id="провокация_6">Провокация<a class="headerlink" href="#провокация_6" title="Permanent link">&para;</a></h3>
+<p>Нельзя писать: <code>if computed_value == exact_value:</code> — это почти никогда не сработает для float. Даже <code>if result == 0.0</code> ненадёжно.</p>
+<p>Как правильно сравнивать вещественные числа? Как измерять погрешность? Когда результат «достаточно точен»?</p>
+<!-- fragment:040 -->
+<h3 id="-71-абсолютная-и-относительная-погрешность">§ 7.1 Абсолютная и относительная погрешность<a class="headerlink" href="#-71-абсолютная-и-относительная-погрешность" title="Permanent link">&para;</a></h3>
+<p><strong>Абсолютная:</strong> Δx = |x_computed - x_exact|. Размерная. Зависит от масштаба.</p>
+<p><strong>Относительная:</strong> δx = |x_computed - x_exact| / |x_exact|. Безразмерная.</p>
+<p>Когда абсолютную: задача имеет физический масштаб. Когда относительную: сравнение чисел разного масштаба.</p>
+<p>Проблема: относительная не определена при x_exact = 0. Используйте смешанную: max(|x|, |y|) в знаменателе.</p>
+<h3 id="-72-ulp--единицы-на-последнем-месте">§ 7.2 ULP — единицы на последнем месте<a class="headerlink" href="#-72-ulp--единицы-на-последнем-месте" title="Permanent link">&para;</a></h3>
+<p><em>При первом чтении достаточно вынести § 7.1, § 7.3 и инженерный чеклист (§ 7.5). Разделы 7.2 и 7.4 — более тонкие инструменты для углублённого анализа.</em></p>
+<p>ULP (Unit in the Last Place) — расстояние от числа <span class="arithmatex">\(x\)</span> до следующего представимого float. Два числа различаются на 1 ULP, если между ними нет ни одного float.</p>
+<p><code>math.ulp(x)</code> в Python 3.9+: расстояние от x до следующего float.</p>
+<p>Результат «правильно округлён», если отличается от точного менее чем на 0.5 ULP.</p>
+<p><code>math.ulp(1.0)</code> ≈ <span class="arithmatex">\(2.22 \cdot 10^{-16}\)</span> — это в точности машинное эпсилон. Почему? По определению eps — расстояние от 1.0 до следующего float, то есть ULP(1.0).</p>
+<h3 id="-73-правильное-сравнение-float">§ 7.3 Правильное сравнение float<a class="headerlink" href="#-73-правильное-сравнение-float" title="Permanent link">&para;</a></h3>
+<p><strong>Для результатов вещественных вычислений:</strong> почти никогда не сравнивайте <code>a == b</code> напрямую; используйте допуск.</p>
+<p><strong>Абсолютное:</strong> <code>abs(a - b) &lt; atol</code> — работает при числах близких к нулю.</p>
+<p><strong>Относительное:</strong> <code>abs(a - b) / max(abs(a), abs(b)) &lt; rtol</code>.</p>
+<p><strong>Комбинированное (numpy):</strong> <code>abs(a - b) ≤ atol + rtol · max(abs(a), abs(b))</code>.</p>
+<p>Рекомендация: rtol = <span class="arithmatex">\(10 \cdot \text{eps} \approx 10^{-15}\)</span> для одиночных операций, rtol = <span class="arithmatex">\(10^{-10}\)</span> для длинных вычислений.</p>
+<!-- fragment:041 -->
+<h3 id="-74-интервальная-арифметика">§ 7.4 Интервальная арифметика<a class="headerlink" href="#-74-интервальная-арифметика" title="Permanent link">&para;</a></h3>
+<p>Радикальный подход: вместо числа x хранить интервал [x_min, x_max], гарантированно содержащий точное значение. Каждая операция обновляет интервал.</p>
+<p>[a₁,a₂] + [b₁,b₂] = [a₁+b₁, a₂+b₂].</p>
+<p>[a₁,a₂]  [b₁,b₂] = [min(...), max(...)] по всем парам.</p>
+<p>Применение: доказательство гипотезы Кеплера об оптимальной упаковке шаров (Томас Хейлз, 2005) использовало интервальную арифметику для компьютерной верификации. Также: управление беспилотниками, финансовые расчёты.</p>
+<p>Цена: замедление в 10–100 раз. Ширина интервала может расти быстро.</p>
+<!-- fragment:042 -->
+<h3 id="код-сравнение-float-и-ulp-расстояние">Код: сравнение float и ULP-расстояние<a class="headerlink" href="#код-сравнение-float-и-ulp-расстояние" title="Permanent link">&para;</a></h3>
+<p>Что демонстрирует: стандартный практический способ сравнения float через <code>math.isclose()</code>; демонстрационный подсчёт ULP-расстояния для положительных конечных float (не универсальная реализация).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span><span class="o">,</span><span class="w"> </span><span class="nn">struct</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1"># Стандартный способ: math.isclose()</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># Реализует комбинированный критерий: abs(a-b) &lt;= atol + rtol * max(abs(a), abs(b))</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">))</span>              <span class="c1"># True (rel_tol=1e-9)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="mf">1e-15</span><span class="p">,</span> <span class="mf">2e-15</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">1e-14</span><span class="p">))</span>  <span class="c1"># True (вблизи нуля нужен abs_tol)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># ULP-расстояние (демонстрация для положительных конечных float)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="k">def</span><span class="w"> </span><span class="nf">ulp_distance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="k">assert</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"только положительные конечные"</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_int</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">'&gt;d'</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="s1">'big'</span><span class="p">)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>        <span class="k">return</span> <span class="n">n</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">to_int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">-</span> <span class="n">to_int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">ulp_distance</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">))</span>  <span class="c1"># несколько ULP</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>True
+True
+1</code></pre>
+<!-- fragment:043 -->
+<h3 id="-75-инженерный-чеклист">§ 7.5 Инженерный чеклист<a class="headerlink" href="#-75-инженерный-чеклист" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ситуация</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Начинаете вычисления?</td>
+<td>Оцените cond. K &gt; 10¹² → спец. методы</td>
+</tr>
+<tr>
+<td>Суммируете много чисел?</td>
+<td>Кэхэн или <code>math.fsum()</code>; встроенная <code>sum()</code> начиная с Python 3.12 — тоже компенсированная.</td>
+</tr>
+<tr>
+<td>Сравниваете <strong>вычисленные</strong> вещественные результаты?</td>
+<td>Почти никогда не <code>==</code>. <code>math.isclose()</code> или комбинированный допуск (<code>atol</code>, <code>rtol</code>).</td>
+</tr>
+<tr>
+<td>Вычитаете близкие числа?</td>
+<td>Переформулируйте алгебраически.</td>
+</tr>
+<tr>
+<td>Решаете СЛАУ?</td>
+<td>С pivoting. Проверьте cond(A).</td>
+</tr>
+<tr>
+<td>Нужна гарантия?</td>
+<td><code>Fraction</code> или <code>mpmath</code>.</td>
+</tr>
+<tr>
+<td>Физическая задача?</td>
+<td>Точность ≥ точности измерений.</td>
+</tr>
+</tbody>
+</table>
+<!-- fragment:044 -->
+<h3 id="теорема-годунова-математический-предел-точности">Теорема Годунова: математический предел точности<a class="headerlink" href="#теорема-годунова-математический-предел-точности" title="Permanent link">&para;</a></h3>
+<p>В 1961 году Сергей Годунов доказал: не существует линейного монотонного численного метода для гиперболических уравнений точнее первого порядка. Любой «более точный» линейный метод порождает осцилляции вблизи разрывов (ударные волны, фронты горения).</p>
+<p>Выход: нелинейные ограничители потока, адаптивные сетки, WENO-схемы.</p>
+<p>Урок: иногда «более точный алгоритм» даёт физически неверный результат, а «грубый» — правильный. Точность и устойчивость — разные качества.</p>
+<!-- fragment:045 -->
+<h3 id="задачи-к-7">Задачи к §7<a class="headerlink" href="#задачи-к-7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>Базовый.</em> Протестируйте <code>math.isclose(a, b)</code> на парах: <code>(1.0, 1.0+1e-10)</code>, <code>(0.0, 1e-300)</code>, <code>(1e300, 1e300+1e284)</code>. Для каких пар нужен <code>abs_tol</code>, а для каких достаточно <code>rel_tol</code>?</li>
+<li><em>Аналитический.</em> Используя <code>mpmath</code> (50 знаков), вычислите Σ 1/n² для n = 1..10000. Сравните с π²/6. Сколько знаков верно в float64?</li>
+<li><em>Исследовательский.</em> (Проект) Решение квадратного уравнения с явным анализом ошибок: для каждого корня — оценка погрешности через cond.</li>
+</ul>
+<!-- fragment:046 -->
+<h2 id="-8-дерево-решений-какой-числовой-тип-выбрать">§ 8. Дерево решений: какой числовой тип выбрать?<a class="headerlink" href="#-8-дерево-решений-какой-числовой-тип-выбрать" title="Permanent link">&para;</a></h2>
+<p>Это кульминация главы. Все предыдущие параграфы вели к одному практическому вопросу: имея конкретную задачу, какой числовой тип взять?</p>
+<h3 id="decision-tree-выбор-числового-типа">Decision tree: выбор числового типа<a class="headerlink" href="#decision-tree-выбор-числового-типа" title="Permanent link">&para;</a></h3>
+<p><strong>1. Число целое?</strong></p>
+<p>→ Диапазон заранее известен и <span class="arithmatex">\(\le 64\)</span> бит? → <code>int32</code> / <code>int64</code>.</p>
+<p>→ Диапазон непредсказуем или нужна криптография? → Python <code>int</code> (BigInt).</p>
+<p><strong>2. Число дробное и нужна точность?</strong></p>
+<p>→ Финансы, символьные вычисления, предикаты геометрии? → <code>Fraction</code>.</p>
+<p>→ Финансы с фиксированным числом десятичных знаков? → <code>Decimal</code>.</p>
+<p><strong>3. Число дробное и нужна скорость?</strong></p>
+<p>→ GPU, графика, нейросети, потоковые данные? → <code>float32</code>.</p>
+<p>→ Наука, инженерия, общие вычисления? → <code>float64</code>.</p>
+<p><strong>4. Нужна гарантированная точность или верификация?</strong> → Интервальная арифметика.</p>
+<p><strong>Правило</strong>: начинайте с самого простого типа, который решает задачу. Переходите к более тяжёлому только когда есть конкретная причина — не «на всякий случай».</p>
+<h3 id="сводная-таблица-числа-в-компьютере">Сводная таблица: числа в компьютере<a class="headerlink" href="#сводная-таблица-числа-в-компьютере" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Тип</th>
+<th>Размер</th>
+<th>Диапазон</th>
+<th>Точность</th>
+<th>Применение</th>
+<th>Катастрофа</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int8/uint8</td>
+<td>1 Б</td>
+<td>−128..127 / 0..255</td>
+<td>точно</td>
+<td>Байты, пиксели</td>
+<td>—</td>
+</tr>
+<tr>
+<td>int16/uint16</td>
+<td>2 Б</td>
+<td>−32768..32767</td>
+<td>точно</td>
+<td>Порты, аудио</td>
+<td>Ariane 5*</td>
+</tr>
+<tr>
+<td>int32/uint32</td>
+<td>4 Б</td>
+<td>±2.1·10⁹</td>
+<td>точно</td>
+<td>Стандартный int</td>
+<td>—</td>
+</tr>
+<tr>
+<td>int64/uint64</td>
+<td>8 Б</td>
+<td>±9.2·10¹⁸</td>
+<td>точно</td>
+<td>long, Unix-время</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Python int</td>
+<td>перем.</td>
+<td>неограничен</td>
+<td>точно</td>
+<td>BigInt, крипто</td>
+<td>—</td>
+</tr>
+<tr>
+<td>float32</td>
+<td>4 Б</td>
+<td>±3.4·10³⁸</td>
+<td>~7 знаков</td>
+<td>GPU, графика</td>
+<td>—</td>
+</tr>
+<tr>
+<td>float64</td>
+<td>8 Б</td>
+<td>±1.8·10³⁰⁸</td>
+<td>~16 знаков</td>
+<td>Наука, инженерия</td>
+<td>Patriot</td>
+</tr>
+<tr>
+<td>Fraction</td>
+<td>перем.</td>
+<td>точно</td>
+<td>точно</td>
+<td>Символьн. выч.</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Decimal</td>
+<td>перем.</td>
+<td>настр.</td>
+<td>настр.</td>
+<td>Финансы</td>
+<td>—</td>
+</tr>
+<tr>
+<td>mpmath</td>
+<td>настр.</td>
+<td>произвольно</td>
+<td>произвольно</td>
+<td>Верификация</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Ariane 5: ошибка при преобразовании float64 → int16.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- fragment:047 -->
+<h2 id="-9-проектная-задача-спасите-вычисление">§ 9. Проектная задача: спасите вычисление<a class="headerlink" href="#-9-проектная-задача-спасите-вычисление" title="Permanent link">&para;</a></h2>
+<h3 id="задание">Задание<a class="headerlink" href="#задание" title="Permanent link">&para;</a></h3>
+<p>Дано выражение для вычисления:</p>
+<div class="arithmatex">\[f(x) = \frac{1 - \cos x}{x^2}, \quad x \to 0.\]</div>
+<p>Точное значение предела: <span class="arithmatex">\(1/2\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mpmath</span><span class="w"> </span><span class="kn">import</span> <span class="n">mp</span><span class="p">,</span> <span class="n">mpf</span><span class="p">,</span> <span class="n">cos</span> <span class="k">as</span> <span class="n">mpcos</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">mp</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># 50 знаков для эталона</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">f_direct</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">f_trig</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">half</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="n">sinc</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">half</span><span class="p">)</span> <span class="o">/</span> <span class="n">half</span> <span class="k">if</span> <span class="n">half</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">1.0</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="k">return</span> <span class="n">sinc</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">f_taylor</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="k">return</span> <span class="mf">0.5</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">24</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">/</span><span class="mi">720</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">f_exact</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="n">xm</span> <span class="o">=</span> <span class="n">mpf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="k">return</span> <span class="nb">float</span><span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">mpcos</span><span class="p">(</span><span class="n">xm</span><span class="p">))</span> <span class="o">/</span> <span class="n">xm</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">]:</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mf">10.0</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="n">e</span><span class="p">)</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="n">exact</span> <span class="o">=</span> <span class="n">f_exact</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'x=1e-</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s1">: direct err=</span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">f_direct</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="n">exact</span><span class="p">)</span><span class="o">/</span><span class="n">exact</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">, '</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>          <span class="sa">f</span><span class="s1">'trig err=</span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">f_trig</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="n">exact</span><span class="p">)</span><span class="o">/</span><span class="n">exact</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">, '</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>          <span class="sa">f</span><span class="s1">'taylor err=</span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">f_taylor</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="n">exact</span><span class="p">)</span><span class="o">/</span><span class="n">exact</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="проект-катастрофическое-cancellation-и-его-лечение">Проект: катастрофическое cancellation и его лечение<a class="headerlink" href="#проект-катастрофическое-cancellation-и-его-лечение" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Часть 1.</strong> Вычислите <code>f(x)</code> напрямую для <span class="arithmatex">\(x = 10^{-1}, 10^{-4}, 10^{-8}, 10^{-12}\)</span>. Сравните с <span class="arithmatex">\(0.5\)</span>. Постройте таблицу относительных ошибок. Что происходит?</p>
+</li>
+<li>
+<p><strong>Часть 2.</strong> Объясните механизм: при малых <span class="arithmatex">\(x\)</span> числитель <span class="arithmatex">\((1 - \cos x)\)</span> вычисляет разность двух чисел, близких к 1. Это катастрофическое вычитание.</p>
+</li>
+<li>
+<p><strong>Часть 3.</strong> Перепишите формулу так, чтобы уменьшить ошибку в 1000 раз и более. Два способа:</p>
+</li>
+</ul>
+<p><em>Способ A (алгебраический):</em> используйте тождество <span class="arithmatex">\(1 - \cos x = 2 \sin^2(x/2)\)</span>, тогда <span class="arithmatex">\(f(x) = 2 \sin^2(x/2) / x^2 = (\sin(x/2) / (x/2))^2 / 2\)</span>. При малых <span class="arithmatex">\(x\)</span> <span class="arithmatex">\(\sin(x/2)/(x/2) \to 1\)</span>, и cancellation исчезает.</p>
+<p><em>Способ B (ряд Тейлора):</em> <span class="arithmatex">\(\cos x \approx 1 - x^2/2 + x^4/24\)</span>, тогда <span class="arithmatex">\((1 - \cos x)/x^2 \approx 1/2 - x^2/24\)</span>. Вычитание устранено.</p>
+<ul>
+<li>
+<p><strong>Часть 4.</strong> Постройте таблицу ошибок для обоих способов. При каком <span class="arithmatex">\(x\)</span> прямая формула теряет все знаки, а исправленная — нет?</p>
+</li>
+<li>
+<p><strong>Часть 5.</strong> Напишите функцию <code>safe_f(x)</code>, которая автоматически выбирает способ вычисления в зависимости от <span class="arithmatex">\(|x|\)</span>.</p>
+</li>
+</ul>
+<!-- fragment:048 -->
+<h2 id="итог-от-транзистора-до-гарантированной-точности">Итог: от транзистора до гарантированной точности<a class="headerlink" href="#итог-от-транзистора-до-гарантированной-точности" title="Permanent link">&para;</a></h2>
+<p>Эта глава проследила путь от транзистора до интервальной арифметики. От «сколько бит» до «как гарантировать правильность результата».</p>
+<p>Ключевой сдвиг мышления: компьютер не вычисляет «точно». Он вычисляет «достаточно точно при правильных условиях». Понять эти условия — значит стать инженером, а не просто пользователем калькулятора.</p>
+<h3 id="главный-вывод-главы">Главный вывод главы<a class="headerlink" href="#главный-вывод-главы" title="Permanent link">&para;</a></h3>
+<p>Точность вычислений — это инженерный компромисс. Целые числа: точны, но ограничены диапазоном. BigInt: точны, но медленнее. Рациональные: точны, но растут бесконтрольно. Float: быстрые и компактные, но приближённые. Понимать этот компромисс — знать, какой инструмент взять для каждой задачи.</p>
+<h3 id="ответы-на-три-вопроса-из-начала-главы">Ответы на три вопроса из начала главы<a class="headerlink" href="#ответы-на-три-вопроса-из-начала-главы" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><code>0.1 + 0.2 == 0.3</code> → <code>False</code>. Числа 0.1 и 0.2 не имеют конечного двоичного представления (знаменатель не степень двойки). Сумма приближений отличается от приближения суммы на 1 ULP — конкретный бит мантиссы, который мы увидели через <code>float_to_bits()</code>.</p>
+</li>
+<li>
+<p><code>int</code> в Python — BigInt: динамический массив 30-битных «цифр», никогда не переполняется. <code>int</code> в Java — int32: фиксированная ячейка, арифметика по модулю <span class="arithmatex">\(2^{32}\)</span>, гарантированное переполнение. <code>int</code> в C (signed) — фиксированная ячейка, но переполнение формально не определено стандартом (undefined behavior); unsigned — по модулю <span class="arithmatex">\(2^n\)</span>.</p>
+</li>
+<li>
+<p>Ariane 5: преобразование <code>float64 → int16</code> без проверки диапазона. Горизонтальная скорость превысила 32 767 — максимум int16. Необработанное исключение → диагностические данные вместо полётных → ракета разрушилась.</p>
+</li>
+</ol>
+<!-- fragment:049 -->
+<h2 id="мост-к-следующей-главе">Мост к следующей главе<a class="headerlink" href="#мост-к-следующей-главе" title="Permanent link">&para;</a></h2>
+<p>Мы научились выбирать тип данных и оценивать ошибку. Но каждый выбор опирается на точные утверждения: «<em>если</em> диапазон превышен — переполнение», «<em>если</em> потеря значимости возможна — переформулировать», «<em>если</em> два числа считаются равными — с заданным допуском». Слова <em>если</em>, <em>для всех</em>, <em>существует</em>, <em>тогда и только тогда</em> — несут точный смысл, который естественный язык размывает. Сформулировать условие корректно — уже не инженерный, а логический вопрос. Следующая глава даёт для этого язык: язык множеств, логических связок и кванторов.</p>
+<p>Этим мы займёмся в главе <strong>«Множества, логика и язык математики»</strong>.</p>
+<!-- fragment:050 -->
+<h2 id="что-за-пределами-этой-главы">Что за пределами этой главы<a class="headerlink" href="#что-за-пределами-этой-главы" title="Permanent link">&para;</a></h2>
+<p>Числа с фиксированной точкой (fixed-point): компромисс между integer и float, используется в DSP и встраиваемых системах.</p>
+<p>SIMD и векторные вычисления: параллельная float-арифметика на уровне CPU и GPU.</p>
+<p>Символьные вычисления: SymPy, Mathematica — работа с формулами, не числами.</p>
+<p>Верификация численных программ: Frama-C, Why3 — формальное доказательство корректности float-программ.</p>
+<p>Квантовые вычисления: иная модель числовой точности — вероятностные результаты.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 ARISTOTEL
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../assets/javascripts/katex-init.js"></script>
+      
+    
+  </body>
+</html>
