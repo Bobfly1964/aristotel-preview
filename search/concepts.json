@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "stembook_version": "0.1.0",
-  "concept_count": 156,
+  "concept_count": 165,
   "concepts": [
     {
       "id": "cs.arbitrary_precision_integer",
@@ -34,6 +34,14 @@
       "area": "numerical_methods",
       "importance": "high",
       "href": "/concepts/cs-condition_number/"
+    },
+    {
+      "id": "cs.discrete_time_simulation",
+      "title": "Пошаговая модель движения",
+      "subject": "cs",
+      "area": "computation",
+      "importance": "critical",
+      "href": "/concepts/cs-discrete_time_simulation/"
     },
     {
       "id": "cs.fast_exponentiation",
@@ -356,6 +364,14 @@
       "href": "/concepts/cs-python-variable/"
     },
     {
+      "id": "cs.python.while_loop",
+      "title": "Цикл while",
+      "subject": "cs",
+      "area": "python",
+      "importance": "critical",
+      "href": "/concepts/cs-python-while_loop/"
+    },
+    {
       "id": "cs.python.zip",
       "title": "Функция zip()",
       "subject": "cs",
@@ -378,6 +394,14 @@
       "area": "numerical_methods",
       "importance": "high",
       "href": "/concepts/cs-roundoff_error/"
+    },
+    {
+      "id": "cs.time_step",
+      "title": "Шаг по времени",
+      "subject": "cs",
+      "area": "computation",
+      "importance": "critical",
+      "href": "/concepts/cs-time_step/"
     },
     {
       "id": "cs.twos_complement",
@@ -442,6 +466,22 @@
       "area": "arithmetic",
       "importance": "normal",
       "href": "/concepts/math-collatz_conjecture/"
+    },
+    {
+      "id": "math.collinear_vector_addition",
+      "title": "Сложение коллинеарных векторов",
+      "subject": "math",
+      "area": "geometry",
+      "importance": "critical",
+      "href": "/concepts/math-collinear_vector_addition/"
+    },
+    {
+      "id": "math.collinear_vectors",
+      "title": "Коллинеарные векторы",
+      "subject": "math",
+      "area": "geometry",
+      "importance": "critical",
+      "href": "/concepts/math-collinear_vectors/"
     },
     {
       "id": "math.composite_number",
@@ -1084,6 +1124,22 @@
       "href": "/concepts/physics-force_decomposition/"
     },
     {
+      "id": "physics.friction_coefficient",
+      "title": "Коэффициент трения",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "critical",
+      "href": "/concepts/physics-friction_coefficient/"
+    },
+    {
+      "id": "physics.friction_force",
+      "title": "Сила трения скольжения",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "critical",
+      "href": "/concepts/physics-friction_force/"
+    },
+    {
       "id": "physics.gravity_coefficient",
       "title": "Коэффициент силы тяжести",
       "subject": "physics",
@@ -1212,6 +1268,14 @@
       "href": "/concepts/physics-spring_stiffness/"
     },
     {
+      "id": "physics.static_friction",
+      "title": "Сила трения покоя",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "critical",
+      "href": "/concepts/physics-static_friction/"
+    },
+    {
       "id": "physics.tension_force",
       "title": "Сила натяжения",
       "subject": "physics",
@@ -1242,6 +1306,14 @@
       "area": "kinematics",
       "importance": "critical",
       "href": "/concepts/physics-velocity/"
+    },
+    {
+      "id": "physics.velocity_addition",
+      "title": "Сложение скоростей",
+      "subject": "physics",
+      "area": "kinematics",
+      "importance": "critical",
+      "href": "/concepts/physics-velocity_addition/"
     },
     {
       "id": "physics.weight",

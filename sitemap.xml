@@ -25,6 +25,10 @@
          <lastmod>2026-09-01</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-discrete_time_simulation/</loc>
+         <lastmod>2026-09-01</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/cs-fast_exponentiation/</loc>
          <lastmod>2026-09-01</lastmod>
     </url>
@@ -185,6 +189,10 @@
          <lastmod>2026-09-01</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-python-while_loop/</loc>
+         <lastmod>2026-09-01</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/cs-python-zip/</loc>
          <lastmod>2026-09-01</lastmod>
     </url>
@@ -194,6 +202,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/cs-roundoff_error/</loc>
+         <lastmod>2026-09-01</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-time_step/</loc>
          <lastmod>2026-09-01</lastmod>
     </url>
     <url>
@@ -226,6 +238,14 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/math-collatz_conjecture/</loc>
+         <lastmod>2026-09-01</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/math-collinear_vector_addition/</loc>
+         <lastmod>2026-09-01</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/math-collinear_vectors/</loc>
          <lastmod>2026-09-01</lastmod>
     </url>
     <url>
@@ -549,6 +569,14 @@
          <lastmod>2026-09-01</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/physics-friction_coefficient/</loc>
+         <lastmod>2026-09-01</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/physics-friction_force/</loc>
+         <lastmod>2026-09-01</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/physics-gravity_coefficient/</loc>
          <lastmod>2026-09-01</lastmod>
     </url>
@@ -609,6 +637,10 @@
          <lastmod>2026-09-01</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/physics-static_friction/</loc>
+         <lastmod>2026-09-01</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/physics-tension_force/</loc>
          <lastmod>2026-09-01</lastmod>
     </url>
@@ -622,6 +654,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/physics-velocity/</loc>
+         <lastmod>2026-09-01</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/physics-velocity_addition/</loc>
          <lastmod>2026-09-01</lastmod>
     </url>
     <url>
@@ -674,6 +710,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/modules/module-2/force-vector/</loc>
+         <lastmod>2026-09-01</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/modules/module-2/friction/</loc>
          <lastmod>2026-09-01</lastmod>
     </url>
 </urlset>
