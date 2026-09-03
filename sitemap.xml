@@ -13,10 +13,6 @@
          <lastmod>2026-09-03</lastmod>
     </url>
     <url>
-         <loc>https://preview.aristotel.academy/concepts/cs-bisection/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
          <loc>https://preview.aristotel.academy/concepts/cs-bitwise_operation/</loc>
          <lastmod>2026-09-03</lastmod>
     </url>
@@ -65,10 +61,6 @@
          <lastmod>2026-09-03</lastmod>
     </url>
     <url>
-         <loc>https://preview.aristotel.academy/concepts/cs-interactive_model/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
          <loc>https://preview.aristotel.academy/concepts/cs-interval_arithmetic/</loc>
          <lastmod>2026-09-03</lastmod>
     </url>
@@ -85,15 +77,7 @@
          <lastmod>2026-09-03</lastmod>
     </url>
     <url>
-         <loc>https://preview.aristotel.academy/concepts/cs-model_validation/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
          <loc>https://preview.aristotel.academy/concepts/cs-numerical_stability/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
-         <loc>https://preview.aristotel.academy/concepts/cs-parameter_sweep/</loc>
          <lastmod>2026-09-03</lastmod>
     </url>
     <url>
@@ -473,10 +457,6 @@
          <lastmod>2026-09-03</lastmod>
     </url>
     <url>
-         <loc>https://preview.aristotel.academy/concepts/math-scale_factor/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
          <loc>https://preview.aristotel.academy/concepts/math-set/</loc>
          <lastmod>2026-09-03</lastmod>
     </url>
@@ -529,10 +509,6 @@
          <lastmod>2026-09-03</lastmod>
     </url>
     <url>
-         <loc>https://preview.aristotel.academy/concepts/math-vector_diagram/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
          <loc>https://preview.aristotel.academy/concepts/math-vector_length/</loc>
          <lastmod>2026-09-03</lastmod>
     </url>
@@ -562,10 +538,6 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/physics-average_speed/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
-         <loc>https://preview.aristotel.academy/concepts/physics-center_of_gravity/</loc>
          <lastmod>2026-09-03</lastmod>
     </url>
     <url>
@@ -665,27 +637,11 @@
          <lastmod>2026-09-03</lastmod>
     </url>
     <url>
-         <loc>https://preview.aristotel.academy/concepts/physics-stability/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
-         <loc>https://preview.aristotel.academy/concepts/physics-stability_margin/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
          <loc>https://preview.aristotel.academy/concepts/physics-static_friction/</loc>
          <lastmod>2026-09-03</lastmod>
     </url>
     <url>
-         <loc>https://preview.aristotel.academy/concepts/physics-support_area/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
          <loc>https://preview.aristotel.academy/concepts/physics-tension_force/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
-         <loc>https://preview.aristotel.academy/concepts/physics-tipping_edge/</loc>
          <lastmod>2026-09-03</lastmod>
     </url>
     <url>
@@ -758,10 +714,6 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/modules/module-2/friction/</loc>
-         <lastmod>2026-09-03</lastmod>
-    </url>
-    <url>
-         <loc>https://preview.aristotel.academy/modules/module-2/tower-stability/</loc>
          <lastmod>2026-09-03</lastmod>
     </url>
 </urlset>
