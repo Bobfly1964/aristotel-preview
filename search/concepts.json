@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "stembook_version": "0.1.0",
-  "concept_count": 165,
+  "concept_count": 176,
   "concepts": [
     {
       "id": "cs.arbitrary_precision_integer",
@@ -10,6 +10,14 @@
       "area": "representation",
       "importance": "high",
       "href": "/concepts/cs-arbitrary_precision_integer/"
+    },
+    {
+      "id": "cs.bisection",
+      "title": "Деление интервала пополам",
+      "subject": "cs",
+      "area": "numerical_methods",
+      "importance": "high",
+      "href": "/concepts/cs-bisection/"
     },
     {
       "id": "cs.bitwise_operation",
@@ -108,6 +116,14 @@
       "href": "/concepts/cs-integer_overflow/"
     },
     {
+      "id": "cs.interactive_model",
+      "title": "Интерактивная модель",
+      "subject": "cs",
+      "area": "computation",
+      "importance": "high",
+      "href": "/concepts/cs-interactive_model/"
+    },
+    {
       "id": "cs.interval_arithmetic",
       "title": "Интервальная арифметика",
       "subject": "cs",
@@ -140,12 +156,28 @@
       "href": "/concepts/cs-machine_epsilon/"
     },
     {
+      "id": "cs.model_validation",
+      "title": "Проверка модели",
+      "subject": "cs",
+      "area": "computation",
+      "importance": "critical",
+      "href": "/concepts/cs-model_validation/"
+    },
+    {
       "id": "cs.numerical_stability",
       "title": "Численная устойчивость",
       "subject": "cs",
       "area": "numerical_methods",
       "importance": "critical",
       "href": "/concepts/cs-numerical_stability/"
+    },
+    {
+      "id": "cs.parameter_sweep",
+      "title": "Перебор параметра",
+      "subject": "cs",
+      "area": "numerical_methods",
+      "importance": "high",
+      "href": "/concepts/cs-parameter_sweep/"
     },
     {
       "id": "cs.python.abs",
@@ -900,6 +932,14 @@
       "href": "/concepts/math-scalar/"
     },
     {
+      "id": "math.scale_factor",
+      "title": "Масштабный коэффициент",
+      "subject": "math",
+      "area": "geometry",
+      "importance": "high",
+      "href": "/concepts/math-scale_factor/"
+    },
+    {
       "id": "math.set",
       "title": "Множество",
       "subject": "math",
@@ -1004,6 +1044,14 @@
       "href": "/concepts/math-vector_coordinates/"
     },
     {
+      "id": "math.vector_diagram",
+      "title": "Векторная диаграмма",
+      "subject": "math",
+      "area": "geometry",
+      "importance": "critical",
+      "href": "/concepts/math-vector_diagram/"
+    },
+    {
       "id": "math.vector_length",
       "title": "Длина вектора",
       "subject": "math",
@@ -1066,6 +1114,14 @@
       "area": "kinematics",
       "importance": "critical",
       "href": "/concepts/physics-average_speed/"
+    },
+    {
+      "id": "physics.center_of_gravity",
+      "title": "Центр тяжести",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "critical",
+      "href": "/concepts/physics-center_of_gravity/"
     },
     {
       "id": "physics.displacement",
@@ -1268,6 +1324,22 @@
       "href": "/concepts/physics-spring_stiffness/"
     },
     {
+      "id": "physics.stability",
+      "title": "Устойчивость к опрокидыванию",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "critical",
+      "href": "/concepts/physics-stability/"
+    },
+    {
+      "id": "physics.stability_margin",
+      "title": "Запас устойчивости",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "critical",
+      "href": "/concepts/physics-stability_margin/"
+    },
+    {
       "id": "physics.static_friction",
       "title": "Сила трения покоя",
       "subject": "physics",
@@ -1276,12 +1348,28 @@
       "href": "/concepts/physics-static_friction/"
     },
     {
+      "id": "physics.support_area",
+      "title": "Площадь опоры",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "critical",
+      "href": "/concepts/physics-support_area/"
+    },
+    {
       "id": "physics.tension_force",
       "title": "Сила натяжения",
       "subject": "physics",
       "area": "dynamics",
       "importance": "critical",
       "href": "/concepts/physics-tension_force/"
+    },
+    {
+      "id": "physics.tipping_edge",
+      "title": "Ребро опрокидывания",
+      "subject": "physics",
+      "area": "dynamics",
+      "importance": "high",
+      "href": "/concepts/physics-tipping_edge/"
     },
     {
       "id": "physics.trajectory",
