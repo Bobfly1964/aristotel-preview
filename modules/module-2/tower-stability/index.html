@@ -1,0 +1,2764 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AI-powered STEM Education для 7-11 класса">
+      
+      
+      
+        <link rel="canonical" href="https://preview.aristotel.academy/modules/module-2/tower-stability/">
+      
+      
+        <link rel="prev" href="../friction/">
+      
+      
+        <link rel="next" href="../../../concepts/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Устойчивая башня: почему падает то, что стояло - ARISTOTEL Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/aristotel.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <!-- Branch preview: never to be indexed. Paired with robots.txt in the
+       preview repository; robots.txt stops crawlers that ask, this stops
+       the ones that read the page anyway.
+
+       No canonical override here: material already emits one from site_url,
+       a second tag would contradict it, and pointing it at the live site
+       would aim at a 404 for any chapter that is not published yet. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#м2-5-устойчивая-башня-почему-падает-то-что-стояло" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div style="text-align:center;font-weight:600">
+    Черновик, не публикация — сборка из ветки, содержимое может быть
+    неполным или неверным.
+    Учебник: <a href="https://aristotel.academy" style="color:inherit;text-decoration:underline">aristotel.academy</a>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../../.." title="ARISTOTEL Knowledge Base" class="md-header__button md-logo" aria-label="ARISTOTEL Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ARISTOTEL Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Устойчивая башня: почему падает то, что стояло
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Переключить на светлую"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключить на светлую" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Переключить на тёмную"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключить на тёмную" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-0/python-intro/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Модуль 0
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-1/numbers-three-worlds/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Модуль 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../force-vector/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Модуль 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../concepts/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Концепты
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ARISTOTEL Knowledge Base" class="md-nav__button md-logo" aria-label="ARISTOTEL Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    ARISTOTEL Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Модуль 0
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Модуль 0
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-0/python-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §1 — Python — ваш рабочий инструмент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-0/natural-numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §2 — Натуральные числа: от счёта до глубин теории чисел
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-0/computer-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §3 — Арифметика компьютера: точность, ошибки и цена вычислений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-0/sets-logic-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М0 §4 — Множества, логика и язык математики: от интуиции к доказательству
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Модуль 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Модуль 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/numbers-three-worlds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §1 — Цифра в мире величин: число в физике, математике и компьютере
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/coordinates-vectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §2 — Координаты и векторы: где находится тело и куда оно сместилось
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/uniform-motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §3 — Ритм движения: скорость и равномерное движение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/graphs-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §4 — Графический язык: как читать историю движения по линии
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/mean-value/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М1 §5 — Среднее значение: как заменить набор чисел одним числом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Модуль 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Модуль 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../force-vector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М2 §1 — Сила как вектор: почему санки едут не туда, куда тянут
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../equilibrium-two-forces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М2 §2 — Равновесие: почему книга на столе никуда не падает
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../equilibrium-three-forces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М2 §3 — Равновесие трёх сил: почему фонарь висит на двух тросах
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../friction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М2 §4 — Сила трения: почему санки останавливаются
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М2 §5 — Устойчивая башня: почему падает то, что стояло
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    М2 §5 — Устойчивая башня: почему падает то, что стояло
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#вопросы-к-м2-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вопросы к М2 §5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-51-физика-башня--не-точка" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.1. Физика: башня — не точка
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.1. Физика: башня — не точка">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#центр-тяжести" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Центр тяжести
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#где-эта-точка-находится" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Где эта точка находится
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#центр-тяжести-составной-башни" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Центр тяжести составной башни
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#тот-же-расчёт-программой" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Тот же расчёт программой
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#площадь-опоры-и-ребро-опрокидывания" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Площадь опоры и ребро опрокидывания
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-52-физика-критерий-стоит-или-падает" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.2. Физика: критерий «стоит или падает»
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.2. Физика: критерий «стоит или падает»">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#правило" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правило
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#запас-устойчивости" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запас устойчивости
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#считаем-запас-нашей-башни" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Считаем запас нашей башни
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#вердикт-программой" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вердикт программой
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#три-ходовых-заблуждения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Три ходовых заблуждения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#наклон-что-наступит-раньше--скольжение-или-опрокидывание" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Наклон: что наступит раньше — скольжение или опрокидывание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#сначала-предсказание-потом-запуск" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сначала предсказание, потом запуск
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-53-математика-диаграмма-в-масштабе" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.3. Математика: диаграмма в масштабе
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.3. Математика: диаграмма в масштабе">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#диаграмма-для-бруска-на-склоне" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Диаграмма для бруска на склоне
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#порядок-построения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок построения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#чертёж-башни-черепахой" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Чертёж башни черепахой
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-54-информатика-модель-в-симуляторе" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.4. Информатика: модель в симуляторе
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.4. Информатика: модель в симуляторе">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#сборка-башни-в-algodoo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сборка башни в Algodoo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#что-движок-делает-внутри" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что движок делает внутри
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-55-информатика-критический-сдвиг" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.5. Информатика: критический сдвиг
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.5. Информатика: критический сдвиг">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#предсказание" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Предсказание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#перебор-с-шагом-05-см" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Перебор с шагом 0,5 см
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#деление-интервала-пополам" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Деление интервала пополам
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-56-информатика-расчёт-против-движка" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.6. Информатика: расчёт против движка
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.6. Информатика: расчёт против движка">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#отчёт" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отчёт
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#что-показал-algodoo-то-и-правда" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        «Что показал Algodoo, то и правда»
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-57-задачи" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.7. Задачи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.7. Задачи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#уровень-1--узнавание" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Уровень 1 — узнавание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#уровень-2--расчёт" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Уровень 2 — расчёт
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#уровень-3--исследование" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Уровень 3 — исследование
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-58-итог" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.8. Итог
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#мост-к-м3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мост к М3 §1
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Концепты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#вопросы-к-м2-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вопросы к М2 §5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-51-физика-башня--не-точка" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.1. Физика: башня — не точка
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.1. Физика: башня — не точка">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#центр-тяжести" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Центр тяжести
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#где-эта-точка-находится" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Где эта точка находится
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#центр-тяжести-составной-башни" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Центр тяжести составной башни
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#тот-же-расчёт-программой" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Тот же расчёт программой
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#площадь-опоры-и-ребро-опрокидывания" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Площадь опоры и ребро опрокидывания
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-52-физика-критерий-стоит-или-падает" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.2. Физика: критерий «стоит или падает»
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.2. Физика: критерий «стоит или падает»">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#правило" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правило
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#запас-устойчивости" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запас устойчивости
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#считаем-запас-нашей-башни" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Считаем запас нашей башни
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#вердикт-программой" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вердикт программой
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#три-ходовых-заблуждения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Три ходовых заблуждения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#наклон-что-наступит-раньше--скольжение-или-опрокидывание" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Наклон: что наступит раньше — скольжение или опрокидывание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#сначала-предсказание-потом-запуск" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сначала предсказание, потом запуск
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-53-математика-диаграмма-в-масштабе" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.3. Математика: диаграмма в масштабе
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.3. Математика: диаграмма в масштабе">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#диаграмма-для-бруска-на-склоне" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Диаграмма для бруска на склоне
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#порядок-построения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Порядок построения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#чертёж-башни-черепахой" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Чертёж башни черепахой
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-54-информатика-модель-в-симуляторе" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.4. Информатика: модель в симуляторе
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.4. Информатика: модель в симуляторе">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#сборка-башни-в-algodoo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сборка башни в Algodoo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#что-движок-делает-внутри" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что движок делает внутри
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-55-информатика-критический-сдвиг" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.5. Информатика: критический сдвиг
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.5. Информатика: критический сдвиг">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#предсказание" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Предсказание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#перебор-с-шагом-05-см" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Перебор с шагом 0,5 см
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#деление-интервала-пополам" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Деление интервала пополам
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-56-информатика-расчёт-против-движка" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.6. Информатика: расчёт против движка
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.6. Информатика: расчёт против движка">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#отчёт" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отчёт
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#что-показал-algodoo-то-и-правда" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        «Что показал Algodoo, то и правда»
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-57-задачи" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.7. Задачи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="М2 §5.7. Задачи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#уровень-1--узнавание" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Уровень 1 — узнавание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#уровень-2--расчёт" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Уровень 2 — расчёт
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#уровень-3--исследование" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Уровень 3 — исследование
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#м2-58-итог" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        М2 §5.8. Итог
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#мост-к-м3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мост к М3 §1
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="м2-5-устойчивая-башня-почему-падает-то-что-стояло">М2 §5. Устойчивая башня: почему падает то, что стояло<a class="headerlink" href="#м2-5-устойчивая-башня-почему-падает-то-что-стояло" title="Permanent link">&para;</a></h1>
+<!-- fragment:001 -->
+
+<h2 id="вопросы-к-м2-5">Вопросы к М2 §5<a class="headerlink" href="#вопросы-к-м2-5" title="Permanent link">&para;</a></h2>
+<p>Поставьте на стол четыре одинаковых бруска один на другой — ровной колонной. Толкните верхний вбок на сантиметр, потом ещё на сантиметр. Сначала ничего не происходит. Потом, на каком-то сдвиге, башня без предупреждения валится.</p>
+<p>Всё это время сумма сил, действующих на башню, была равна нулю: сила тяжести тянула вниз, опора давила вверх ровно с той же величиной. Условие равновесия из М2 §2 и М2 §3 выполнялось до последнего мгновения — и не спасло.</p>
+<p>Значит, чего-то в нашем аппарате не хватает. Четыре предыдущих параграфа модуля мы прикладывали все силы к одной точке: тело было материальной точкой, у него не было ни ширины, ни высоты. Башня — не точка. У неё есть основание, есть ребро, через которое она перевалится, и есть особая точка внутри, через которую всё решается.</p>
+<p>Три вопроса, на которые отвечает этот параграф.</p>
+<ol>
+<li><strong>Физика.</strong> Равнодействующая равна нулю, а тело падает. Какое условие мы пропустили и как оно выглядит для тела, у которого есть размеры?</li>
+<li><strong>Математика.</strong> Как посчитать положение той самой особой точки для составной конструкции — и как перевести чертёж в числа так, чтобы по нему можно было измерять силы линейкой?</li>
+<li><strong>Информатика.</strong> Как найти точный сдвиг, при котором башня падает, если перебирать варианты руками — час работы, и как проверить, что физический движок и наш расчёт говорят одно и то же?</li>
+</ol>
+<p>Обещать, что будет легко, не станем: понятий здесь вводится десять. Обещаем другое — к концу параграфа вы сможете про любую конструкцию сказать заранее, упадёт она или устоит, и подтвердить ответ тремя независимыми способами: расчётом, чертежом и симулятором.</p>
+<hr />
+<!-- fragment:002 -->
+
+<h2 id="м2-51-физика-башня--не-точка">М2 §5.1. Физика: башня — не точка<a class="headerlink" href="#м2-51-физика-башня--не-точка" title="Permanent link">&para;</a></h2>
+<p>Модель материальной точки, которой мы пользовались в М2 §1 — М2 §4, устроена так: всю массу тела мысленно собирают в одну точку, а размерами пренебрегают. Для санок, которые тянут по снегу, это работает прекрасно: сила приложена, трение приложено, ответ получается верный.</p>
+<p>Но у точки нет площадки, на которой она стоит. Точка не может «перевалиться через край» — переваливаться нечему. Как только вопрос звучит «упадёт или устоит», модель материальной точки перестаёт отвечать: она отвечает только на вопрос «поедет или останется на месте».</p>
+<p>Поэтому здесь мы впервые сохраняем телу размеры. У башни есть основание шириной 8 см и высота 16 см, и оба числа войдут в ответ. А вот силу тяжести всё-таки удобно прикладывать к одной точке — только теперь надо честно сказать, к какой именно.</p>
+<hr />
+<!-- fragment:003 -->
+
+<h3 id="центр-тяжести">Центр тяжести<a class="headerlink" href="#центр-тяжести" title="Permanent link">&para;</a></h3>
+<p>Сила тяжести действует не на тело целиком, а на каждую его крупинку по отдельности: на каждый грамм дерева, гипса, металла. Складывать миллион маленьких сил неудобно, и физика поступает так же, как всегда, — заменяет их одной.</p>
+<blockquote>
+<p><strong>Центром тяжести</strong> тела называют точку, в которую можно приложить одну-единственную силу тяжести всего тела, чтобы она действовала так же, как все силы тяжести его частей вместе.</p>
+</blockquote>
+<p>Обозначаем центр тяжести заглавной буквой <code>C</code> (строчная <code>c</code> у нас уже занята ценой деления прибора). Величина этой одной силы известна из М2 §1: <span class="arithmatex">\(F_{тяж} = mg\)</span>, где <span class="arithmatex">\(m\)</span> — масса всего тела, а <span class="arithmatex">\(g = 10\)</span> Н/кг — коэффициент силы тяжести.</p>
+<p>Оговорка на будущее. В книгах вам встретится и «центр масс». Различить эти две точки можно только там, где притяжение неодинаково в разных частях тела — например, у тела размером с гору. В школьных задачах, и в этой главе тоже, они совпадают, и мы говорим «центр тяжести».</p>
+<hr />
+<!-- fragment:004 -->
+
+<h3 id="где-эта-точка-находится">Где эта точка находится<a class="headerlink" href="#где-эта-точка-находится" title="Permanent link">&para;</a></h3>
+<p>Первое, что хочется сказать про центр тяжести: он где-то в середине тела. Для однородного бруска это верно — точка ровно в геометрическом центре. Но «в середине» и «внутри вещества» — не одно и то же.</p>
+<p>Возьмите кольцо. Его центр тяжести — в центре кольца, то есть в дырке: там, где вещества нет вовсе. Возьмите рамку от картины, обруч, бублик — то же самое. Возьмите фигуру в форме буквы «Г»: её центр тяжести лежит в вырезанном углу, снаружи фигуры.</p>
+<p>Это не парадокс, а прямое следствие определения. Центр тяжести — точка приложения замещающей силы, а не «место, где сидит вещество». Проверить положение <code>C</code> у плоской фигуры можно руками, без всякого расчёта: подвесьте фигуру на нитке за любую точку края и отметьте на ней линию, вдоль которой натянута нить; подвесьте за другую точку и отметьте вторую линию. Пересечение линий и есть центр тяжести.</p>
+<p>Для кольца и для буквы «Г» пересечение окажется в пустоте, и карандашу там не за что зацепиться. Делают так: кладут фигуру на лист бумаги, каждую линию прочерчивают не только по фигуре, но и продолжают на лист, а потом снимают фигуру. Точка отметится на бумаге — и это правильный ответ, а не признак ошибки.</p>
+<p>Запомните этот факт: он ещё понадобится, когда мы будем считать башню со сдвинутыми блоками. У такой башни <code>C</code> тоже вполне может оказаться вне кирпичей.</p>
+<hr />
+<!-- fragment:005 -->
+
+<h3 id="центр-тяжести-составной-башни">Центр тяжести составной башни<a class="headerlink" href="#центр-тяжести-составной-башни" title="Permanent link">&para;</a></h3>
+<p>Башня из четырёх блоков — четыре тела, у каждого свой известный центр тяжести (блок однородный, значит в геометрическом центре) и своя масса. Нужна одна точка на всех.</p>
+<p>Ответ даёт взвешенное среднее, с которым вы уже работали в математике: координаты центров блоков усредняются, но с весами — и весами служат массы.</p>
+<div class="arithmatex">\[x_C = \frac{m_1 x_1 + m_2 x_2 + \ldots + m_n x_n}{m_1 + m_2 + \ldots + m_n}, \qquad y_C = \frac{m_1 y_1 + m_2 y_2 + \ldots + m_n y_n}{m_1 + m_2 + \ldots + m_n}\]</div>
+<p>Если все массы одинаковы, они выносятся за скобку и сокращаются — остаётся обычное арифметическое среднее координат. Это важный частный случай: у стопки одинаковых книг <code>C</code> находится в среднем арифметическом их центров.</p>
+<p>Возьмём конкретную башню, с которой будем работать до конца параграфа. Четыре блока одной формы: ширина 8 см, высота 4 см. Материалы разные, поэтому массы разные: снизу вверх 500 г, 300 г, 150 г, 50 г (гипс, дерево, пластик, пенопласт). Начало координат — на столе, посередине нижнего блока; ось <span class="arithmatex">\(x\)</span> — вдоль стола вправо, ось <span class="arithmatex">\(y\)</span> — вверх.</p>
+<p>Все размеры и сдвиги мы выставляем линейкой, а линейка честно даёт десятые доли сантиметра. <strong>Объявляем точность заранее: 0,1 см.</strong> Это относится и к исходным числам, и ко всем ответам, которые из них получатся.</p>
+<p>Каждый следующий блок сдвинут вправо относительно предыдущего на 2 см. Тогда центры блоков:</p>
+<table>
+<thead>
+<tr>
+<th>блок</th>
+<th>масса, кг</th>
+<th><span class="arithmatex">\(x\)</span>, см</th>
+<th><span class="arithmatex">\(y\)</span>, см</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (нижний)</td>
+<td>0,50</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0,30</td>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0,15</td>
+<td>4</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4 (верхний)</td>
+<td>0,05</td>
+<td>6</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<p>Считаем по формуле:</p>
+<div class="arithmatex">\[x_C = \frac{0{,}50 \cdot 0 + 0{,}30 \cdot 2 + 0{,}15 \cdot 4 + 0{,}05 \cdot 6}{0{,}50 + 0{,}30 + 0{,}15 + 0{,}05} = \frac{1{,}5}{1{,}0} = 1{,}5 \text{ см}\]</div>
+<div class="arithmatex">\[y_C = \frac{0{,}50 \cdot 2 + 0{,}30 \cdot 6 + 0{,}15 \cdot 10 + 0{,}05 \cdot 14}{1{,}0} = \frac{5{,}0}{1{,}0} = 5{,}0 \text{ см}\]</div>
+<p>Центр тяжести башни — точка <code>C</code> (1,5; 5,0) см. Масса всей башни 1,0 кг, значит из этой точки вниз тянет одна сила <span class="arithmatex">\(F_{тяж} = 1{,}0 \cdot 10 = 10\)</span> Н.</p>
+<hr />
+<!-- fragment:006 -->
+
+<h3 id="тот-же-расчёт-программой">Тот же расчёт программой<a class="headerlink" href="#тот-же-расчёт-программой" title="Permanent link">&para;</a></h3>
+<p>Считать взвешенное среднее руками для четырёх блоков терпимо, для двенадцати — уже нет, а менять сдвиги нам придётся десятки раз. Оформим расчёт функцией. Два списка координат и один список масс проходим одним циклом, соединяя их <code>zip</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">center_of_gravity</span><span class="p">(</span><span class="n">masses</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">):</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">sum_x</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">sum_y</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">masses</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">):</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">m</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">sum_x</span> <span class="o">=</span> <span class="n">sum_x</span> <span class="o">+</span> <span class="n">m</span> <span class="o">*</span> <span class="n">x</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="n">sum_y</span> <span class="o">=</span> <span class="n">sum_y</span> <span class="o">+</span> <span class="n">m</span> <span class="o">*</span> <span class="n">y</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">return</span> <span class="n">sum_x</span> <span class="o">/</span> <span class="n">total</span><span class="p">,</span> <span class="n">sum_y</span> <span class="o">/</span> <span class="n">total</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">masses</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]</span>   <span class="c1"># кг, снизу вверх</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">]</span>           <span class="c1"># см, центры блоков по горизонтали</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">14.0</span><span class="p">]</span>         <span class="c1"># см, центры блоков по высоте</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">x_c</span><span class="p">,</span> <span class="n">y_c</span> <span class="o">=</span> <span class="n">center_of_gravity</span><span class="p">(</span><span class="n">masses</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">total_mass</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">masses</span><span class="p">:</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">total_mass</span> <span class="o">=</span> <span class="n">total_mass</span> <span class="o">+</span> <span class="n">m</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"C = (</span><span class="si">{</span><span class="n">x_c</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">; </span><span class="si">{</span><span class="n">y_c</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">) см"</span><span class="p">)</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"масса башни = </span><span class="si">{</span><span class="n">total_mass</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> кг"</span><span class="p">)</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>C = (1.50; 5.00) см
+масса башни = 1.00 кг</code></pre>
+<p>Новое здесь одно: в строке <code>return</code> через запятую стоят <strong>две</strong> величины. Функция отдаёт их вместе, парой, и принять их надо тоже в два имени сразу — <code>x_c, y_c = center_of_gravity(...)</code>. Порядок имён слева от знака равенства соответствует порядку величин в <code>return</code>: первое имя получает первое число, второе — второе.</p>
+<p>Обратите внимание: ни ширина блока, ни его высота в расчёт не вошли. Форма блоков нужна нам дальше, для площади опоры, а для центра тяжести достаточно масс и координат центров.</p>
+<hr />
+<!-- fragment:007 -->
+
+<h3 id="площадь-опоры-и-ребро-опрокидывания">Площадь опоры и ребро опрокидывания<a class="headerlink" href="#площадь-опоры-и-ребро-опрокидывания" title="Permanent link">&para;</a></h3>
+<p>Теперь про то, на чём башня стоит.</p>
+<blockquote>
+<p><strong>Площадь опоры</strong> — область на поверхности опоры, ограниченная крайними точками касания тела с опорой. Границу этой области называют <strong>опорным контуром</strong>: контур — это линия по краю, площадь опоры — всё, что она охватывает.</p>
+</blockquote>
+<p>У кирпича, лежащего на столе плашмя, площадь опоры — весь прямоугольник нижней грани. У стеллажа на четырёх ножках — четырёхугольник, натянутый на ножки; в него входит и пустота между ножками, хотя там стеллаж стола не касается. У велосипеда — узкая полоска между двумя пятнами колёс. У дорожного конуса — круг его основания.</p>
+<!-- fig-anchor: figure.physics.statics.brick_support_base -->
+
+<p><img alt="Кирпич лежит плашмя; из его центра вниз идёт стрелка силы тяжести 10 Н, снизу вверх — стрелка реакции опоры 10 Н; нижняя грань подписана как площадь опоры, центр — как точка C" src="/assets/images/physics.tower_stability/generated/tower_stability_brick_support_base.png" /></p>
+<p><em>Кирпич на столе: центр тяжести C, площадь опоры — нижняя грань, вертикаль через C проходит внутри опоры</em></p>
+<p>Площадь опоры отвечает на вопрос: <strong>где телу разрешено стоять</strong>. Но когда тело падает, оно не проваливается сквозь опору и не улетает — оно поворачивается через один определённый край контура.</p>
+<blockquote>
+<p><strong>Ребро опрокидывания</strong> — та граница опорного контура, вокруг которой тело поворачивается при опрокидывании.</p>
+</blockquote>
+<p>Рёбер у контура несколько: у кирпича их четыре, у конуса — вся окружность основания. Работает всегда одно — то, к которому тело клонится. Толкнули башню вправо — работает правое ребро; наклонили стол влево — левое. Знать контур мало, надо ещё выбрать ребро; поэтому это два разных понятия, а не одно.</p>
+<p>Для нашей башни всё просто: она стоит на нижнем блоке шириной 8 см, значит на чертеже (мы смотрим сбоку, разрез) площадь опоры — отрезок от <span class="arithmatex">\(x = -4\)</span> см до <span class="arithmatex">\(x = +4\)</span> см. Левое ребро: <span class="arithmatex">\(x = -4\)</span> см. Правое ребро: <span class="arithmatex">\(x = +4\)</span> см.</p>
+<hr />
+<!-- fragment:008 -->
+
+<h2 id="м2-52-физика-критерий-стоит-или-падает">М2 §5.2. Физика: критерий «стоит или падает»<a class="headerlink" href="#м2-52-физика-критерий-стоит-или-падает" title="Permanent link">&para;</a></h2>
+<p>Разберём главный сюжет параграфа честно и медленно.</p>
+<p>На стоящую башню действуют две силы. Сила тяжести <span class="arithmatex">\(F_{тяж} = 10\)</span> Н приложена в <code>C</code> и направлена вниз. Реакция опоры <span class="arithmatex">\(N\)</span> приложена со стороны стола и направлена вверх. Пока башня покоится, эти силы равны по модулю и противоположны по направлению — их сумма нулевой вектор, ровно как в М2 §2. Равновесие.</p>
+<p>Теперь сдвигаем блоки вправо, шаг за шагом. Сила тяжести не меняется: масса та же. Реакция опоры не меняется: башня по-прежнему давит на стол весом 10 Н. Сумма сил как была нулём, так и остаётся. И в какой-то момент башня валится.</p>
+<p>Значит, вывод из М2 §2 и М2 §3 — «сумма сил равна нулю, тело покоится» — для тела с размерами <strong>необходим, но недостаточен</strong>. Он гарантирует, что тело не поедет по столу как целое. Он ничего не говорит о повороте.</p>
+<p>Причина в том, что стол умеет давить только снизу и только внутри площади опоры. Реакция опоры набирается из миллиона маленьких сил, распределённых по площадке касания, и вся эта сумма приложена где-то между левым и правым рёбрами — за пределы контура ей выйти неоткуда. Пока вертикаль, проведённая через <code>C</code> вниз, попадает внутрь опоры, опора «ловит» линию действия силы тяжести и держит башню. Как только вертикаль вышла за ребро, ловить нечем: сила тяжести тянет вниз с одной стороны от ребра, а опора подпирает только с другой, и башня поворачивается через ребро.</p>
+<!-- fig-anchor: figure.physics.statics.tipping_three_positions -->
+
+<p><img alt="Наклонная поверхность, на ней три одинаковых бруска в трёх положениях; у каждого из центра вниз идёт стрелка силы тяжести; подписи под брусками: стоит, критическое, падает" src="/assets/images/physics.tower_stability/generated/tower_stability_tipping_three_positions.png" /></p>
+<p><em>Три положения одного тела: вертикаль через C внутри опоры — стоит; ровно на ребре — критическое; за ребром — падает</em></p>
+<hr />
+<!-- fragment:009 -->
+
+<h3 id="правило">Правило<a class="headerlink" href="#правило" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Устойчивость к опрокидыванию.</strong> Тело не опрокидывается, пока вертикаль, проведённая через центр тяжести, проходит внутри площади опоры. Если вертикаль выходит за ребро опоры — тело опрокидывается через это ребро. Вертикаль ровно на ребре — критическое положение: тело на грани.</p>
+</blockquote>
+<p>Проверить правило можно двумя независимыми способами, и оба вам доступны прямо сейчас: собрать башню на столе и двигать блоки, отмечая карандашом положение <code>C</code>; собрать ту же башню в физическом симуляторе (§5.4) и запустить время. Оба способа дают один ответ.</p>
+<p>Пока это для нас <strong>экспериментальный факт</strong>, а не теорема. Доказать его можно — но для доказательства нужно понятие момента силы, произведения силы на плечо, а момент появится в М4 §3, когда мы возьмёмся за рычаг. Там это правило будет выведено, а не принято на веру: вы увидите, что момент силы тяжести относительно ребра либо возвращает тело на место, либо валит его, и знак момента как раз определяется тем, с какой стороны от ребра прошла вертикаль. Мы не прячем от вас, что должны доказательство; мы говорим, где его отдадим.</p>
+<hr />
+<!-- fragment:010 -->
+
+<h3 id="запас-устойчивости">Запас устойчивости<a class="headerlink" href="#запас-устойчивости" title="Permanent link">&para;</a></h3>
+<p>Правило отвечает «да» или «нет». Инженеру этого мало: ему нужно знать, насколько близко к краю стоит конструкция.</p>
+<blockquote>
+<p><strong>Запас устойчивости</strong> <span class="arithmatex">\(d_{уст}\)</span> — расстояние по горизонтали от вертикали через центр тяжести до ближайшего ребра опрокидывания.</p>
+</blockquote>
+<p>Буква выбрана не случайно: <code>d</code> в математике обозначает расстояние (вспомните формулу расстояния между точками), а нижний индекс «уст» говорит, какое именно расстояние имеется в виду. Это отдельное обозначение, а не переопределение старого: <code>d</code> остаётся расстоянием вообще, <span class="arithmatex">\(d_{уст}\)</span> — конкретное расстояние в конкретной задаче.</p>
+<p>Считается запас как разность координат — вертикаль через <code>C</code> имеет уравнение <span class="arithmatex">\(x = x_C\)</span>, рёбра стоят при <span class="arithmatex">\(x = x_{лев}\)</span> и <span class="arithmatex">\(x = x_{прав}\)</span>:</p>
+<div class="arithmatex">\[d_{уст} = \min\big(x_C - x_{лев},\; x_{прав} - x_C\big)\]</div>
+<p>Запись <span class="arithmatex">\(\min(\ldots)\)</span> читается «наименьшее из перечисленного» и означает ровно то, что говорит: из чисел в скобках берут меньшее. Например, <span class="arithmatex">\(\min(5{,}5;\ 2{,}5) = 2{,}5\)</span>. В Python есть встроенная функция с тем же именем и тем же смыслом: <code>min(5.5, 2.5)</code> вернёт <code>2.5</code>, <code>min(a, b)</code> — меньшее из двух значений. Она короче, чем <code>if a &lt; b: ... else: ...</code>, а делает то же самое; дальше мы пользуемся именно ей.</p>
+<p>Знак содержателен. Положительный запас — вертикаль внутри опоры, тело стоит; ноль — критическое положение; отрицательный — вертикаль вышла наружу, тело падает, а модуль числа показывает, насколько далеко она вышла.</p>
+<hr />
+<!-- fragment:011 -->
+
+<h3 id="считаем-запас-нашей-башни">Считаем запас нашей башни<a class="headerlink" href="#считаем-запас-нашей-башни" title="Permanent link">&para;</a></h3>
+<p>У нас <span class="arithmatex">\(x_C = 1{,}5\)</span> см, рёбра при <span class="arithmatex">\(x = -4\)</span> см и <span class="arithmatex">\(x = +4\)</span> см.</p>
+<div class="arithmatex">\[x_C - x_{лев} = 1{,}5 - (-4) = 5{,}5 \text{ см}, \qquad x_{прав} - x_C = 4 - 1{,}5 = 2{,}5 \text{ см}\]</div>
+<p>Меньшее из двух: <span class="arithmatex">\(d_{уст} = \min(5{,}5;\ 2{,}5) = 2{,}5\)</span> см. Ближайшее ребро — правое, значит именно через него башня и повалится, если сдвинуть блоки ещё.</p>
+<p>Ответ полагается округлять по объявленной точности. Координаты блоков мы задавали с точностью 0,1 см — объявили это в §5.1, до вычислений, — поэтому запас имеет смысл писать как <span class="arithmatex">\(d_{уст} \approx 2{,}5\)</span> см, а не 2,5000 см: лишние знаки обещают точность, которой у измерения нет.</p>
+<!-- fig-anchor: figure.physics.statics.tower_cg_vertical -->
+
+<p><img alt="Координатная плоскость в сантиметрах; из точки C с координатами 1,5 и 5,0 вниз до оси x проведена вертикаль через C, пунктиры показывают обе координаты точки C" src="/assets/images/physics.tower_stability/generated/tower_stability_tower_cg_vertical.png" /></p>
+<p><em>Вертикаль через центр тяжести башни: x_C = 1,5 см, до правого ребра опоры (x = 4 см) остаётся d_уст = 2,5 см</em></p>
+<hr />
+<!-- fragment:012 -->
+
+<h3 id="вердикт-программой">Вердикт программой<a class="headerlink" href="#вердикт-программой" title="Permanent link">&para;</a></h3>
+<p>Оформим правило функцией, чтобы дальше проверять десятки вариантов, не считая руками.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">margin</span><span class="p">(</span><span class="n">x_c</span><span class="p">,</span> <span class="n">x_left</span><span class="p">,</span> <span class="n">x_right</span><span class="p">):</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">x_c</span> <span class="o">-</span> <span class="n">x_left</span><span class="p">,</span> <span class="n">x_right</span> <span class="o">-</span> <span class="n">x_c</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">verdict</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">tol</span><span class="p">:</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="k">return</span> <span class="s2">"на грани"</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="k">return</span> <span class="s2">"стоит"</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="k">return</span> <span class="s2">"падает"</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">x_left</span> <span class="o">=</span> <span class="o">-</span><span class="mf">4.0</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">x_right</span> <span class="o">=</span> <span class="mf">4.0</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">for</span> <span class="n">x_c</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">3.6</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.2</span><span class="p">]:</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">d</span> <span class="o">=</span> <span class="n">margin</span><span class="p">(</span><span class="n">x_c</span><span class="p">,</span> <span class="n">x_left</span><span class="p">,</span> <span class="n">x_right</span><span class="p">)</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"x_C = </span><span class="si">{</span><span class="n">x_c</span><span class="si">:</span><span class="s2">5.2f</span><span class="si">}</span><span class="s2"> см   d_уст = </span><span class="si">{</span><span class="n">d</span><span class="si">:</span><span class="s2">6.2f</span><span class="si">}</span><span class="s2"> см   </span><span class="si">{</span><span class="n">verdict</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>x_C =  1.50 см   d_уст =   2.50 см   стоит
+x_C =  3.60 см   d_уст =   0.40 см   стоит
+x_C =  4.00 см   d_уст =   0.00 см   на грани
+x_C =  5.20 см   d_уст =  -1.20 см   падает</code></pre>
+<p>Две мелочи записи, которые встречаются здесь впервые.</p>
+<p>Запись <code>tol=0.01</code> в заголовке функции — <strong>значение по умолчанию</strong>: если вызвать <code>verdict(d)</code> с одним аргументом, второй возьмётся равным 0,01; если написать <code>verdict(d, 0.001)</code> — возьмётся 0,001. Так задают величину, которую меняют редко, но иногда всё же надо.</p>
+<p>В f-строке <code>{d:6.2f}</code> первое число — ширина поля в знаках: число прижимается вправо и колонки в таблице выстраиваются ровно. <code>.2f</code> — уже знакомое округление до двух знаков после запятой.</p>
+<p>Про сам допуск <code>tol</code>. Сравнивать вещественные числа знаком <code>==</code> нельзя — об этом шла речь ещё в М1 §1: число хранится в конечном числе разрядов, и вычисленное значение почти никогда не равно ожидаемому в точности. Здесь у допуска есть и физический смысл: 0,01 см — это 0,1 мм, точнее ни одна школьная линейка положение ребра не покажет. Так что «на грани» у нас означает «отличается от нуля меньше, чем мы способны измерить», и это честнее, чем требовать математического нуля.</p>
+<hr />
+<!-- fragment:013 -->
+
+<h3 id="три-ходовых-заблуждения">Три ходовых заблуждения<a class="headerlink" href="#три-ходовых-заблуждения" title="Permanent link">&para;</a></h3>
+<p><strong>«Чем тяжелее конструкция, тем она устойчивее».</strong> Посмотрите на критерий ещё раз: в нём нет ни массы, ни силы тяжести — только координаты. Умножьте все массы башни на десять: во взвешенном среднем общий множитель сократится, <span class="arithmatex">\(x_C\)</span> не сдвинется ни на миллиметр, и башня упадёт при том же самом сдвиге. Тяжёлая узкая колонна падает, лёгкая широкая стоит.</p>
+<p>Масса всё же важна — но не своей величиной, а тем, <strong>где</strong> она сидит. Насыпьте песка в нижний блок — <code>C</code> опустится и сдвинется к центру, устойчивость вырастет. Положите тот же песок наверх — <code>C</code> поднимется и уедет вбок, устойчивость упадёт. Именно поэтому в грузовик тяжёлое кладут вниз, а не сверху.</p>
+<p><strong>«Пока свесилось меньше половины — стоит, больше половины — падает».</strong> Доля свисающей площади не решает ничего. У нашей башни верхний блок свисает за правое ребро нижнего на три четверти своей ширины — его левый край при <span class="arithmatex">\(x = 2\)</span> см, правый при <span class="arithmatex">\(x = 10\)</span> см, ребро на <span class="arithmatex">\(x = 4\)</span> см, значит над опорой остались всего 2 см из 8, — и башня всё равно стоит, потому что вертикаль через общий <code>C</code> проходит внутри опоры. Считать надо <code>C</code>, а не долю свеса.</p>
+<p><strong>«Если равнодействующая ноль, упасть невозможно».</strong> Это тот случай, который мы разбирали выше. Нулевая равнодействующая запрещает телу разгоняться как целому; повернуться через ребро она не запрещает.</p>
+<hr />
+<!-- fragment:014 -->
+
+<h3 id="наклон-что-наступит-раньше--скольжение-или-опрокидывание">Наклон: что наступит раньше — скольжение или опрокидывание<a class="headerlink" href="#наклон-что-наступит-раньше--скольжение-или-опрокидывание" title="Permanent link">&para;</a></h3>
+<p>Всё сказанное до сих пор — про опрокидывание. Но тело на наклонной поверхности может и просто поехать, так и не начав поворачиваться: этим сюжетом занимался М2 §4. Когда наклон растёт, наступает то из двух, для чего порог ниже. Значит, нужны оба порога.</p>
+<p><strong>Скольжение.</strong> Из М2 §4: тело трогается с места, когда уклон превышает коэффициент трения покоя <span class="arithmatex">\(\mu\)</span>. Уклоном мы, как и в математике, называем отношение подъёма к горизонтальному пробегу: склон «3 : 4» имеет уклон 0,75.</p>
+<p><strong>Опрокидывание.</strong> Здесь работает то же правило вертикали, просто теперь пол наклонён. Обозначим:</p>
+<ul>
+<li><span class="arithmatex">\(h\)</span> — расстояние от <code>C</code> до поверхности склона, отмеренное <strong>по перпендикуляру</strong> к ней;</li>
+<li><span class="arithmatex">\(b\)</span> — расстояние от <code>C</code> до нижнего ребра, отмеренное <strong>вдоль</strong> поверхности.</li>
+</ul>
+<p>Опустим из <code>C</code> две линии: перпендикуляр к склону (длиной <span class="arithmatex">\(h\)</span>) и настоящую вертикаль. На ровном полу они совпадают, на наклонном — расходятся, и угол между ними ровно такой же, как угол склона с горизонтом. Эти две линии вместе с поверхностью склона отсекают прямоугольный треугольник, подобный треугольнику самого склона: его катеты относятся так же, как подъём к пробегу. Один катет — наш перпендикуляр длиной <span class="arithmatex">\(h\)</span>, другой лежит на склоне, и его длина равна <span class="arithmatex">\(h \cdot (\text{уклон})\)</span>.</p>
+<p>Это и есть смещение: вертикаль встречает склон не под самой точкой <code>C</code>, а ниже по склону на <span class="arithmatex">\(h \cdot (\text{уклон})\)</span>. Пока смещение меньше <span class="arithmatex">\(b\)</span>, вертикаль остаётся внутри опоры.</p>
+<div class="arithmatex">\[h \cdot (\text{уклон}) &lt; b \quad\Longleftrightarrow\quad \text{уклон} &lt; \frac{b}{h}\]</div>
+<p>Итак, опрокидывание начинается, когда уклон превысит отношение <span class="arithmatex">\(b/h\)</span>. Отношение это чисто геометрическое: чем шире тело и чем ниже сидит его центр тяжести, тем круче должен быть склон.</p>
+<p><strong>Сравниваем два числа.</strong> Для нашей башни, поставленной ровно (<span class="arithmatex">\(x_C = 0\)</span>, <span class="arithmatex">\(y_C = 5{,}0\)</span> см), это <span class="arithmatex">\(b = 4\)</span> см, <span class="arithmatex">\(h = 5\)</span> см, <span class="arithmatex">\(b/h = 0{,}8\)</span>. На гладкой столешнице с <span class="arithmatex">\(\mu = 0{,}3\)</span> башня уедет задолго до того, как начнёт валиться: 0,3 меньше 0,8. На резиновом коврике с <span class="arithmatex">\(\mu = 0{,}9\)</span> — сначала опрокинется. Всякий раз, говоря «опрокинется при таком-то наклоне», проверяйте, что раньше не наступит скольжение, и наоборот.</p>
+<hr />
+<!-- fragment:015 -->
+
+<h3 id="сначала-предсказание-потом-запуск">Сначала предсказание, потом запуск<a class="headerlink" href="#сначала-предсказание-потом-запуск" title="Permanent link">&para;</a></h3>
+<p>Ниже программа. Рёбра опоры на <span class="arithmatex">\(x = \pm 4\)</span> см. <strong>Не запускайте её сразу.</strong> Возьмите листок и напишите три строки вывода — что именно напечатается для каждого значения. Потом наберите код и сверьте.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">margin</span><span class="p">(</span><span class="n">x_c</span><span class="p">,</span> <span class="n">x_left</span><span class="p">,</span> <span class="n">x_right</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">x_c</span> <span class="o">-</span> <span class="n">x_left</span><span class="p">,</span> <span class="n">x_right</span> <span class="o">-</span> <span class="n">x_c</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">verdict</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">tol</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="k">return</span> <span class="s2">"на грани"</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="k">return</span> <span class="s2">"стоит"</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="k">return</span> <span class="s2">"падает"</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="k">for</span> <span class="n">x_c</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">3.995</span><span class="p">,</span> <span class="mf">4.005</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.20</span><span class="p">]:</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">d</span> <span class="o">=</span> <span class="n">margin</span><span class="p">(</span><span class="n">x_c</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"x_C = </span><span class="si">{</span><span class="n">x_c</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2">  -&gt;  </span><span class="si">{</span><span class="n">d</span><span class="si">:</span><span class="s2">+.3f</span><span class="si">}</span><span class="s2"> см, </span><span class="si">{</span><span class="n">verdict</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<p>Подсказка к записи <code>{d:+.3f}</code>: знак <code>+</code> требует печатать знак числа всегда, а не только у отрицательных, — так плюс и минус видно с одного взгляда.</p>
+<p>Вопросы к предсказанию: почему третья строка — про левое ребро, а не про правое? Что изменится в ответе, если поставить <code>tol = 0.001</code>? Какое из трёх положений вы физически не отличите от критического обычной линейкой?</p>
+<hr />
+<!-- fragment:016 -->
+
+<h2 id="м2-53-математика-диаграмма-в-масштабе">М2 §5.3. Математика: диаграмма в масштабе<a class="headerlink" href="#м2-53-математика-диаграмма-в-масштабе" title="Permanent link">&para;</a></h2>
+<p>В М2 §1 — М2 §3 мы уже рисовали силы стрелками, но чертёж был иллюстрацией: длина стрелки означала «побольше» или «поменьше». Пора сделать из чертежа измерительный прибор.</p>
+<blockquote>
+<p><strong>Векторная диаграмма</strong> — чертёж, на котором каждая сила изображена вектором, а длина вектора связана с величиной силы объявленным правилом пересчёта. По такой диаграмме силу можно измерить линейкой.</p>
+<p><strong>Масштабный коэффициент</strong> — число, показывающее, сколько единиц изображаемой величины приходится на одну единицу длины чертежа.</p>
+</blockquote>
+<p>Записываем масштаб словами, прямо на чертеже: <strong>1 см ⇔ 2 Н</strong>. Знак ⇔ читается «отвечает»: одному сантиметру чертежа отвечает 2 Н силы. Это значит: сила 12 Н рисуется отрезком длиной 6 см, сила 7,2 Н — отрезком 3,6 см. Обратно: намерили на чертеже 4,8 см — значит сила 9,6 Н.</p>
+<p>Масштаб обязан быть объявлен. Диаграмма без объявленного масштаба — картинка, по ней ничего измерить нельзя; ровно как график без подписей осей.</p>
+<p>Тот же приём работает не только с силами. Наш чертёж башни — тоже масштаб: 1 клетка тетради ⇔ 1 см настоящего блока. И когда мы будем рисовать башню черепахой, понадобится ещё один: 1 см ⇔ 10 шагов черепахи. Разные величины, одна идея.</p>
+<hr />
+<!-- fragment:017 -->
+
+<h3 id="диаграмма-для-бруска-на-склоне">Диаграмма для бруска на склоне<a class="headerlink" href="#диаграмма-для-бруска-на-склоне" title="Permanent link">&para;</a></h3>
+<p>Башню мы на минуту оставим — и вот почему. Чтобы диаграмма чему-то научила, нужен случай, где сил больше двух и направлены они не вдоль одной прямой; у стоящей башни сил всего две, и чертить там нечего. Возьмём брусок на склоне, а к башне вернёмся в конце параграфа — тот же масштабный коэффициент понадобится, когда её будет чертить черепаха.</p>
+<p>Брусок массой 1,2 кг стоит на склоне с уклоном <strong>3 : 4</strong> — на каждые 4 клетки вдоль горизонтали склон поднимается на 3 клетки. Ширина бруска 8 см, высота 10 см, центр тяжести в его геометрическом центре. Коэффициент трения покоя между бруском и склоном <span class="arithmatex">\(\mu = 0{,}8\)</span>. Брусок покоится. Какие силы на него действуют и чему они равны?</p>
+<p>Сила тяжести: <span class="arithmatex">\(F_{тяж} = 1{,}2 \cdot 10 = 12\)</span> Н, направлена вертикально вниз из точки <code>C</code>.</p>
+<p>Разложим её на две составляющие, как в М2 §3: вдоль склона и перпендикулярно ему. Треугольник склона со сторонами 3 и 4 имеет гипотенузу 5 (проверьте: <span class="arithmatex">\(3^2 + 4^2 = 5^2\)</span>), и треугольник разложения ему подобен. Значит составляющие относятся к силе тяжести как 3 : 5 и 4 : 5:</p>
+<div class="arithmatex">\[F_{\parallel} = 12 \cdot \frac{3}{5} = 7{,}2 \text{ Н (вдоль склона, вниз)}, \qquad F_{\perp} = 12 \cdot \frac{4}{5} = 9{,}6 \text{ Н (в склон)}\]</div>
+<p>Брусок покоится, значит каждой составляющей есть противовес. Склон отвечает реакцией опоры <span class="arithmatex">\(N = 9{,}6\)</span> Н перпендикулярно поверхности, трение покоя отвечает силой <span class="arithmatex">\(F_{тр} = 7{,}2\)</span> Н вдоль склона вверх.</p>
+<p>Проверим, что трения хватает: максимум, который оно может дать, равен <span class="arithmatex">\(\mu N = 0{,}8 \cdot 9{,}6 = 7{,}68\)</span> Н, а требуется 7,2 Н. Хватает, брусок не скользит.</p>
+<p>Проверим, не опрокидывается ли он. Работает критерий из §5.2: у бруска <span class="arithmatex">\(b = 4\)</span> см (половина ширины), <span class="arithmatex">\(h = 5\)</span> см (половина высоты), отношение <span class="arithmatex">\(b/h = 0{,}8\)</span>, уклон <span class="arithmatex">\(3/4 = 0{,}75\)</span>. Уклон меньше — не опрокидывается. Брусок стоит, но обе проверки прошёл впритык: чуть круче склон — и он либо поедет, либо перевалится.</p>
+<p>Теперь диаграмма. Строим цепочкой по правилу многоугольника (М2 §3): от конца первого вектора откладываем второй, от его конца — третий. В масштабе 1 см ⇔ 2 Н получаем стороны 6 см, 4,8 см и 3,6 см. Цепочка замыкается — конец последнего вектора попадает в начало первого, — и это геометрическая запись того же факта: равнодействующая трёх сил равна нулевому вектору. Не замкнулась бы — отрезок, соединяющий конец с началом, и был бы равнодействующей, а брусок поехал бы.</p>
+<!-- fig-anchor: figure.physics.statics.incline_force_polygon -->
+
+<p><img alt="Замкнутый треугольник из трёх векторов: сила тяжести 12 Н вниз, реакция опоры 9,6 Н перпендикулярно склону, сила трения 7,2 Н вдоль склона вверх; стороны 6, 4,8 и 3,6 см" src="/assets/images/physics.tower_stability/generated/tower_stability_incline_force_polygon.png" /></p>
+<p><em>Диаграмма сил для бруска на склоне 3 : 4 в масштабе 1 см ⇔ 2 Н: многоугольник замкнулся, равнодействующая равна нулю</em></p>
+<hr />
+<!-- fragment:018 -->
+
+<h3 id="порядок-построения">Порядок построения<a class="headerlink" href="#порядок-построения" title="Permanent link">&para;</a></h3>
+<p>Пять шагов, которые стоит выполнять всегда в одном и том же порядке.</p>
+<ol>
+<li><strong>Объявите масштаб</strong> и запишите его на чертеже: «1 см ⇔ 2 Н». Выбирайте так, чтобы самый длинный вектор поместился на лист и был не короче 4—5 см.</li>
+<li><strong>Перечислите силы</strong> — все, что действуют на тело, и только на него. Не на опору, не на соседний блок.</li>
+<li><strong>Переведите ньютоны в сантиметры</strong>: разделите каждую силу на масштаб. 12 Н : 2 Н/см = 6 см.</li>
+<li><strong>Отложите векторы цепочкой</strong>, соблюдая направления: каждый следующий — от конца предыдущего.</li>
+<li><strong>Проверьте замыкание.</strong> Замкнулось — равнодействующая ноль, тело в равновесии. Не замкнулось — измерьте отрезок замыкания линейкой и умножьте на масштаб: это и есть равнодействующая в ньютонах.</li>
+</ol>
+<p>Пятый шаг и делает диаграмму инструментом: ответ получается измерением, а не вычислением, и служит независимой проверкой расчёта.</p>
+<hr />
+<!-- fragment:019 -->
+
+<h3 id="чертёж-башни-черепахой">Чертёж башни черепахой<a class="headerlink" href="#чертёж-башни-черепахой" title="Permanent link">&para;</a></h3>
+<p>Тот же масштабный коэффициент — в программе. Черепаха рисует в шагах, башня задана в сантиметрах; переводим одним числом <code>K</code>.</p>
+<p><strong>Где запускать.</strong> Этому блоку нужно графическое окно, которого в Colab нет: набирайте и запускайте его в Replit. Текстового вывода у программы не будет вовсе — результат её работы это картинка. На экране вы увидите четыре прямоугольника, сложенных лесенкой вправо, вертикальную линию, опущенную из точки <code>C</code> до стола, и короткую отметку правого ребра опоры. Видно сразу: линия проходит левее отметки — башня стоит.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">K</span> <span class="o">=</span> <span class="mf">10.0</span>        <span class="c1"># масштаб: 1 см ⇔ 10 шагов черепахи</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">W</span> <span class="o">=</span> <span class="mf">8.0</span>         <span class="c1"># ширина блока, см</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">H</span> <span class="o">=</span> <span class="mf">4.0</span>         <span class="c1"># высота блока, см</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">t</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">goto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">K</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="n">K</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="k">def</span><span class="w"> </span><span class="nf">block</span><span class="p">(</span><span class="n">x_center</span><span class="p">,</span> <span class="n">y_bottom</span><span class="p">):</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="n">goto</span><span class="p">(</span><span class="n">x_center</span> <span class="o">-</span> <span class="n">W</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y_bottom</span><span class="p">)</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="n">t</span><span class="o">.</span><span class="n">setheading</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">K</span> <span class="o">*</span> <span class="n">W</span><span class="p">)</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">K</span> <span class="o">*</span> <span class="n">H</span><span class="p">)</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">K</span> <span class="o">*</span> <span class="n">W</span><span class="p">)</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">K</span> <span class="o">*</span> <span class="n">H</span><span class="p">)</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">]</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="n">levels</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">]</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">levels</span><span class="p">):</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>    <span class="n">block</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="c1"># вертикаль через центр тяжести C = (1,5; 5,0)</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="n">t</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">"red"</span><span class="p">)</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="n">goto</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">16.0</span><span class="p">)</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="n">t</span><span class="o">.</span><span class="n">setheading</span><span class="p">(</span><span class="mi">270</span><span class="p">)</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">K</span> <span class="o">*</span> <span class="mf">16.0</span><span class="p">)</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="c1"># отметка правого ребра опоры</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="n">t</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">"blue"</span><span class="p">)</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="n">goto</span><span class="p">(</span><span class="mf">4.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="n">t</span><span class="o">.</span><span class="n">setheading</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">K</span> <span class="o">*</span> <span class="mf">2.0</span><span class="p">)</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="n">turtle</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
+</code></pre></div>
+<p>Поменяйте список <code>xs</code> на <code>[0.0, 5.0, 10.0, 15.0]</code> — и увидите, как красная линия уходит правее синей отметки. Это уже упавшая башня, только программа не умеет её ронять: рисунок показывает положение, а падение считает физический движок, к которому мы сейчас и перейдём.</p>
+<hr />
+<!-- fragment:020 -->
+
+<h2 id="м2-54-информатика-модель-в-симуляторе">М2 §5.4. Информатика: модель в симуляторе<a class="headerlink" href="#м2-54-информатика-модель-в-симуляторе" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Интерактивная модель</strong> — модель, параметры которой можно менять во время её работы и сразу видеть последствия, не переписывая и не перезапуская расчёт.</p>
+</blockquote>
+<p>Разница с программами, которые мы писали до сих пор, вот в чём. В нашем коде, чтобы поменять сдвиг, надо отредактировать строку и запустить всё заново. В интерактивной модели вы тянете блок мышью — и картинка отвечает немедленно. Взамен вы теряете контроль: что именно движок считает внутри и с какой точностью, вы не видите.</p>
+<p>Поэтому модель в симуляторе для нас — не замена расчёта, а второй, независимый источник чисел. Расчёт мы уже умеем делать полностью сами, и все выводы этого параграфа получены им. Симулятор добавляет наглядность и вторую цифру для сверки.</p>
+<hr />
+<!-- fragment:021 -->
+
+<h3 id="сборка-башни-в-algodoo">Сборка башни в Algodoo<a class="headerlink" href="#сборка-башни-в-algodoo" title="Permanent link">&para;</a></h3>
+<p>Algodoo — двумерный физический движок: вы рисуете тела мышью, задаёте им массу и трение, нажимаете «пуск», и дальше он сам считает, что с ними произойдёт. Программа бесплатна для компьютера; скачивается с сайта <strong>algodoo.com</strong>, раздел загрузки, версии для Windows и macOS.</p>
+<ol>
+<li><strong>Пол.</strong> Инструментом «прямоугольник» нарисуйте длинную плоскую плиту и сделайте её неподвижной (в свойствах объекта — «закрепить»). Это наш стол.</li>
+<li><strong>Масштаб.</strong> Включите сетку. Договоритесь, что одна клетка — 1 см, и держитесь этого до конца: числа из расчёта и числа на экране должны быть в одних единицах.</li>
+<li><strong>Первый блок.</strong> Нарисуйте прямоугольник 8 × 4 клетки. В свойствах задайте массу 0,50 кг и коэффициент трения 0,8 — иначе башня начнёт скользить и вы будете исследовать не то явление.</li>
+<li><strong>Остальные три.</strong> Скопируйте блок трижды, задайте массы 0,30; 0,15; 0,05 кг, поставьте друг на друга и сдвиньте каждый следующий вправо на 2 клетки.</li>
+<li><strong>Скрепите блоки.</strong> Инструментом «склеить» соедините соседние блоки. Это важное упрощение: скреплённая башня может опрокинуться только целиком, через ребро основания. Без склейки у неё появятся промежуточные рёбра — каждый блок сможет свалиться со своего соседа отдельно, и придётся проверять каждый ярус. Этим займёмся в задаче уровня 3.</li>
+<li><strong>Пуск.</strong> Снимите паузу. Башня со сдвигом 2 см должна остаться стоять — ровно это предсказал наш расчёт: <span class="arithmatex">\(d_{уст} = 2{,}5\)</span> см.</li>
+<li><strong>Параметры.</strong> Поставьте паузу, увеличьте сдвиг каждого блока до 3 клеток, запустите снова. Потом до 4, до 5, до 6. Отмечайте, на каком сдвиге башня впервые упала. Наклон пола — второй параметр: поверните плиту на несколько градусов и посмотрите, что случится раньше — скольжение или опрокидывание.</li>
+</ol>
+<p><strong>Тот же опыт в Scratch.</strong> Собрать модель можно и там, но физического движка в Scratch нет: силу тяжести, поворот через ребро и остановку на опоре придётся запрограммировать самому. Порядок работы такой: сначала один спрайт-блок, который падает на пол и останавливается на нём; потом второй блок, который останавливается на первом; потом проверка вертикали через <code>C</code> — если она вышла за ребро, включаем поворот спрайта. Это заметно длиннее, чем весь остальной параграф, но каждое правило вы напишете руками и увидите его целиком — в Algodoo этого не видно. Числа для сверки берите те же.</p>
+<hr />
+<!-- fragment:022 -->
+
+<h3 id="что-движок-делает-внутри">Что движок делает внутри<a class="headerlink" href="#что-движок-делает-внутри" title="Permanent link">&para;</a></h3>
+<p>Никакого волшебства внутри Algodoo нет, и вы уже видели этот приём. В М2 §4 мы считали движение бруска по шагам: взяли маленький промежуток времени, посчитали силы, пересчитали скорость и положение, повторили. Это и есть <strong>пошаговая модель с шагом по времени</strong>.</p>
+<p>Движок делает то же самое, только с двумя отличиями. Первое: шаг <span class="arithmatex">\(\Delta t\)</span> у него очень мал — порядка одной шестидесятой секунды и меньше, и таких шагов за секунду проходят десятки. Второе: кроме положения он пересчитывает ещё и поворот каждого тела — то самое вращение через ребро, которое мы описываем правилом, а он считает численно.</p>
+<p>Отсюда важное следствие. Результат движка — не точный ответ, а результат многих маленьких приближений подряд. Он зависит от размера шага, от заданных коэффициентов трения, от того, как движок обрабатывает касание тел. Поэтому картинка на экране — не истина в последней инстанции, а второе измерение, которое надо сравнить с первым.</p>
+<hr />
+<!-- fragment:023 -->
+
+<h2 id="м2-55-информатика-критический-сдвиг">М2 §5.5. Информатика: критический сдвиг<a class="headerlink" href="#м2-55-информатика-критический-сдвиг" title="Permanent link">&para;</a></h2>
+<p>Вопрос, ради которого писалась вся программа: <strong>при каком сдвиге башня падает?</strong></p>
+<p>Тянуть блоки мышью в симуляторе и на глаз ловить границу — занятие на полчаса, и точность выйдет «где-то между 5 и 6 сантиметрами». Расчёт даёт ответ точнее и быстрее.</p>
+<blockquote>
+<p><strong>Перебор параметра</strong> — приём, при котором задачу «при каком значении величины наступит событие» решают, прогоняя расчёт для целого ряда значений этой величины подряд и отслеживая, между какими соседними значениями результат изменился.</p>
+</blockquote>
+<p>Уточним постановку. Пусть блоки сдвинуты <strong>ступенькой</strong>: каждый следующий смещён относительно предыдущего на одно и то же расстояние <span class="arithmatex">\(s\)</span>. Тогда центры блоков стоят в точках <span class="arithmatex">\(0,\; s,\; 2s,\; 3s\)</span>, а вся остальная геометрия — прежняя: рёбра при <span class="arithmatex">\(x = \pm 4\)</span> см, массы 0,50; 0,30; 0,15; 0,05 кг. Блоки скреплены, падает вся башня целиком.</p>
+<p>Подставим в формулу взвешенного среднего:</p>
+<div class="arithmatex">\[x_C = \frac{0{,}50 \cdot 0 + 0{,}30 \cdot s + 0{,}15 \cdot 2s + 0{,}05 \cdot 3s}{1{,}0} = (0{,}30 + 0{,}30 + 0{,}15)\, s = 0{,}75\, s\]</div>
+<p>Проверка на известном случае: при <span class="arithmatex">\(s = 2\)</span> см получаем <span class="arithmatex">\(x_C = 1{,}5\)</span> см — совпало с §5.1. Значит запас</p>
+<div class="arithmatex">\[d_{уст} = 4 - 0{,}75\, s\]</div>
+<p>и он обращается в ноль при <span class="arithmatex">\(s = 4 : 0{,}75 = 16/3 \approx 5{,}33\)</span> см. Этот ответ мы теперь знаем аналитически — и именно поэтому он годится в проверку для программы: если перебор даст другое число, ошибка есть в одном из двух мест, и её надо найти.</p>
+<hr />
+<!-- fragment:024 -->
+
+<h3 id="предсказание">Предсказание<a class="headerlink" href="#предсказание" title="Permanent link">&para;</a></h3>
+<p>Прежде чем запускать перебор, ответьте письменно.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">masses</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">x_cg</span><span class="p">(</span><span class="n">shift</span><span class="p">):</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">s</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">masses</span><span class="p">:</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">m</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">m</span> <span class="o">*</span> <span class="n">k</span> <span class="o">*</span> <span class="n">shift</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="k">return</span> <span class="n">s</span> <span class="o">/</span> <span class="n">total</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="k">for</span> <span class="n">shift</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">]:</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"s = </span><span class="si">{</span><span class="n">shift</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> см -&gt; x_C = </span><span class="si">{</span><span class="n">x_cg</span><span class="p">(</span><span class="n">shift</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> см"</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Какие три числа напечатает программа?</li>
+<li>При каком из трёх сдвигов башня уже упала?</li>
+<li>Верхний блок при <span class="arithmatex">\(s = 5\)</span> см стоит центром в точке <span class="arithmatex">\(x = 15\)</span> см — далеко за краем нижнего блока, у которого правое ребро на <span class="arithmatex">\(x = 4\)</span> см. Почему при этом башня всё ещё стоит?</li>
+</ol>
+<p>Запишите ответы, затем наберите код и проверьте.</p>
+<hr />
+<!-- fragment:025 -->
+
+<h3 id="перебор-с-шагом-05-см">Перебор с шагом 0,5 см<a class="headerlink" href="#перебор-с-шагом-05-см" title="Permanent link">&para;</a></h3>
+<p>Пройдём сдвиг от нуля до 8 см с шагом полсантиметра и напечатаем таблицу. Программа сама отметит строку, где знак запаса сменился с плюса на минус.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">masses</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">x_right</span> <span class="o">=</span> <span class="mf">4.0</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">x_cg</span><span class="p">(</span><span class="n">shift</span><span class="p">):</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">total_x</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">masses</span><span class="p">:</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">m</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        <span class="n">total_x</span> <span class="o">=</span> <span class="n">total_x</span> <span class="o">+</span> <span class="n">m</span> <span class="o">*</span> <span class="n">k</span> <span class="o">*</span> <span class="n">shift</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    <span class="k">return</span> <span class="n">total_x</span> <span class="o">/</span> <span class="n">total</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="k">def</span><span class="w"> </span><span class="nf">margin</span><span class="p">(</span><span class="n">shift</span><span class="p">):</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    <span class="k">return</span> <span class="n">x_right</span> <span class="o">-</span> <span class="n">x_cg</span><span class="p">(</span><span class="n">shift</span><span class="p">)</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="s1">'сдвиг, см'</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'запас, см'</span><span class="si">:</span><span class="s2">&gt;11</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="n">prev_shift</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="n">prev_d</span> <span class="o">=</span> <span class="n">margin</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">17</span><span class="p">):</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    <span class="n">shift</span> <span class="o">=</span> <span class="n">k</span> <span class="o">*</span> <span class="mf">0.5</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    <span class="n">d</span> <span class="o">=</span> <span class="n">margin</span><span class="p">(</span><span class="n">shift</span><span class="p">)</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">shift</span><span class="si">:</span><span class="s2">10.2f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">d</span><span class="si">:</span><span class="s2">11.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>    <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">prev_d</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  -&gt; знак сменился между </span><span class="si">{</span><span class="n">prev_shift</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> и </span><span class="si">{</span><span class="n">shift</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> см"</span><span class="p">)</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>    <span class="n">prev_shift</span> <span class="o">=</span> <span class="n">shift</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>    <span class="n">prev_d</span> <span class="o">=</span> <span class="n">d</span>
+</code></pre></div>
+<pre class="aristotel-output"><code> сдвиг, см   запас, см
+      0.00       4.000
+      0.50       3.625
+      1.00       3.250
+      1.50       2.875
+      2.00       2.500
+      2.50       2.125
+      3.00       1.750
+      3.50       1.375
+      4.00       1.000
+      4.50       0.625
+      5.00       0.250
+      5.50      -0.125
+  -&gt; знак сменился между 5.00 и 5.50 см
+      6.00      -0.500
+      6.50      -0.875
+      7.00      -1.250
+      7.50      -1.625
+      8.00      -2.000</code></pre>
+<p>Знак <code>&gt;</code> в записи <code>{'сдвиг, см':&gt;10}</code> означает «прижать вправо в поле шириной 10 знаков» — так шапка таблицы встаёт над колонками чисел.</p>
+<p>Перебор с шагом 0,5 см загоняет ответ в вилку шириной полсантиметра. Чтобы сузить её вдесятеро, можно уменьшить шаг вдесятеро — тогда строк станет 160. Ещё вдесятеро — 1600 строк. Такой способ работает, но глупо: есть приём экономнее.</p>
+<!-- fig-anchor: figure.physics.statics.margin_vs_shift -->
+
+<p><img alt="Убывающая прямая на осях: по горизонтали сдвиг ступеньки в сантиметрах, по вертикали запас устойчивости в сантиметрах; прямая пересекает горизонтальную ось около 5,33 см, дальше уходит в отрицательную область" src="/assets/images/physics.tower_stability/generated/tower_stability_margin_vs_shift.png" /></p>
+<p><em>Запас устойчивости как функция сдвига: d_уст = 4 − 0,75·s. Точка перехода через ноль — критический сдвиг s ≈ 5,33 см</em></p>
+<hr />
+<!-- fragment:026 -->
+
+<h3 id="деление-интервала-пополам">Деление интервала пополам<a class="headerlink" href="#деление-интервала-пополам" title="Permanent link">&para;</a></h3>
+<p>Мы знаем: на левом конце вилки запас положительный, на правом отрицательный. Значит граница внутри. Возьмём середину, посчитаем запас — и отбросим ту половину, где границы точно нет. Повторим. Каждый шаг сокращает вилку вдвое.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">masses</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">x_right</span> <span class="o">=</span> <span class="mf">4.0</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">margin</span><span class="p">(</span><span class="n">shift</span><span class="p">):</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="n">total_x</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">masses</span><span class="p">:</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">m</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="n">total_x</span> <span class="o">=</span> <span class="n">total_x</span> <span class="o">+</span> <span class="n">m</span> <span class="o">*</span> <span class="n">k</span> <span class="o">*</span> <span class="n">shift</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="k">return</span> <span class="n">x_right</span> <span class="o">-</span> <span class="n">total_x</span> <span class="o">/</span> <span class="n">total</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="n">lo</span> <span class="o">=</span> <span class="mf">5.0</span>        <span class="c1"># здесь башня ещё стоит</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="n">hi</span> <span class="o">=</span> <span class="mf">5.5</span>        <span class="c1"># здесь уже упала</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="n">steps</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="k">while</span> <span class="n">hi</span> <span class="o">-</span> <span class="n">lo</span> <span class="o">&gt;</span> <span class="mf">0.001</span><span class="p">:</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>    <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">lo</span> <span class="o">+</span> <span class="n">hi</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>    <span class="k">if</span> <span class="n">margin</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>        <span class="n">lo</span> <span class="o">=</span> <span class="n">mid</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>        <span class="n">hi</span> <span class="o">=</span> <span class="n">mid</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>    <span class="n">steps</span> <span class="o">=</span> <span class="n">steps</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="n">answer</span> <span class="o">=</span> <span class="p">(</span><span class="n">lo</span> <span class="o">+</span> <span class="n">hi</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="n">exact</span> <span class="o">=</span> <span class="mi">16</span> <span class="o">/</span> <span class="mi">3</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"критический сдвиг: </span><span class="si">{</span><span class="n">answer</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> см"</span><span class="p">)</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"шагов деления: </span><span class="si">{</span><span class="n">steps</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"точный ответ 16/3 = </span><span class="si">{</span><span class="n">exact</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> см"</span><span class="p">)</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"расхождение: </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">answer</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">exact</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> см"</span><span class="p">)</span>
+</code></pre></div>
+<pre class="aristotel-output"><code>критический сдвиг: 5.333 см
+шагов деления: 9
+точный ответ 16/3 = 5.333 см
+расхождение: 0.0002 см</code></pre>
+<p>Обратите внимание на последнюю строку: мы не спрашиваем, равны ли два числа, — мы печатаем, насколько они различаются, и смотрим, укладывается ли разница в объявленную точность. Так и следует поступать с вещественными числами: у них конечное число разрядов хранения, и точное совпадение — редкая случайность, а не признак правильности (М1 §1).</p>
+<p>Итак, критический сдвиг ступеньки для нашей башни — примерно 5,33 см. Дальше его надо проверить движком.</p>
+<hr />
+<!-- fragment:027 -->
+
+<h2 id="м2-56-информатика-расчёт-против-движка">М2 §5.6. Информатика: расчёт против движка<a class="headerlink" href="#м2-56-информатика-расчёт-против-движка" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Проверка модели</strong> — сравнение результата модели с результатом, полученным независимым способом: другим расчётом, экспериментом или другой моделью. Модель, ни разу не сверенная ни с чем внешним, ничего не доказывает.</p>
+</blockquote>
+<p>У нас на руках три независимых источника ответа на один и тот же вопрос «при каком сдвиге падает башня»:</p>
+<ol>
+<li><strong>Формула.</strong> <span class="arithmatex">\(s^* = 16/3 \approx 5{,}33\)</span> см — получена из критерия аналитически.</li>
+<li><strong>Перебор с уточнением.</strong> Та же величина, полученная программой численно. Это проверка формулы: два разных пути к одному числу.</li>
+<li><strong>Симулятор.</strong> Число, при котором башня в Algodoo впервые повалилась. Это уже проверка самого критерия: движок про наше правило ничего не знает, он считает силы и повороты по шагам.</li>
+</ol>
+<p>Третий источник и есть настоящая проверка. Первые два опираются на одну и ту же формулу и одну и ту же идею; если бы правило устойчивости было неверным, оба ошиблись бы одинаково.</p>
+<hr />
+<!-- fragment:028 -->
+
+<h3 id="отчёт">Отчёт<a class="headerlink" href="#отчёт" title="Permanent link">&para;</a></h3>
+<p>Соберите таблицу. Числа во втором столбце вы вписываете со своего экрана: аккуратно увеличивайте сдвиг в модели, каждый раз запуская время заново, и найдите наименьший сдвиг, при котором башня падает.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">calc</span> <span class="o">=</span> <span class="mf">5.333</span>        <span class="c1"># см, наш расчёт</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">engine</span> <span class="o">=</span> <span class="mf">0.0</span>        <span class="c1"># см, ВПИШИТЕ сюда число, полученное в симуляторе</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">tolerance</span> <span class="o">=</span> <span class="mf">0.2</span>     <span class="c1"># см, объявленная нами приемлемая разница</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">if</span> <span class="n">engine</span> <span class="o">&lt;=</span> <span class="mf">0.0</span><span class="p">:</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"число из симулятора не вписано — сравнивать нечего"</span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="n">gap</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">calc</span> <span class="o">-</span> <span class="n">engine</span><span class="p">)</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"расчёт:      </span><span class="si">{</span><span class="n">calc</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> см"</span><span class="p">)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"движок:      </span><span class="si">{</span><span class="n">engine</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> см"</span><span class="p">)</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"расхождение: </span><span class="si">{</span><span class="n">gap</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> см"</span><span class="p">)</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="k">if</span> <span class="n">gap</span> <span class="o">&lt;=</span> <span class="n">tolerance</span><span class="p">:</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"сходится в пределах объявленной точности"</span><span class="p">)</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"не сходится: ищите причину в обоих способах"</span><span class="p">)</span>
+</code></pre></div>
+<p>Проверка <code>if engine &lt;= 0.0</code> стоит здесь не зря: пока своё число вы не вписали, программа честно говорит, что сравнивать нечего, — вместо того чтобы выдать пугающее «не сходится» на пустом месте.</p>
+<p>Строку <code>tolerance = 0.2</code> нужно уметь защитить: почему именно два миллиметра? Потому что сдвиг в модели вы выставляете мышью с точностью примерно до половины клетки, а клетка у нас — сантиметр. Объявите свою точность заранее, до сравнения, — иначе допуск легко подогнать под уже полученный результат.</p>
+<hr />
+<!-- fragment:029 -->
+
+<h3 id="что-показал-algodoo-то-и-правда">«Что показал Algodoo, то и правда»<a class="headerlink" href="#что-показал-algodoo-то-и-правда" title="Permanent link">&para;</a></h3>
+<p>Соблазн понятный: движок красиво роняет башню, картинка убедительная. Но расхождение с расчётом — не повод объявить расчёт неверным. Это повод искать ошибку <strong>в обоих</strong>, и вот наиболее вероятные её адреса.</p>
+<ul>
+<li><strong>Шаг по времени.</strong> Движок пересчитывает мир порциями <span class="arithmatex">\(\Delta t\)</span>. Если башня стоит на самой границе, за один шаг она может успеть «провалиться» в соседний блок и получить толчок, которого в реальности не было.</li>
+<li><strong>Коэффициенты.</strong> Если вы не выставили трение 0,8, а оставили значение по умолчанию, башня могла не опрокинуться, а поехать. Ответ будет про другое явление.</li>
+<li><strong>Склейка.</strong> Не скрепили блоки — падает не башня, а верхние ярусы по отдельности, и критический сдвиг получится меньше.</li>
+<li><strong>Наш расчёт.</strong> Мы считали блоки однородными, а <code>C</code> каждого — в геометрическом центре. Если в модели у блоков разная плотность или скруглённые углы, ребро опоры уже не там, где мы думали.</li>
+</ul>
+<p>И самое честное. Движок считает больше, чем мы умеем посчитать: он знает про вращение, про удары, про то, как быстро тело поворачивается, — у нас для этого пока нет аппарата. Поэтому мы сравниваем с ним только одно число, единственное, которое умеем предсказать: сдвиг, на котором равновесие кончается. За что не отвечаем — про то и не спорим.</p>
+<hr />
+<!-- fragment:030 -->
+
+<h2 id="м2-57-задачи">М2 §5.7. Задачи<a class="headerlink" href="#м2-57-задачи" title="Permanent link">&para;</a></h2>
+<h3 id="уровень-1--узнавание">Уровень 1 — узнавание<a class="headerlink" href="#уровень-1--узнавание" title="Permanent link">&para;</a></h3>
+<p><strong>1.1.</strong> Книжный стеллаж стоит на четырёх ножках, расставленных по углам прямоугольника 40 см × 90 см (40 см — от стены к комнате). Назовите площадь опоры стеллажа. Ребёнок тянет верхнюю полку на себя, от стены. Какое ребро окажется ребром опрокидывания?</p>
+<p><strong>1.2.</strong> Дорожный конус — сплошной, однородный, симметричный относительно своей вертикальной оси. Где лежит его центр тяжести: на оси или в стороне от неё? Выше середины высоты или ниже? Ответ объясните, не считая: одной фразой про симметрию и одной — про то, где у конуса больше вещества.</p>
+<p><strong>1.3.</strong> Из картона вырезали кольцо и букву «Г». Для каждой фигуры ответьте: лежит ли её центр тяжести внутри вещества фигуры? Как проверить ответ, имея нитку, иголку, карандаш и лист бумаги?</p>
+<p><strong>1.4.</strong> Четыре штатива стоят на одном столе. Основание у всех одинаковое — равносторонний треугольник на трёх ножках; расстояние по горизонтали от центра основания до каждой его стороны равно 15 см. Все четыре штатива наклонены в сторону одной и той же стороны основания, так что ребром опрокидывания служит именно она. Различаются штативы высотой центра тяжести и его сдвигом от центра основания в сторону этого ребра:</p>
+<table>
+<thead>
+<tr>
+<th>штатив</th>
+<th>сдвиг <code>C</code> от центра, см</th>
+<th>высота <code>C</code>, см</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>А</td>
+<td>4</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Б</td>
+<td>14</td>
+<td>30</td>
+</tr>
+<tr>
+<td>В</td>
+<td>4</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Г</td>
+<td>16</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>Какой из штативов уже упал, хотя его никто не трогал? Для остальных трёх посчитайте запас устойчивости и расположите их по убыванию запаса. Влияет ли высота <code>C</code> на ответ, пока стол горизонтален?</p>
+<p><strong>1.5.</strong> Кирпич лежит на столе плашмя (грань 25 × 12 см), потом его ставят на торец (грань 12 × 6,5 см). Масса та же. Что изменилось: сила тяжести, площадь опоры, высота центра тяжести, запас устойчивости? Ответьте по каждому пункту «выросло / уменьшилось / не изменилось».</p>
+<hr />
+<!-- fragment:031 -->
+
+<h3 id="уровень-2--расчёт">Уровень 2 — расчёт<a class="headerlink" href="#уровень-2--расчёт" title="Permanent link">&para;</a></h3>
+<p><strong>2.1.</strong> Башня из трёх скреплённых блоков. Ширина каждого 12 см, высота 5 см. Массы снизу вверх: 0,6 кг; 0,3 кг; 0,1 кг. Центр нижнего блока — в начале координат; второй блок сдвинут вправо на 3 см относительно нижнего, третий — ещё на 3 см.
+а) Найдите <span class="arithmatex">\(x_C\)</span> и <span class="arithmatex">\(y_C\)</span> взвешенным средним.
+б) Укажите координаты обоих рёбер опоры и найдите <span class="arithmatex">\(d_{уст}\)</span>.
+в) Округлите ответ до десятых и объясните, почему не до сотых.</p>
+<p><strong>2.2.</strong> Для башни из задачи 2.1 выразите запас устойчивости <strong>в процентах от полуширины основания</strong>. Это удобная форма ответа для инженера: она не зависит от размеров конструкции. Какой запас в процентах у башни из §5.1? У какой из двух башен положение надёжнее?</p>
+<p><strong>2.3.</strong> Ту же башню из 2.1 собирают со ступенькой <span class="arithmatex">\(s\)</span>: второй блок сдвинут на <span class="arithmatex">\(s\)</span>, третий — на <span class="arithmatex">\(2s\)</span>. Выведите формулу <span class="arithmatex">\(x_C(s)\)</span> и найдите критический сдвиг точно, дробью. Проверьте: подставьте <span class="arithmatex">\(s = 3\)</span> см и сверьтесь с ответом 2.1.</p>
+<p><strong>2.4.</strong> Тележка с грузом стоит на наклонном въезде. Ширина колеи 50 см (значит от <code>C</code> до колеса по горизонтали 25 см), центр тяжести гружёной тележки — на высоте 40 см над дорогой, посередине между колёсами. Тележка стоит поперёк склона, колёса заторможены.
+а) При каком уклоне (отношение подъёма к горизонтальному пробегу) вертикаль через <code>C</code> выйдет за нижнее колесо? Воспользуйтесь критерием <span class="arithmatex">\(b/h\)</span> из §5.2.
+б) Коэффициент трения покоя между шинами и покрытием <span class="arithmatex">\(\mu = 0{,}3\)</span>. Что случится раньше при увеличении уклона — тележка поедет или опрокинется? Ответ обоснуйте сравнением двух чисел.
+в) Груз переложили ниже, и <code>C</code> опустился до высоты 25 см. Как изменился ответ пункта (а)? Изменился ли ответ пункта (б)?</p>
+<p><strong>2.5.</strong> Напишите функцию <code>stability_report(masses, xs, half_width)</code>, которая по спискам масс и координат центров блоков и по полуширине основания печатает: координату <span class="arithmatex">\(x_C\)</span>, запас устойчивости в сантиметрах, запас в процентах от полуширины и вердикт «стоит / на грани / падает». Запас считайте через <code>min</code>, как в §5.2. Проверьте функцию на башне из §5.1 (ответ должен быть 2,5 см) и на башне из задачи 2.1.</p>
+<hr />
+<!-- fragment:032 -->
+
+<h3 id="уровень-3--исследование">Уровень 3 — исследование<a class="headerlink" href="#уровень-3--исследование" title="Permanent link">&para;</a></h3>
+<p><strong>3.1. Лестница из книг.</strong> Возьмите шесть одинаковых предметов правильной формы: книги в твёрдом переплёте, домино, деревянные бруски. Сложите их стопкой на краю стола, сдвигая каждый следующий наружу, и добейтесь <strong>максимального суммарного свеса</strong> — расстояния по горизонтали от края стола до дальнего края верхнего предмета. Двигайте осторожно: стопка нескреплённая, и развалиться может любой ярус.</p>
+<p>Измерьте максимальный свес линейкой три раза, пересобирая стопку заново, и запишите среднее.</p>
+<p><strong>3.2. Расчёт.</strong> Посчитайте предельный свес заранее. Подсказка к порядку рассуждения: идти надо сверху вниз и проверять каждый ярус отдельно. Верхний предмет держится, пока его <code>C</code> не вышел за край того, на котором он лежит. Пара верхних предметов держится, пока <code>C</code> этой пары не вышел за край третьего. И так далее — до нижнего, для которого опора — стол. Каждое условие даёт свой предельный сдвиг; сложите предельные сдвиги.</p>
+<p>Оформите расчёт программой: списки масс и координат, функция центра тяжести из §5.1, цикл по ярусам. Одинаковые предметы означают, что взвешенное среднее превращается в арифметическое.</p>
+<p><strong>3.3. Симулятор.</strong> Соберите ту же стопку из шести тел в Algodoo — <strong>без склейки</strong>, ярусы должны падать по отдельности, — и найдите максимальный свес, при котором конструкция ещё стоит.</p>
+<p><strong>3.4. Отчёт.</strong> Сведите три числа в таблицу:</p>
+<table>
+<thead>
+<tr>
+<th>источник</th>
+<th>максимальный свес, см</th>
+<th>объявленная точность, см</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>измерение (среднее из трёх)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>расчёт</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>симулятор</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Точность объявляйте <strong>до</strong> сравнения, а не после. Затем ответьте письменно: сходятся ли три числа в пределах объявленной точности? Если нет — назовите <strong>не менее двух</strong> причин расхождения и объясните, в какую сторону каждая из них смещает результат. Кандидаты: погрешность линейки; неровность и неодинаковость предметов (у настоящей книги <code>C</code> не строго в центре); шаг <span class="arithmatex">\(\Delta t\)</span> движка; трение, которого в расчёте нет вовсе; то, что вы двигали книги руками и слегка их подталкивали.</p>
+<p><strong>3.5.</strong> Если бы предметов было не шесть, а двадцать, вырос бы предельный свес? Есть ли у него предел, которого нельзя перейти, сколько книг ни бери? Проверьте расчётом на программе из 3.2, увеличив число ярусов; на симуляторе проверять не обязательно — объясните, почему двадцатиярусная стопка в модели скорее всего упадёт раньше расчётного предела.</p>
+<hr />
+<!-- fragment:033 -->
+
+<h2 id="м2-58-итог">М2 §5.8. Итог<a class="headerlink" href="#м2-58-итог" title="Permanent link">&para;</a></h2>
+<p>Что теперь у вас есть.</p>
+<p><strong>Физика.</strong></p>
+<ul>
+<li><strong>Центр тяжести</strong> <code>C</code> — точка, в которую можно приложить одну силу тяжести всего тела. У кольца и у буквы «Г» она лежит вне вещества, и это нормально.</li>
+<li><strong>Площадь опоры</strong> — область, ограниченная крайними точками касания; её граница называется опорным контуром. Отвечает на вопрос «где телу разрешено стоять».</li>
+<li><strong>Ребро опрокидывания</strong> — та граница контура, вокруг которой тело повернётся; рёбер несколько, работает ближайшее к вертикали через <code>C</code>.</li>
+<li><strong>Правило устойчивости:</strong> тело не опрокидывается, пока вертикаль через <code>C</code> проходит внутри площади опоры. Пока — экспериментальный факт; вывод через момент силы ждёт вас в М4 §3, когда появится момент силы.</li>
+<li><strong>Запас устойчивости</strong> <span class="arithmatex">\(d_{уст}\)</span> — расстояние от вертикали через <code>C</code> до ближайшего ребра. Знак говорит вердикт, величина — насколько всё серьёзно.</li>
+<li>Нулевая равнодействующая необходима, но недостаточна: она запрещает разгон, а не поворот. Масса в критерий не входит — устойчивость геометрическая.</li>
+<li>На наклоне сравнивайте два числа: уклон против <span class="arithmatex">\(\mu\)</span> — начнётся ли скольжение, уклон против <span class="arithmatex">\(b/h\)</span> — начнётся ли опрокидывание. Наступает то, для чего порог ниже.</li>
+</ul>
+<p><strong>Математика.</strong></p>
+<ul>
+<li>Центр тяжести составной конструкции — <strong>взвешенное среднее</strong> координат её частей с массами в качестве весов; при равных массах — обычное арифметическое среднее.</li>
+<li>Запись <span class="arithmatex">\(\min(\ldots)\)</span> — «наименьшее из перечисленного»; в Python это встроенная функция <code>min</code>.</li>
+<li><strong>Векторная диаграмма</strong> с объявленным <strong>масштабным коэффициентом</strong> («1 см ⇔ 2 Н») превращает чертёж в измерительный прибор: замкнулся многоугольник — равнодействующая ноль; не замкнулся — измерьте отрезок замыкания и умножьте на масштаб.</li>
+<li>Разложение силы тяжести на склоне 3 : 4 и вывод отношения <span class="arithmatex">\(b/h\)</span> делаются подобием треугольников, без всякой тригонометрии.</li>
+</ul>
+<p><strong>Информатика.</strong></p>
+<ul>
+<li><strong>Интерактивная модель</strong> отвечает мгновенно, но прячет внутренности; расчёт медленнее, зато весь на виду. Мы пользуемся обоими.</li>
+<li><strong>Перебор параметра</strong> загоняет ответ в вилку, <strong>деление интервала пополам</strong> сужает вилку вдвое за шаг.</li>
+<li><strong>Проверка модели</strong> — сравнение с независимым источником и объявленная заранее точность. Расхождение с симулятором — повод искать ошибку в обоих, а не верить картинке.</li>
+</ul>
+<p>И общий вывод, который стоит того, чтобы его записать отдельно. Устойчивость конструкции — не про то, насколько она тяжёлая и прочная. Она про два расстояния: где стоит вертикаль через центр тяжести и где проходит ближайшее ребро. Всё остальное — способы посчитать эти два расстояния.</p>
+<hr />
+<!-- fragment:034 -->
+
+<h2 id="мост-к-м3-1">Мост к М3 §1<a class="headerlink" href="#мост-к-м3-1" title="Permanent link">&para;</a></h2>
+<p>Модуль про силы закончен. Мы научились складывать силы, приложенные к точке, раскладывать их, учитывать трение — и, наконец, работать с телом, у которого есть размеры.</p>
+<p>И как раз на размерах остался вопрос, который мы обошли. Разбирая, почему башня стоит, мы сказали: реакция опоры набирается из множества маленьких сил, распределённых по всей площадке касания. Мы заменили их одной силой и дальше не интересовались, как они по площадке разложены.</p>
+<p>А вопрос содержательный. Одна и та же женщина в туфлях на шпильке продавливает линолеум, а в кроссовках — нет; вес тот же. Гусеничный трактор идёт по болоту, где легковая машина тонет. Кнопку вдавливают в доску пальцем, а гвоздь той же рукой не вдавишь. Во всех трёх случаях сила одна, а результат разный, и различает их площадь, по которой сила распределена.</p>
+<p>Величина, которая измеряет силу, приходящуюся на единицу площади, называется давлением. С неё начинается следующий модуль.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 ARISTOTEL
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../assets/javascripts/katex-init.js"></script>
+      
+    
+  </body>
+</html>
