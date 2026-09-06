@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "stembook_version": "0.1.0",
-  "concept_count": 190,
+  "concept_count": 176,
   "concepts": [
     {
       "id": "cs.arbitrary_precision_integer",
@@ -108,14 +108,6 @@
       "href": "/concepts/cs-ieee754/"
     },
     {
-      "id": "cs.input_validation",
-      "title": "Проверка входных данных",
-      "subject": "cs",
-      "area": "code_quality",
-      "importance": "critical",
-      "href": "/concepts/cs-input_validation/"
-    },
-    {
       "id": "cs.integer_overflow",
       "title": "Целочисленное переполнение",
       "subject": "cs",
@@ -218,22 +210,6 @@
       "area": "python",
       "importance": "critical",
       "href": "/concepts/cs-python-comparison_operators/"
-    },
-    {
-      "id": "cs.python.default_parameter",
-      "title": "Значение параметра по умолчанию",
-      "subject": "cs",
-      "area": "python",
-      "importance": "normal",
-      "href": "/concepts/cs-python-default_parameter/"
-    },
-    {
-      "id": "cs.python.elif",
-      "title": "Ветка elif",
-      "subject": "cs",
-      "area": "python",
-      "importance": "critical",
-      "href": "/concepts/cs-python-elif/"
     },
     {
       "id": "cs.python.expression",
@@ -372,14 +348,6 @@
       "href": "/concepts/cs-python-matplotlib/"
     },
     {
-      "id": "cs.python.none",
-      "title": "None",
-      "subject": "cs",
-      "area": "python",
-      "importance": "normal",
-      "href": "/concepts/cs-python-none/"
-    },
-    {
       "id": "cs.python.numpy",
       "title": "Библиотека numpy",
       "subject": "cs",
@@ -410,14 +378,6 @@
       "area": "python",
       "importance": "high",
       "href": "/concepts/cs-python-return_value/"
-    },
-    {
-      "id": "cs.python.str",
-      "title": "Строка (str)",
-      "subject": "cs",
-      "area": "python",
-      "importance": "high",
-      "href": "/concepts/cs-python-str/"
     },
     {
       "id": "cs.python.turtle",
@@ -508,22 +468,6 @@
       "href": "/concepts/math-absolute_value/"
     },
     {
-      "id": "math.area",
-      "title": "Площадь",
-      "subject": "math",
-      "area": "geometry",
-      "importance": "critical",
-      "href": "/concepts/math-area/"
-    },
-    {
-      "id": "math.area_unit_conversion",
-      "title": "Перевод единиц площади",
-      "subject": "math",
-      "area": "geometry",
-      "importance": "critical",
-      "href": "/concepts/math-area_unit_conversion/"
-    },
-    {
       "id": "math.arithmetic_mean",
       "title": "Среднее арифметическое",
       "subject": "math",
@@ -546,14 +490,6 @@
       "area": "arithmetic",
       "importance": "normal",
       "href": "/concepts/math-chinese_remainder_theorem/"
-    },
-    {
-      "id": "math.circle_area",
-      "title": "Площадь круга",
-      "subject": "math",
-      "area": "geometry",
-      "importance": "critical",
-      "href": "/concepts/math-circle_area/"
     },
     {
       "id": "math.collatz_conjecture",
@@ -916,14 +852,6 @@
       "href": "/concepts/math-peano_axioms/"
     },
     {
-      "id": "math.pi",
-      "title": "Число π",
-      "subject": "math",
-      "area": "geometry",
-      "importance": "high",
-      "href": "/concepts/math-pi/"
-    },
-    {
       "id": "math.polygon_rule",
       "title": "Правило многоугольника",
       "subject": "math",
@@ -970,14 +898,6 @@
       "area": "logic",
       "importance": "high",
       "href": "/concepts/math-quantifier_negation/"
-    },
-    {
-      "id": "math.rectangle_area",
-      "title": "Площадь прямоугольника",
-      "subject": "math",
-      "area": "geometry",
-      "importance": "critical",
-      "href": "/concepts/math-rectangle_area/"
     },
     {
       "id": "math.riemann_hypothesis",
@@ -1074,14 +994,6 @@
       "area": "arithmetic",
       "importance": "high",
       "href": "/concepts/math-successor/"
-    },
-    {
-      "id": "math.triangle_area",
-      "title": "Площадь треугольника",
-      "subject": "math",
-      "area": "geometry",
-      "importance": "high",
-      "href": "/concepts/math-triangle_area/"
     },
     {
       "id": "math.triangle_rule",
@@ -1210,14 +1122,6 @@
       "area": "dynamics",
       "importance": "critical",
       "href": "/concepts/physics-center_of_gravity/"
-    },
-    {
-      "id": "physics.contact_area",
-      "title": "Площадь контакта",
-      "subject": "physics",
-      "area": "mechanics",
-      "importance": "critical",
-      "href": "/concepts/physics-contact_area/"
     },
     {
       "id": "physics.displacement",
@@ -1372,28 +1276,12 @@
       "href": "/concepts/physics-normal_force/"
     },
     {
-      "id": "physics.pascal",
-      "title": "Паскаль",
-      "subject": "physics",
-      "area": "mechanics",
-      "importance": "high",
-      "href": "/concepts/physics-pascal/"
-    },
-    {
       "id": "physics.path",
       "title": "Путь",
       "subject": "physics",
       "area": "kinematics",
       "importance": "high",
       "href": "/concepts/physics-path/"
-    },
-    {
-      "id": "physics.pressure",
-      "title": "Давление",
-      "subject": "physics",
-      "area": "mechanics",
-      "importance": "critical",
-      "href": "/concepts/physics-pressure/"
     },
     {
       "id": "physics.reference_frame",
