@@ -61,6 +61,10 @@
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-input_validation/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/cs-integer_overflow/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
@@ -110,6 +114,14 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/cs-python-comparison_operators/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-python-default_parameter/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-python-elif/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
@@ -181,6 +193,10 @@
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-python-none/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/cs-python-numpy/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
@@ -194,6 +210,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/cs-python-return_value/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/cs-python-str/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
@@ -241,6 +261,14 @@
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/math-area/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/math-area_unit_conversion/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/math-arithmetic_mean/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
@@ -250,6 +278,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/math-chinese_remainder_theorem/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/math-circle_area/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
@@ -433,6 +465,10 @@
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/math-pi/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/math-polygon_rule/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
@@ -454,6 +490,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/math-quantifier_negation/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/math-rectangle_area/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
@@ -502,6 +542,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/math-successor/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/math-triangle_area/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
@@ -566,6 +610,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/concepts/physics-center_of_gravity/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/physics-contact_area/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
@@ -641,7 +689,15 @@
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
+         <loc>https://preview.aristotel.academy/concepts/physics-pascal/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
          <loc>https://preview.aristotel.academy/concepts/physics-path/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/concepts/physics-pressure/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
     <url>
@@ -762,6 +818,10 @@
     </url>
     <url>
          <loc>https://preview.aristotel.academy/modules/module-2/tower-stability/</loc>
+         <lastmod>2026-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://preview.aristotel.academy/modules/module-3/solid-pressure/</loc>
          <lastmod>2026-09-06</lastmod>
     </url>
 </urlset>
