@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "stembook_version": "0.1.0",
-  "concept_count": 190,
+  "concept_count": 202,
   "concepts": [
     {
       "id": "cs.arbitrary_precision_integer",
@@ -204,6 +204,14 @@
       "href": "/concepts/cs-python-assignment/"
     },
     {
+      "id": "cs.python.axis_labels",
+      "title": "Подписи осей, сетка и легенда графика",
+      "subject": "cs",
+      "area": "python",
+      "importance": "high",
+      "href": "/concepts/cs-python-axis_labels/"
+    },
+    {
       "id": "cs.python.comment",
       "title": "Комментарий",
       "subject": "cs",
@@ -332,6 +340,14 @@
       "href": "/concepts/cs-python-library/"
     },
     {
+      "id": "cs.python.linspace",
+      "title": "Равномерная сетка значений numpy.linspace",
+      "subject": "cs",
+      "area": "python",
+      "importance": "high",
+      "href": "/concepts/cs-python-linspace/"
+    },
+    {
       "id": "cs.python.list",
       "title": "Список",
       "subject": "cs",
@@ -394,6 +410,14 @@
       "area": "python",
       "importance": "high",
       "href": "/concepts/cs-python-parameter/"
+    },
+    {
+      "id": "cs.python.plot",
+      "title": "Построение графика plt.plot",
+      "subject": "cs",
+      "area": "python",
+      "importance": "high",
+      "href": "/concepts/cs-python-plot/"
     },
     {
       "id": "cs.python.range",
@@ -772,6 +796,14 @@
       "href": "/concepts/math-goldbach_conjecture/"
     },
     {
+      "id": "math.graph_by_two_points",
+      "title": "Построение прямой по двум точкам",
+      "subject": "math",
+      "area": null,
+      "importance": "high",
+      "href": "/concepts/math-graph_by_two_points/"
+    },
+    {
       "id": "math.graph_slope",
       "title": "Угловой коэффициент",
       "subject": "math",
@@ -1052,6 +1084,14 @@
       "href": "/concepts/math-significant_digits/"
     },
     {
+      "id": "math.slope_units",
+      "title": "Единицы углового коэффициента",
+      "subject": "math",
+      "area": null,
+      "importance": "high",
+      "href": "/concepts/math-slope_units/"
+    },
+    {
       "id": "math.standard_form",
       "title": "Стандартный вид числа",
       "subject": "math",
@@ -1180,6 +1220,14 @@
       "href": "/concepts/math-well_ordering_principle/"
     },
     {
+      "id": "math.y_intercept",
+      "title": "Точка пересечения графика с осью ординат (свободный член)",
+      "subject": "math",
+      "area": null,
+      "importance": "high",
+      "href": "/concepts/math-y_intercept/"
+    },
+    {
       "id": "math.zero_vector",
       "title": "Нулевой вектор",
       "subject": "math",
@@ -1220,6 +1268,14 @@
       "href": "/concepts/physics-contact_area/"
     },
     {
+      "id": "physics.density",
+      "title": "Плотность",
+      "subject": "physics",
+      "area": null,
+      "importance": "critical",
+      "href": "/concepts/physics-density/"
+    },
+    {
       "id": "physics.displacement",
       "title": "Перемещение",
       "subject": "physics",
@@ -1258,6 +1314,14 @@
       "area": "dynamics",
       "importance": "critical",
       "href": "/concepts/physics-equilibrium/"
+    },
+    {
+      "id": "physics.external_pressure",
+      "title": "Внешнее давление",
+      "subject": "physics",
+      "area": null,
+      "importance": "high",
+      "href": "/concepts/physics-external_pressure/"
     },
     {
       "id": "physics.force",
@@ -1306,6 +1370,30 @@
       "area": "dynamics",
       "importance": "critical",
       "href": "/concepts/physics-gravity_force/"
+    },
+    {
+      "id": "physics.hydraulic_press",
+      "title": "Гидравлическая машина (пресс)",
+      "subject": "physics",
+      "area": null,
+      "importance": "high",
+      "href": "/concepts/physics-hydraulic_press/"
+    },
+    {
+      "id": "physics.hydrostatic_paradox",
+      "title": "Гидростатический парадокс",
+      "subject": "physics",
+      "area": null,
+      "importance": "high",
+      "href": "/concepts/physics-hydrostatic_paradox/"
+    },
+    {
+      "id": "physics.hydrostatic_pressure",
+      "title": "Гидростатическое давление",
+      "subject": "physics",
+      "area": null,
+      "importance": "critical",
+      "href": "/concepts/physics-hydrostatic_pressure/"
     },
     {
       "id": "physics.inertia",
@@ -1378,6 +1466,14 @@
       "area": "mechanics",
       "importance": "high",
       "href": "/concepts/physics-pascal/"
+    },
+    {
+      "id": "physics.pascal_law",
+      "title": "Закон Паскаля",
+      "subject": "physics",
+      "area": null,
+      "importance": "critical",
+      "href": "/concepts/physics-pascal_law/"
     },
     {
       "id": "physics.path",
