@@ -2027,8 +2027,8 @@
 <thead>
 <tr>
 <th>Вещество</th>
-<th>ρ, кг/м³</th>
-<th>ρ, г/см³</th>
+<th><span class="arithmatex">\(\rho\)</span>, кг/м³</th>
+<th><span class="arithmatex">\(\rho\)</span>, г/см³</th>
 </tr>
 </thead>
 <tbody>
@@ -2107,7 +2107,7 @@
 <!-- fig-anchor: figure.physics.hydrostatics.liquid_column -->
 
 <p><img alt="На горизонтальной линии дна сосуда стоит узкий вертикальный столб жидкости высотой h; из его середины вниз идёт стрелка веса с подписью P = ρgSh, под столбом подписана площадка S на дне, сбоку — высота h" src="/assets/images/physics.fluid_pressure/generated/fluid_pressure_liquid_column.png" /></p>
-<p><em>Вес столба ρgSh давит на площадку S; при делении на S площадь сокращается, и остаётся p = ρgh</em></p>
+<p><em>Вес столба <span class="arithmatex">\(\rho g S h\)</span> давит на площадку <span class="arithmatex">\(S\)</span>; при делении на <span class="arithmatex">\(S\)</span> площадь сокращается, и остаётся <span class="arithmatex">\(p = \rho g h\)</span></em></p>
 <p>Объём столба: <span class="arithmatex">\(V = S h\)</span>.</p>
 <p>Масса столба: <span class="arithmatex">\(m = \rho V = \rho S h\)</span>.</p>
 <p>Вес столба: <span class="arithmatex">\(P = mg = \rho g S h\)</span>.</p>
@@ -2230,7 +2230,7 @@
 <!-- fig-anchor: figure.math.functions.pressure_depth_two_liquids -->
 
 <p><img alt="На осях «h, м» по горизонтали и «p, кПа» по вертикали из начала координат выходят две прямые: более крутая сплошная, отмеченная точкой с подписью «вода», доходит до 98 кПа на десяти метрах; чуть более пологая пунктирная — масло — доходит примерно до 90 кПа" src="/assets/images/physics.fluid_pressure/generated/fluid_pressure_pressure_depth_two_liquids.png" /></p>
-<p><em>p = ρgh для воды и подсолнечного масла: сплошная прямая — вода, она подписана на графике; пунктирная, чуть более пологая, — масло. Обе выходят из нуля, наклон k = ρg у воды больше</em></p>
+<p><em><span class="arithmatex">\(p = \rho g h\)</span> для воды и подсолнечного масла: сплошная прямая — вода, она подписана на графике; пунктирная, чуть более пологая, — масло. Обе выходят из нуля, наклон <span class="arithmatex">\(k = \rho g\)</span> у воды больше</em></p>
 <p>Обе прямые выходят из одной точки — из начала координат: на нулевой глубине обе жидкости дают ноль. Дальше они расходятся, и чем глубже, тем сильнее: у воды наклон круче. Разница наклонов — это в точности разница плотностей, умноженная на <span class="arithmatex">\(g\)</span>.</p>
 <hr />
 <!-- fragment:016 -->
@@ -2243,7 +2243,7 @@
 <!-- fig-anchor: figure.math.functions.pressure_depth_with_p0 -->
 
 <p><img alt="На осях «h, м» и «p, кПа» две параллельные прямые одинакового наклона: нижняя, подписанная на линии «открытый сосуд», выходит из начала координат; верхняя, подписанная «под поршнем», пересекает вертикальную ось на отметке 20 кПа, и эта точка пересечения отмечена кружком с подписью «b»" src="/assets/images/physics.fluid_pressure/generated/fluid_pressure_pressure_depth_with_p0.png" /></p>
-<p><em>Внешнее давление p₀ = 20 кПа сдвигает прямую вверх целиком: свободный член меняется, наклон k = ρg остаётся прежним</em></p>
+<p><em>Внешнее давление <span class="arithmatex">\(p_0 = 20\ \text{кПа}\)</span> сдвигает прямую вверх целиком: свободный член меняется, наклон <span class="arithmatex">\(k = \rho g\)</span> остаётся прежним</em></p>
 <p>И вот что важно: во втором случае удвоение глубины <strong>не</strong> удваивает давление. На 2 м: <span class="arithmatex">\(9{,}8 \cdot 2 + 20 = 39{,}6\)</span> кПа. На 4 м: <span class="arithmatex">\(9{,}8 \cdot 4 + 20 = 59{,}2\)</span> кПа. Выросло в 1,5 раза, а не в два. Прямая пропорциональность работает, только когда <span class="arithmatex">\(b = 0\)</span>; во всех остальных случаях зависимость линейная, но не пропорциональная.</p>
 <p>Зато <strong>разность</strong> давлений на двух глубинах от <span class="arithmatex">\(p_0\)</span> не зависит вовсе:</p>
 <div class="arithmatex">\[p(h_2) - p(h_1) = (p_0 + \rho g h_2) - (p_0 + \rho g h_1) = \rho g (h_2 - h_1).\]</div>

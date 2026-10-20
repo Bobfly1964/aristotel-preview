@@ -2076,7 +2076,7 @@
 <p>Здесь <span class="arithmatex">\(F\)</span> — сила в ньютонах, <span class="arithmatex">\(S\)</span> — площадь в квадратных метрах, <span class="arithmatex">\(p\)</span> — давление.</p>
 <p>Единица давления в СИ называется <strong>паскаль</strong> и обозначается Па:</p>
 <div class="arithmatex">\[1\ \text{Па} = 1\ \frac{\text{Н}}{\text{м}^2}\]</div>
-<p>Один паскаль — очень мало: это сила в один ньютон, размазанная по целому квадратному метру. Лист бумаги, лежащий на столе, давит примерно на 1 Па. Поэтому в расчётах постоянно появляются приставки, знакомые по М1 §1: 1 кПа = 10³ Па, 1 МПа = 10⁶ Па. Давление пальца из предыдущего расчёта — 100 кПа, давление острия — 100 МПа.</p>
+<p>Один паскаль — очень мало: это сила в один ньютон, размазанная по целому квадратному метру. Лист бумаги, лежащий на столе, давит примерно на 1 Па. Поэтому в расчётах постоянно появляются приставки, знакомые по М1 §1: <span class="arithmatex">\(1\ \text{кПа} = 10^3\ \text{Па}\)</span>, <span class="arithmatex">\(1\ \text{МПа} = 10^6\ \text{Па}\)</span>. Давление пальца из предыдущего расчёта — 100 кПа, давление острия — 100 МПа.</p>
 <blockquote>
 <p><strong>О букве <span class="arithmatex">\(S\)</span>.</strong> Заглавной <span class="arithmatex">\(S\)</span> в курсе уже обозначена функция следования <span class="arithmatex">\(S(n)\)</span> из раздела о натуральных числах. Спутать их трудно: у той всегда есть аргумент в скобках. Площадь мы пишем просто <span class="arithmatex">\(S\)</span>, без скобок; строчная <span class="arithmatex">\(s\)</span> остаётся за путём и в этой главе не встречается.</p>
 </blockquote>
@@ -2248,7 +2248,7 @@
 <!-- fragment:015 -->
 
 <h3 id="перевод-единиц--тоже-работа-для-функции">Перевод единиц — тоже работа для функции<a class="headerlink" href="#перевод-единиц--тоже-работа-для-функции" title="Permanent link">&para;</a></h3>
-<p>Чтобы множители 10⁴ и 10⁶ были не в памяти, а на экране, запишем перевод функцией:</p>
+<p>Чтобы множители <span class="arithmatex">\(10^4\)</span> и <span class="arithmatex">\(10^6\)</span> были не в памяти, а на экране, запишем перевод функцией:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">to_square_meters</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">unit</span><span class="p">):</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s2">"м2"</span><span class="p">:</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="k">return</span> <span class="n">value</span>
